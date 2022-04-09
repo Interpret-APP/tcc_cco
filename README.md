@@ -6,5 +6,9 @@
 
 
 ## Mobile
+- `npm install -g @ionic/cli`
+- `cd mobile/Interpretaria`
+- `npm i`
+- `ionic serve`
 
 ## Front-web
