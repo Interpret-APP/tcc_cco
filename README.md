@@ -36,9 +36,13 @@
 
 
 ## Mobile
-- `npm install -g @ionic/cli`
-- `cd mobile/Interpretari`
-- `npm i` (o comando é apenas necessário antes de rodar o servidor pela primeira vez, ou após atualizarmos a versão de alguma biblioteca, ou adicionar uma biblioteca nova ao projeto)
+- `npm install -g @ionic/cli@6.19.0` (o comando é necessário apenas no primeiro setup)
+- `cd mobile/Interpretari/`
+- `npm i` (o comando é necessário apenas no primeiro setup, ou após atualizarmos a versão de alguma biblioteca, ou adicionar uma biblioteca nova ao projeto)
 - `ionic serve`
 
 ## Front-web
+- `npm install -g @angular/cli@13.3.2` (o comando é necessário apenas no primeiro setup)
+- `cd front_web/Interpretari/`
+- `npm i` (o comando é necessário apenas no primeiro setup, ou após atualizarmos a versão de alguma biblioteca, ou adicionar uma biblioteca nova ao projeto)
+- `ng serve`
