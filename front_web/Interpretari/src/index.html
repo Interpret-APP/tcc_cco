@@ -1,13 +1,77 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Interpretari</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/formField.js"></script>
+
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root></app-root>
+  <!-- <img src="assets/ellipse.png" alt="elipse" class="ellipse_back"> -->
+  <img src="assets/balloon.png" alt="balloon" class="balloon_back">
+  <img src="assets/person.png" alt="person" class="person_back">
+  <img src="assets/people.png" alt="people" class="people_back">
+  <p class="inter_text">Inter</p>
+  <p class="pret_text">prêt!</p>
+
+  <p class="head">Portal Admin</p>
+
+  <p class="intro">Seja bem-vindo(a) ao<br>Interprêt!</p>
+
+  <db-form-field class="email" label="Email" type="text" error-message="E-mail inválido!" required>
+    <!-- <div class="email">
+      <label class="text_field">E-mail</label>
+      <input class="box_field" type="email" />
+      <span class="error">E-mail inválido!</span>
+    </div> -->
+  </db-form-field>
+
+  <db-form-field class="password" label="Password" type="text" error-message="Senha incorreta!" required>
+    <!-- <div class="password">
+      <label class="text_field">Senha</label>
+      <input class="box_field" type="password" />
+      <img src="assets/invisible.png" alt="invisible" class="invisible_field">
+      <span class="error">Senha incorreta!</span>
+    </div> -->
+  </db-form-field>
+
+  <div class="checkbox">
+    <input type="checkbox" value="remember">
+  </div>
+
+  <label class="checkbox_text" for="checkbox">Lembrar de mim</label>
+
+  <input class="enter_button" type="submit" value="Entrar">
+
+  <!--<form action="form.php" method="POST" class="main-form">
+    <div class="email">
+      <label class="text_field" for="email">E-mail</label>
+      <input class="box_field" type="email" id="email" name="email" required>
+    </div>
+
+    <div class="password">
+      <label class="text_field" for="pass">Senha</label>
+      <input class="box_field" type="password" id="pass" name="password" minlength="8" required>
+    </div>
+  </form>
+
+  <form>
+    <db-form-field type="email" id="email" name="email" label="E-mail" required />
+    <db-form-field type="password" id="pass" name="password" required />
+    <db-form-submit type="submit" value="Entrar" />
+  </form>-->
+
+  <a class="no_account" href="register.html">Não tem uma conta? Cadastre-se.</a>
+  <a class="no_password" href="https://www.w3schools.com/">Esqueceu a senha?</a>
 </body>
+
 </html>

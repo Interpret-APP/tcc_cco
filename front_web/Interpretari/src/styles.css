@@ -1,1 +1,296 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*index.html*/
+body {
+    font-family: 'Poppins';
+    background: url(assets/back.png);
+    background-repeat: no-repeat;
+}
+
+/* ellipse.back {
+    position: absolute;
+    left: 40%;
+    right: -34.72%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #5171A5;
+    border: 5px solid rgba(203, 232, 246, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 10px 4px rgba(0, 0, 0, 0.25);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+} */
+
+.balloon_back {
+    position: absolute;
+    left: 14.5%; /*Mudei*/
+    right: 59.58%;
+    top: 23.34%;
+    bottom: 62.79%;
+}
+
+.person_back {
+    position: absolute;
+    left: 3.06%;
+    right: 66.32%;
+    top: 34.08%;
+    bottom: 25.2%;
+}
+
+.people_back {
+    position: absolute;
+    left: 94.24%;
+    right: 2.08%;
+    top: 3.12%;
+    bottom: 91.6%;
+}
+
+.inter_text {
+    position: absolute;
+    left: 0%; /*Mudei*/
+    right: 73%; /*Mudei*/
+    top: 21%; /*Mudei*/
+    bottom: 0%;
+
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 71px;
+    text-align: center;
+
+    color: #CBE8F6;
+}
+
+.pret_text {
+    position: absolute;
+    left: 11%; /*Mudei*/
+    right: 61.53%;
+    top: 21%; /*Mudei*/
+    bottom: 0%;
+    
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 71px;
+    text-align: center;
+    
+    color: #003554;
+}
+
+.head {
+    position: absolute;
+    left: 86.5%; /*Mudei*/
+    right: 6.04%;
+    top: 4.88%;
+    bottom: 91.5%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #5171A5;
+}
+
+.intro {
+    position: absolute;
+    left: 58.33%;
+    right: 12.5%;
+    top: 20.31%;
+    bottom: 72.66%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #5171A5;
+}
+
+.email {
+    position: absolute;
+    left: 58.33%;
+    right: 12.5%;
+    top: 30.57%;
+    bottom: 62.4%;
+}
+
+.password {
+    position: absolute;
+    left: 58.33%;
+    right: 12.5%;
+    top: 39.55%;
+    bottom: 53.42%;
+}
+
+.invisible_field {
+    position: absolute;
+    left: 91%; /*Mudei*/
+    right: 3.27%;
+    top: 51.39%;
+    bottom: 15.28%;
+}
+
+.error {
+    position: absolute;
+    left: 79%;
+    top: 8%;
+
+    font-size: 12px;
+
+    color: red;
+}
+
+.checkbox {
+    /*Não utilizado*/
+    position: absolute;
+    left: 58.4%;
+    right: 29.94%;
+    top: 49.77%;
+    bottom: 47.89%;
+}
+
+.box {
+    position: absolute;
+    left: 58.4%;
+    right: 40.17%;
+    top: 50.13%;
+    bottom: 47.92%;
+
+    border: 1px solid rgba(0, 53, 84, 0.25);
+    border-radius: 3px;
+}
+
+.checkbox_ativo {
+    /*Não utilizado*/
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    border: 1px solid rgba(0, 53, 84, 0.25);
+    border-radius: 3px;
+}
+
+.checkbox_text {
+    position: absolute;
+    left: 60.52%;
+    right: 29.94%;
+    top: 49.77%;
+    bottom: 47.89%;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #5171A5;
+}
+
+.enter_button {
+    position: absolute;
+    left: 58.33%;
+    right: 12.5%;
+    top: 57.23%;
+    bottom: 37.4%;
+
+    background: #5171A5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.no_account {
+    position: absolute;
+    left: 65%;
+    /*58.68%*/
+    right: 12.5%;
+    top: 65.62%;
+    bottom: 31.25%;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #5171A5;
+}
+
+.no_password {
+    position: absolute;
+    left: 68%;
+    /*65.97%*/
+    right: 20.14%;
+    top: 69.53%;
+    bottom: 27.34%;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #5171A5;
+}
+
+/*register.page.html*/
+.cadastro {
+    position: absolute;
+    left: 58.33%;
+    right: 33.61%;
+    top: 16.41%;
+    bottom: 79.59%;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #5171A5;
+}
+
+.dados {
+    position: absolute;
+    left: 67.43%;
+    right: 21.6%;
+    top: 16.8%;
+    bottom: 80.66%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #5171A5;
+}
