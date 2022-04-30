@@ -1,0 +1,23 @@
+<ion-content [scrollY]="false">
+    <swiper [config]="swiperConfig">
+        <ng-template swiperSlide>
+            <div class="slider-container">
+                <ion-button class="skip" fill="clear">Pular</ion-button>
+                <img src="../assets/images/slide1.png" class="slide1" />
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="slider-container">
+                <ion-button class="skip" fill="clear">Pular</ion-button>
+                <img src="../assets/images/slide2.png" class="slide2" />
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="slider-container">
+                <ion-button class="skip" fill="clear">Pular</ion-button>
+                <img src="../assets/images/slide3.png" class="slide3" />
+                <ion-button color="primary" class="start_button">Iniciar</ion-button>
+            </div>
+        </ng-template>
+    </swiper>
+</ion-content>

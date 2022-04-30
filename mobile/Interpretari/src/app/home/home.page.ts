@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(private route: Router) {
+    this.go();
+  }
 
-  constructor() {}
-
+  go() {
+    interval(3000).subscribe(x => {
+      this.route.navigate(['/intro']);
+    });
+  }
 }
