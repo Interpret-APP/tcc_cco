@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Interpretari</title>
+  <title>Home</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="assets/formField.js"></script>
 
   <base href="/">
@@ -16,18 +17,22 @@
 </head>
 
 <body>
-  <!-- <img src="assets/ellipse.png" alt="elipse" class="ellipse_back"> -->
-  <img src="assets/balloon.png" alt="balloon" class="balloon_back">
-  <img src="assets/person.png" alt="person" class="person_back">
+  <!-- <img src="assets/balloon.png" alt="balloon" class="balloon_back">
+  <img src="assets/person.png" alt="person" class="person_back"> -->
   <img src="assets/people.png" alt="people" class="people_back">
-  <p class="inter_text">Inter</p>
-  <p class="pret_text">prêt!</p>
+  <img src="assets/back.png" alt="back" class="background">
+  <img src="assets/logo.png" alt="logo" class="logo_login">
 
-  <p class="head">Portal Admin</p>
+  <!-- <p class="inter_text">Inter</p>
+  <p class="pret_text">prêt!</p> -->
 
-  <p class="intro">Seja bem-vindo(a) ao<br>Interprêt!</p>
+  <p class="head">Portal Super Admin</p>
 
-  <db-form-field class="email" label="Email" type="text" error-message="E-mail inválido!" required>
+  <p class="title">Primeiro Acesso</p>
+
+  <!-- <p class="intro">Seja bem-vindo(a) ao<br>Interprêt!</p> -->
+
+  <db-form-field class="email" label="E-mail" type="text" error-message="E-mail inválido!" required>
     <!-- <div class="email">
       <label class="text_field">E-mail</label>
       <input class="box_field" type="email" />
@@ -35,7 +40,7 @@
     </div> -->
   </db-form-field>
 
-  <db-form-field class="password" label="Password" type="text" error-message="Senha incorreta!" required>
+  <db-form-field class="password" label="Senha" type="password" error-message="Senha incorreta!" required>
     <!-- <div class="password">
       <label class="text_field">Senha</label>
       <input class="box_field" type="password" />
@@ -70,8 +75,50 @@
     <db-form-submit type="submit" value="Entrar" />
   </form>-->
 
-  <a class="no_account" href="register.html">Não tem uma conta? Cadastre-se.</a>
-  <a class="no_password" href="https://www.w3schools.com/">Esqueceu a senha?</a>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" routerLink="/login">Login</a>
+      <a class="nav-item nav-link" routerLink="/register">Register</a>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <nav>
+    <a routerLink="/register" class="no_account">Não tem uma conta? Cadastre-se.</a>
+    <a routerLink="/password" class="no_password">Esqueceu a senha?</a>
+  </nav>
+  <router-outlet></router-outlet> -->
 </body>
 
 </html>
+
+
+
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" routerLink="/login">Login</a>
+      <a class="nav-item nav-link" routerLink="/register">Register</a>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-8 offset-sm-2">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div> -->

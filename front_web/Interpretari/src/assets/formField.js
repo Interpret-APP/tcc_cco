@@ -2,7 +2,6 @@ const template = document.createElement("template");
 template.innerHTML = `
 <style> 
     :host { 
-        margin-bottom: 10px; 
         display: block; 
     } 
     
@@ -23,9 +22,9 @@ template.innerHTML = `
     //     display: table-cell; 
     // } 
 
-    // label { 
-    //     padding-right: 10px; 
-    // } 
+    //  label { 
+    //      padding-right: 10px; 
+    //  } 
 
     .error { 
         display: block; 
@@ -65,9 +64,10 @@ template.innerHTML = `
         top: 36.11%;
         bottom: 0%;
 
-        padding: 10px;
+        padding: 22px;
         line-height: 100%;
-        font-size: 20px;
+        font-size: 18px;
+
         background: #FFFFFF;
         border: 1px solid rgba(0, 53, 84, 0.25);
         border-radius: 15px;
@@ -100,7 +100,7 @@ class FormField extends HTMLElement {
             this.$input.addEventListener("blur", event => {
                 if (!event.target.value && this.hasAttribute("required")) {
                     this.invalid = true;
-                    this.$error.innerText = error-message;
+                    this.$error.innerText = error - message;
                 } else {
                     this.invalid = false;
                     this.value = event.target.value;
