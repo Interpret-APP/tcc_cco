@@ -1,22 +1,27 @@
+<ion-header>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+</ion-header>
+
 <ion-content [scrollY]="false">
-    <swiper [config]="swiperConfig">
+    <ion-button class="skip" fill="clear">Pular</ion-button>
+    <swiper effect="fade" [config]="swiperConfig">
         <ng-template swiperSlide>
-            <div class="slider-container">
-                <ion-button class="skip" fill="clear">Pular</ion-button>
+            <div class="background">
                 <img src="../assets/images/slide1.png" class="slide1" />
+                <!-- <ion-button class="next_button" color="primary" href="/login" (click)="next()">Iniciar</ion-button> -->
             </div>
         </ng-template>
         <ng-template swiperSlide>
-            <div class="slider-container">
-                <ion-button class="skip" fill="clear">Pular</ion-button>
+            <div class="background">
                 <img src="../assets/images/slide2.png" class="slide2" />
+                <!-- <ion-button class="next_button" color="primary" href="/login" (click)="next()">Iniciar</ion-button> -->
             </div>
         </ng-template>
         <ng-template swiperSlide>
-            <div class="slider-container">
-                <ion-button class="skip" fill="clear">Pular</ion-button>
+            <div class="background">
                 <img src="../assets/images/slide3.png" class="slide3" />
-                <ion-button color="primary" class="start_button" href="/login">Iniciar</ion-button>
+                <ion-button class="start_button" color="primary" href="/login">Iniciar</ion-button>
             </div>
         </ng-template>
     </swiper>

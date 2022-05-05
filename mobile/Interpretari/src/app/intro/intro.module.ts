@@ -18,4 +18,4 @@ import { SwiperModule } from 'swiper/angular';
   ],
   declarations: [IntroPage]
 })
-export class IntroPageModule {}
+export class IntroPageModule { }
