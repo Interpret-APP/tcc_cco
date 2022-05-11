@@ -1,6 +1,32 @@
 import { Sequelize } from 'sequelize-typescript';
+
+/**
+ * Entidade teste
+ */
 import { Cat } from '../cats/cat.entity';
+
+/**
+ * Entidades de relações 0,N - 1,1
+ */
+import { Interprete } from '../interpretes/interprete.entity';
+import { Idioma } from '../idiomas/idioma.entity';
+import { Audiencia } from 'src/audiencias/audiencia.entity';
+import { Certificadora } from 'src/certificadoras/certificadora.entity';
+import { Credencial } from 'src/credencial/credencial.entity';
+import { Pais } from 'src/paises/pais.entity';
+import { Posto } from 'src/postos/posto.entity';
+import { Tribunal } from 'src/tribunais/tribunal.entity';
+import { Unidade } from 'src/unidades/unidade.entity';
+import { Usuario } from 'src/usuarios/usuario.entity';
+
 import * as dotenv from 'dotenv';
+
+/**
+ * Entidades de relações 0,N - 0,N]
+ */
+import { InterpreteIdioma } from '../interpretesIdiomas/interpreteIdioma.entity';
+import { AudienciaIdioma } from 'src/audienciasIdiomas/audienciaIdioma.entity';
+import { InterpretePosto } from 'src/interpretesPostos/interpretePosto.entity';
 
 dotenv.config({path: __dirname+'/.env'});
 
@@ -18,7 +44,7 @@ export const databaseProviders = [
             password: 'luccas1125947498',
             database: 'postgres',
             });
-            sequelize.addModels([Cat]);
+            sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
             await sequelize.sync();
             return sequelize;
         } else if(process.env.NODE_ENV == 'prod') {            
@@ -35,7 +61,7 @@ export const databaseProviders = [
                 .then(() => {
                     console.log('Connection has been established successfully.');
                 })    
-            sequelize.addModels([Cat]);          
+            sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);          
             await sequelize.sync();
             return sequelize;
         }
