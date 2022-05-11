@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-logo',
+  templateUrl: 'logo.page.html',
+  styleUrls: ['logo.page.scss'],
 })
-export class HomePage {
+export class LogoPage {
   constructor(private route: Router) {
     this.go();
   }

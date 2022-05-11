@@ -6,12 +6,16 @@ import { LoginPage } from './login.page';
 
 import { LoginPageRoutingModule } from './login-routing.module';
 
+// import { InputFieldComponent } from '../../components/input-field/input-field.component';
+import { InputFieldModule } from '../../components/input-field/input-field.module'
+
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
         LoginPageRoutingModule,
+        InputFieldModule,
     ],
     declarations: [LoginPage]
 })

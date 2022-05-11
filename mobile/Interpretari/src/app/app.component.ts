@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: 'app.component.html',
-//   styleUrls: ['app.component.scss'],
-// })
-// export class AppComponent {
-//   constructor() {}
-// }
-
 import { AnimationController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
