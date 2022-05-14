@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InputField } from '../../models/input-field';
 
 @Component({
@@ -9,8 +9,10 @@ import { InputField } from '../../models/input-field';
 })
 export class InputFieldComponent {
 
-  @Input()
-  inputField: InputField;
+  // @Input() class: string = '';
+  @Input() name: string = '';
+  @Input() type: string = 'text';
+  // inputField: InputField;
 
   constructor() { }
 

@@ -7,8 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('../pages/logo/logo.module').then(m => m.LogoPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
+    path: 'tabs',
+    loadChildren: () => import('../pages/tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: 'intro',
@@ -31,6 +31,7 @@ const routes: Routes = [
     redirectTo: 'logo',
     pathMatch: 'full'
   },
+
 ];
 
 @NgModule({

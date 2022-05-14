@@ -16,11 +16,11 @@ export class LoginPage implements OnInit {
 
     }
 
-    login() {
-        this.router.navigate(['home']);
-    }
+    // login() {
+    //     this.router.navigate(['intro']);
+    // }
 
-    register() {
-        this.router.navigate(['register']);
-    }
+    // register() {
+    //     this.router.navigate(['register']);
+    // }
 }
