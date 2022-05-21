@@ -37,12 +37,12 @@ export const databaseProviders = [
     useFactory: async () => { 
         if(process.env.NODE_ENV == 'dev'){            
             const sequelize = new Sequelize({          
-            dialect: 'postgres',
-            host: 'localhost',
-            port: 5432,
-            username: 'postgres',
-            password: 'luccas1125947498',
-            database: 'postgres',
+                dialect: 'postgres',
+                host: 'localhost',
+                port: 5432,
+                username: process.env.DATABASE_USERNAME,
+                password: process.env.DATABASE_PASSWORD,
+                database: process.env.DATABASE_NAME
             });
             sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
             await sequelize.sync();
