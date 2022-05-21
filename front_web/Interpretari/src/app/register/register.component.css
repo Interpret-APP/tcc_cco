@@ -1,0 +1,54 @@
+/*register.page.html*/
+.background2 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #5171A5;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.logo_register {
+    position: absolute;
+    left: 2.85%;
+    right: 85.28%;
+    top: 2.93%;
+    bottom: 90.53%;
+
+    width: 100px;
+    height: 100%;
+}
+
+.cadastro {
+    position: absolute;
+    left: 58.33%;
+    right: 33.61%;
+    top: 16.41%;
+    bottom: 79.59%;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #5171A5;
+}
+
+.dados {
+    position: absolute;
+    left: 67.43%;
+    right: 21.6%;
+    top: 16.8%;
+    bottom: 80.66%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #5171A5;
+}

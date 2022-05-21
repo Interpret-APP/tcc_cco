@@ -1,347 +1,406 @@
 /* You can add global styles to this file, and also import other style files */
 
-/*index.html*/
-body {
-    font-family: 'Poppins';
-    /* background: url(assets/back.png);
-    background-repeat: no-repeat; */
+header {
+    background: #FFFFFF;
 }
 
-.background {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    /* background: #2D4F96;
-    border: 5px solid rgba(203, 232, 246, 0.1);
-    box-sizing: border-box;
-    transform: matrix(-1, 0, 0, 1, 0, 0); */
-}
-
-.logo_login {
-    position: absolute;
-    left: 10.56%;
-    right: 62.92%;
-    top: 43.07%;
-    bottom: 42.48%;
-}
-
-/* ellipse.back {
-    position: absolute;
-    left: 40%;
-    right: -34.72%;
-    top: 0%;
-    bottom: 0%;
-
-    background: #5171A5;
-    border: 5px solid rgba(203, 232, 246, 0.1);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 10px 4px rgba(0, 0, 0, 0.25);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+/* body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 } */
 
-.balloon_back {
+.topbar {
     position: absolute;
-    left: 14.5%;
-    /*Mudei*/
-    right: 59.58%;
-    top: 23.34%;
-    bottom: 62.79%;
+    width: 1920px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
 }
 
-.person_back {
+.topbar_body {
     position: absolute;
-    left: 3.06%;
-    right: 66.32%;
-    top: 34.08%;
-    bottom: 25.2%;
+    width: 1668px;
+    height: 70px;
+    left: 252px;
+    top: 0px;
+
+    box-shadow: 0px 10px 20px rgba(18, 38, 63, 0.0313726);
 }
 
-.people_back {
+.logo {
     position: absolute;
-    left: 94.24%;
-    right: 2.08%;
-    top: 3.71%;
-    bottom: 91.02%;
+    width: 252px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
 }
 
-.inter_text {
+.logo_img {
     position: absolute;
-    left: 0%;
-    /*Mudei*/
-    right: 73%;
-    /*Mudei*/
-    top: 21%;
-    /*Mudei*/
-    bottom: 0%;
-
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 71px;
-    text-align: center;
-
-    color: #CBE8F6;
+    width: 142px;
+    height: 55px;
+    left: 45px; /*55px*/
+    top: 15px;
 }
 
-.pret_text {
+.logo_background {
     position: absolute;
-    left: 11%;
-    /*Mudei*/
-    right: 61.53%;
-    top: 21%;
-    /*Mudei*/
-    bottom: 0%;
-
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 71px;
-    text-align: center;
-
-    color: #003554;
-}
-
-.head {
-    position: absolute;
-    left: 80.07%;
-    right: 6.04%;
-    top: 5.47%;
-    bottom: 90.92%;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
-
-    color: #5171A5;
-}
-
-.title {
-    position: absolute;
-    left: 58.4%;
-    right: 27.78%;
-    top: 20.12%;
-    bottom: 74.51%;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-
-    color: #5171A5;
-}
-
-.email {
-    position: absolute;
-    left: 58.33%;
-    right: 12.5%;
-    top: 30.57%;
-    bottom: 62.4%;
-}
-
-.password {
-    position: absolute;
-    left: 58.33%;
-    right: 12.5%;
-    top: 39.55%;
-    bottom: 53.42%;
-}
-
-.invisible_field {
-    position: absolute;
-    left: 91%;
-    /*Mudei*/
-    right: 3.27%;
-    top: 51.39%;
-    bottom: 15.28%;
-}
-
-.error {
-    position: absolute;
-    left: 79%;
-    top: 8%;
-
-    font-size: 12px;
-
-    color: red;
-}
-
-.checkbox {
-    /*Não utilizado*/
-    position: absolute;
-    left: 58.4%;
-    right: 29.94%;
-    top: 49.77%;
-    bottom: 47.89%;
-}
-
-.box {
-    position: absolute;
-    left: 58.4%;
-    right: 40.17%;
-    top: 50.13%;
-    bottom: 47.92%;
-
-    border: 1px solid rgba(0, 53, 84, 0.25);
-    border-radius: 3px;
-}
-
-.checkbox_ativo {
-    /*Não utilizado*/
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    border: 1px solid rgba(0, 53, 84, 0.25);
-    border-radius: 3px;
-}
-
-.checkbox_text {
-    position: absolute;
-    left: 60.52%;
-    right: 29.94%;
-    top: 49.77%;
-    bottom: 47.89%;
-
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-
-    color: #5171A5;
-}
-
-.enter_button {
-    position: absolute;
-    left: 58.33%;
-    right: 12.5%;
-    top: 57.23%;
-    bottom: 37.4%;
+    width: 252px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
 
     background: #2D4F96;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+}
 
+.bell_icon {}
+
+.username_txt {}
+
+/* The sidebar menu */
+.sidenav {
+    height: 1178px;
+    /* Full-height: remove this if you want "auto" height */
+    width: 252px;
+    /* Set the width of the sidebar */
+    position: absolute;
+    /* Fixed Sidebar (stay in place on scroll) */
+    /* z-index: 1; Stay on top */
+    top: 70px;
+    /* Stay at the top */
+    left: 0;
+    background: #2D4F96;
+    ;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+/* .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+} */
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: lightgreen;
+}
+
+.menu_group {
+    position: absolute;
+    width: 161.56pxpx;
+    height: 100px;
+    left: 24px;
+    top: -75px; /*119px*/
+}
+
+.home_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 119px;
+
+    background: url(assets/icons/home_icon.svg);
+}
+
+.home_link {
+    position: relative;
+    width: 87px;
+    height: 20px;
+    left: 53.56px;
+    top: 119px;
+
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.certificate_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 159px;
+
+    background: url(assets/icons/certificates_icon.svg);
+}
+
+.certificate_link {
+    position: absolute;
+    width: 132px;
+    height: 20px;
+    left: 53.56px;
+    top: 157.7px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.interview_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 199px;
+
+    background: url(assets/icons/interview_icon.svg);
+}
+
+.interview_link {
+    position: absolute;
+    width: 71px;
+    height: 20px;
+    left: 53.56px;
+    top: 199px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.users_group {
+    position: absolute;
+    width: 181px;
+    height: 100px; /*189px*/
+    left: 24px;
+    top: -75px; /*248px*/
+}
+
+.users_txt {
+    position: absolute;
+    width: 56px;
+    height: 17px;
+    left: 24px;
+    top: 248px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+
+    text-transform: uppercase;
 
     color: #FFFFFF;
 }
 
-.no_account {
+.balance_icon {
     position: absolute;
-    left: 65%;
-    /*58.68%*/
-    right: 12.5%;
-    top: 65.62%;
-    bottom: 31.25%;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 290px;
 
+    background: url(assets/icons/balance_icon.svg);
+}
+
+.court_link {
+    position: absolute;
+    width: 53px;
+    height: 20px;
+    left: 58px;
+    top: 288.5px;
+
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-decoration-line: underline;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
 
-    color: #5171A5;
+    color: #EFF2F7;
 }
 
-.no_password {
+.building_icon {
     position: absolute;
-    left: 68%;
-    /*65.97%*/
-    right: 20.14%;
-    top: 69.53%;
-    bottom: 27.34%;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 334px;
 
+    background: url(assets/icons/building_icon.svg);
+}
+
+.judicial_link {
+    position: absolute;
+    width: 123px;
+    height: 20px;
+    left: 58px;
+    top: 333px;
+
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-decoration-line: underline;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
 
-    color: #5171A5;
+    color: #EFF2F7;
 }
 
-/*register.page.html*/
-.background2 {
+.checked_icon {
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 380px;
 
-    background: #5171A5;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: url(assets/icons/checked_icon.svg);
 }
 
-.logo_register {
+.certifier_link {
     position: absolute;
-    left: 2.85%;
-    right: 85.28%;
-    top: 2.93%;
-    bottom: 90.53%;
+    width: 147px;
+    height: 20px;
+    left: 58px;
+    top: 377.5px;
 
-    width: 100px;
-    height: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
 }
 
-.cadastro {
+.users_icon {
     position: absolute;
-    left: 58.33%;
-    right: 33.61%;
-    top: 16.41%;
-    bottom: 79.59%;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 417px;
 
+    background: url(assets/icons/users_icon.svg);
+}
+
+.interpreter_link {
+    position: absolute;
+    width: 71px;
+    height: 20px;
+    left: 59.56px;
+    top: 417px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.config_group {
+    position: absolute;
+    width: 114px;
+    height: 100px;
+    left: 24px;
+    top: -75px; /*457px*/
+}
+
+.config_txt {
+    position: absolute;
+    width: 95px;
+    height: 17px;
+    left: 24px;
+    top: 457px;
+
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
 
-    color: #5171A5;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
-.dados {
+.profile_icon {
     position: absolute;
-    left: 67.43%;
-    right: 21.6%;
-    top: 16.8%;
-    bottom: 80.66%;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 498px;
 
+    background: url(assets/icons/profile_icon.svg);
+}
+
+.data_link {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    left: 58px;
+    top: 497.5px;
+
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
 
-    color: #5171A5;
+    color: #EFF2F7;
+}
+
+.login_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 537px;
+
+    background: url(assets/icons/login_icon.svg);
+}
+
+.login_link {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    left: 57px;
+    top: 536px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.title_txt {
+    position: absolute;
+    width: 186px;
+    height: 24px;
+    left: 276px;
+    top: 94px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: #495057;
 }

@@ -1,0 +1,141 @@
+<!-- <p-menu [model]="items"></p-menu> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="certificado.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+    <div class="topbar">
+        <i class="topbar_body"></i>
+        <div class="logo">
+            <i class="logo_background"></i>
+            <p-image src="../../assets/images/logoHome.png" class="logo_img"></p-image>
+        </div>
+        <i class="bell_icon"></i>
+        <p class="username_txt"></p>
+    </div>
+</header>
+
+<body>
+    <div class="sidenav">
+        <div class="menu_group">
+            <i class="home_icon"></i>
+            <a class="home_link" href="/inicio">Página Inicial</a>
+            <i class="certificate_icon"></i>
+            <a class="certificate_link" href="/lista-certificados">Lista de Certificados</a>
+            <i class="interview_icon"></i>
+            <a class="interview_link" href="/entrevistas">Entrevistas</a>
+        </div>
+        <div class="users_group">
+            <p class="users_txt">Usuários</p>
+            <i class="balance_icon"></i>
+            <a class="court_link" href="/tribunal">Tribunal</a>
+            <i class="building_icon"></i>
+            <a class="judicial_link" href="/unidade-judiciaria">Unidade Judiciária</a>
+            <i class="checked_icon"></i>
+            <a class="certifier_link" href="/entidade-certificadora">Entidade Certificadora</a>
+            <i class="users_icon"></i>
+            <a class="interpreter_link" href="/interpretes">Intérpretes</a>
+        </div>
+        <div class="config_group">
+            <p class="config_txt">Configurações</p>
+            <i class="profile_icon"></i>
+            <a class="data_link" href="/meus-dados">Meus Dados</a>
+            <i class="login_icon"></i>
+            <a class="login_link" href="/login">Sair</a>
+        </div>
+    </div>
+
+    <p class="title_txt">Lista de Certificados</p>
+
+    <p-table class="certificates_table" [value]="certificado">
+        <ng-template pTemplate="header">
+            <!-- <tr>
+                <th rowspan="3">Certificado</th>
+            </tr> -->
+            <tr>
+                <th>Certificado</th>
+                <th>Título</th>
+                <th>Intérprete</th>
+                <th>Carregado em</th>
+                <th>Status</th>
+                <th>Tipo</th>
+                <th>Download</th>
+                <th>Ações</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-certificado>
+            <tr>
+                <td>{{certificado.img}}</td>
+                <td>{{certificado.title}}</td>
+                <td>{{certificado.interpreter}}</td>
+                <td>{{certificado.date}}</td>
+                <td>{{certificado.status}}</td>
+                <td>{{certificado.type}}</td>
+                <td>{{certificado.download}}</td>
+                <td>{{certificado.actions}}</td>
+            </tr>
+        </ng-template>
+        <!-- <ng-template pTemplate="footer">
+            <tr>
+                <td colspan="3">Totals</td>
+                <td>$506,202</td>
+                <td>$531,020</td>
+            </tr>
+        </ng-template> -->
+    </p-table>
+
+    <!-- <script src="../../assets/sidebar-menu.js"></script>
+    <nav id="sidebar-menu"></nav> -->
+
+    <!-- <p-menu class="menu" [model]="items"></p-menu> -->
+    <!-- <div class="sidebar">
+        <i class="sidebar_body"></i>
+        <li><a href="/home" class="home_link"><i class="home_icon"></i>Página Inicial</a></li>
+        <li><a href="/certificate" class="certificate_link"><i class="certificate_icon"></i>Lista de
+                Certificados</a></li>
+        <li><a href="/interview" class="interview_link"><i class="interview_icon"></i>Entrevistas</a></li>
+
+        <a class="users_txt">Usuários</a><br>
+        <li><a href="/court" class="court_link"><i class="court_icon"></i>Tribunal</a></li>
+        <li><a href="/judicial" class="judicial_link"><i class="judicial_icon"></i>Unidade Judiciária</a></li>
+        <li><a href="/certifier" class="certifier_link"><i class="certifier_icon"></i>Entidade Certificadora</a>
+        </li>
+        <li><a href="/interpreter" class="interpreter_link"><i class="interpreter_icon"></i>Intérpretes</a></li>
+
+        <a class="configurations_txt">Configurações</a><br>
+        <li><a href="/data" class="data_link"><i class="data_icon"></i>Meus Dados</a></li>
+        <li><a href="/login" class="exit_link"><i class="exit_icon"></i>Sair</a></li>
+    </div> -->
+
+    <!-- <ul class="users_group">
+            <div class="court">
+            <a class="court_link" href="/court">Tribunal</a><br>
+            </div>
+            <a class="judicial_link" href="/judicial">Unidade Judiciária</a><br>
+            <a class="certifier_link" href="/certifier">Entidade Certificadora</a><br>
+            <a class="interpreter_link" href="/interpreter">Intérpretes</a><br>
+        </ul> -->
+
+    <!-- <ul>
+            <a class="configurations_title">Configurações</a><br>
+            <a class="data_link" href="/data">Meus Dados</a><br>
+            <a class="login_link" href="/login">Sair</a>
+        </ul> -->
+</body>
