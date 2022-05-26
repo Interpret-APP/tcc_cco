@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Certificado, Representative } from '../certificado/certificado';
-import { CertificadoService } from '../certificado/certificadoservice';
+import { Audiencia, Representative } from '../tribunal/audiencia';
+import { AudienciaService } from '../tribunal/audienciaservice';
 
 @Component({
-  selector: 'app-certificado',
-  templateUrl: './certificado.component.html',
-  styleUrls: ['./certificado.component.css'],
+  selector: 'app-tribunal',
+  templateUrl: './tribunal.component.html',
+  styleUrls: ['./tribunal.component.css'],
 })
-export class CertificadoComponent implements OnInit {
+export class TribunalComponent implements OnInit {
 
-  certificados: Certificado[];
+  audiencias: Audiencia[];
 
   representatives: Representative[];
 
@@ -21,14 +21,14 @@ export class CertificadoComponent implements OnInit {
 
   dt: any;
 
-  constructor(private certificadoService: CertificadoService) { }
+  constructor(private audienciaService: AudienciaService) { }
 
   ngOnInit() {
-    this.certificadoService.getCertificadosLarge().then(certificados => {
-      this.certificados = certificados;
+    this.audienciaService.getAudienciasLarge().then(audiencias => {
+      this.audiencias = audiencias;
       this.loading = false;
 
-      this.certificados.forEach(certificados => certificados.date = new Date(certificados.date));
+      this.audiencias.forEach(audiencias => audiencias.date = new Date(audiencias.date));
     });
 
     // this.representatives = [

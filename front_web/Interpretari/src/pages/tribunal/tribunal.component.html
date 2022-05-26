@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="certificado.component.css">
+    <link rel="stylesheet" href="tribunal.component.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
@@ -60,67 +60,82 @@
         </div>
     </div>
 
-    <p class="title_txt">Lista de Certificados</p>
-    <p class="side_txt">Lista de Certificados</p>
+    <p class="title_txt">Lista de Audiências</p>
+    <p class="side_txt">Lista de Audiências</p>
 
-    <p-table #dt2 [value]="certificados" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
-        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-certificado" [paginator]="true"
+    <p-table #dt2 [value]="audiencias" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-audiencia" [paginator]="true"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-        [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
+        [globalFilterFields]="['processo', 'modo', 'date', 'horario', 'localizacao', 'idioma_partida', 'idioma_chegada', 'requisicao', 'status', 'criado', 'detalhes', 'acoes']"
+        class="certificates_table">
         <ng-template pTemplate="caption">
-            <!-- <th>
+            <th>
                 <p-columnFilter type="text" field="interprete" class="search_input"></p-columnFilter>
-            </th> -->
-            <div class="p-d-flex">
+            </th>
+            <!-- <div class="p-d-flex">
                 <span class="p-input-icon-left p-ml-auto">
                     <i class="pi pi-search"></i>
-                    <input pInputText type="text" (input)="applyFilterGlobal($event.target, 'contains')"
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')"
                         placeholder="Filter" />
                 </span>
-            </div>
+            </div> -->
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th style="text-align: center">Certificado</th>
-                <th style="text-align: center">Título</th>
-                <th style="text-align: center">Intérprete</th>
-                <th style="text-align: center">Carregado em</th>
+                <th style="text-align: center">Processo</th>
+                <th style="text-align: center">Modo</th>
+                <th style="text-align: center">Data</th>
+                <th style="text-align: center">Horário</th>
+                <th style="text-align: center">Localização</th>
+                <th style="text-align: center">Idioma de Partida</th>
+                <th style="text-align: center">Idioma de Chegada</th>
+                <th style="text-align: center">Requisição</th>
                 <th style="text-align: center">Status</th>
-                <th style="text-align: center">Tipo</th>
-                <th style="text-align: center">Download</th>
-                <th style="text-align: center">Ações</th>
-
+                <th style="text-align: center">Criado em</th>
+                <th style="text-align: center">Ver Detalhes</th>
+                <th style="text-align: center">Action</th>
                 <!-- <th style="width: 6rem">Verified</th> -->
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-certificado>
+        <ng-template pTemplate="body" let-audiencia>
             <tr>
                 <td style="text-align: center">
-                    <img [src]="'../../assets/icons/download_img.png' + certificado.image" [alt]="certificado.image" />
+                    <span>{{audiencia.processo}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.titulo}}</span>
+                    <span>{{audiencia.modo}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.interprete}}</span>
+                    <span>{{audiencia.date}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.carregado}}</span>
+                    <span>{{audiencia.horario}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.status}}</span>
+                    <span>{{audiencia.localizacao}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.tipo}}</span>
+                    <span>{{audiencia.idioma_partida}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.download.image}}</span>
-                    <!-- <p-button class="download_icon"></p-button> -->
+                    <span>{{audiencia.idioma_chegada}}</span>
                 </td>
                 <td style="text-align: center">
-                    <button>{{certificado.rejeitar}}</button>
-                    <button>{{certificado.validar}}</button>
+                    <span>{{audiencia.requisicao}}</span>
                 </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.status}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.criado}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.detalhes}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.acoes}}</span>
+                </td>
+
                 <!-- <td>
 				<i class="pi" [ngClass]="{'true-icon pi-check-circle': certificado.verified, 'false-icon pi-times-circle': !certificado.verified}"></i>
 			</td> -->
@@ -133,43 +148,3 @@
         </ng-template>
     </p-table>
 </body>
-
-
-
-<!-- <tr>
-    <th>
-        <p-columnFilter type="text" field="certificado.titulo"></p-columnFilter>
-    </th>
-    <th>
-        <p-columnFilter type="text" field="certificado.titulo"></p-columnFilter>
-    </th>
-    <th>
-        <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
-            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any"
-                    (onChange)="filter($event.value)" optionLabel="certificado.titulo">
-                    <ng-template let-option pTemplate="item">
-                        <div class="p-multiselect-representative-option">
-                            <span class="p-ml-1">{{option.titulo}}</span>
-                        </div>
-                    </ng-template>
-                </p-multiSelect>
-            </ng-template>
-        </p-columnFilter>
-    </th>
-    <th>
-        <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
-            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)"
-                    placeholder="Any" [showClear]="true">
-                    <ng-template let-option pTemplate="item">
-                        <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
-                    </ng-template>
-                </p-dropdown>
-            </ng-template>
-        </p-columnFilter>
-    </th>
-    <th>
-        <p-columnFilter type="boolean" field="verified"></p-columnFilter>
-    </th>
-</tr> -->

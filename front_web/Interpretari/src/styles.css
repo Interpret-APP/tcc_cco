@@ -41,7 +41,8 @@ header {
     position: absolute;
     width: 142px;
     height: 55px;
-    left: 45px; /*55px*/
+    left: 45px;
+    /*55px*/
     top: 15px;
 }
 
@@ -98,7 +99,8 @@ header {
     width: 161.56pxpx;
     height: 100px;
     left: 24px;
-    top: -75px; /*119px*/
+    top: -75px;
+    /*119px*/
 }
 
 .home_icon {
@@ -182,9 +184,11 @@ header {
 .users_group {
     position: absolute;
     width: 181px;
-    height: 100px; /*189px*/
+    height: 100px;
+    /*189px*/
     left: 24px;
-    top: -75px; /*248px*/
+    top: -75px;
+    /*248px*/
 }
 
 .users_txt {
@@ -314,7 +318,8 @@ header {
     width: 114px;
     height: 100px;
     left: 24px;
-    top: -75px; /*457px*/
+    top: -75px;
+    /*457px*/
 }
 
 .config_txt {
@@ -403,4 +408,20 @@ header {
     text-transform: uppercase;
 
     color: #495057;
+}
+
+.side_txt {
+    position: absolute;
+    width: 130px;
+    height: 20px;
+    left: 1753px;
+    top: 98px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #84889A;
 }

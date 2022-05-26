@@ -10,6 +10,7 @@ import { LoginComponent } from '../pages/login/login.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { CertificadoComponent } from '../pages/certificado/certificado.component';
 import { EntrevistaComponent } from '../pages/entrevista/entrevista.component';
+import { TribunalComponent } from '../pages/tribunal/tribunal.component';
 
 // PrimeNG Modules
 import { InputTextModule } from 'primeng/inputtext';
@@ -18,17 +19,19 @@ import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu'; //
 import { TableModule } from 'primeng/table';
+
+import { MultiSelectModule } from 'primeng/multiselect';
+import { DropdownModule } from 'primeng/dropdown';
+import { Slider, SliderModule } from 'primeng/slider';
 import { EditorModule } from 'primeng/editor';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CertificadoService } from '../pages/certificado/certificadoservice';
+import { HttpClientModule } from '@angular/common/http';
 
-// Sidebar
-// import { MenuItem } from 'primeng/api';
-// import { Router } from '@angular/router';
+import { AudienciaService } from '../pages/tribunal/audienciaservice';
 
 import { FormsModule } from '@angular/forms';
-
-
 
 import { RegisterComponent } from './register/register.component';
 import { PasswordComponent } from './password/password.component';
@@ -40,6 +43,7 @@ import { PasswordComponent } from './password/password.component';
     HomeComponent,
     CertificadoComponent,
     EntrevistaComponent,
+    TribunalComponent,
 
     RegisterComponent,
     PasswordComponent,
@@ -53,9 +57,15 @@ import { PasswordComponent } from './password/password.component';
     PasswordModule,
     ButtonModule,
     MenuModule, //
-    BrowserAnimationsModule,
     TableModule,
+
+    MultiSelectModule,
+    DropdownModule,
+    SliderModule,
     EditorModule,
+
+    BrowserAnimationsModule,
+    HttpClientModule,
 
     FormsModule,
 
@@ -65,12 +75,13 @@ import { PasswordComponent } from './password/password.component';
       { path: 'inicio', component: HomeComponent },
       { path: 'lista-certificados', component: CertificadoComponent },
       { path: 'entrevistas', component: EntrevistaComponent },
+      { path: 'tribunal', component: TribunalComponent},
 
       { path: 'register', component: RegisterComponent },
       { path: 'password', component: PasswordComponent },
     ]),
   ],
-  providers: [],
+  providers: [CertificadoService, AudienciaService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
