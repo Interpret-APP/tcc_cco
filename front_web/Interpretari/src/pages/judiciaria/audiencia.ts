@@ -1,16 +1,17 @@
 export interface Audiencia {
-    processo?: number;
-    modo?: string;
+    // processo?: number;
+    // modo?: string;
     date?: string | Date;
-    horario?: string;
-    localizacao?: string;
-    idioma_partida?: string;
-    idioma_chegada?: string;
-    requisicao?: string;
-    status?: string;
-    criado?: string | Date;
-    detalhes?: string;
-    acoes?: boolean; 
+    // horario?: string;
+    // localizacao?: string;
+    // idioma_partida?: string;
+    // idioma_chegada?: string;
+    // requisicao?: string;
+    // status?: string;
+    // criado?: string | Date;
+    // detalhes?: string;
+    editar?: string;
+    deletar?: string;
 
     // id?: number;
     // name?: string;

@@ -26,7 +26,8 @@
             <p-image src="../../assets/images/logoHome.png" class="logo_img"></p-image>
         </div>
         <i class="bell_icon"></i>
-        <p class="username_txt"></p>
+        <p class="user_txt">Henry</p>
+        <i class="user_icon"></i>
     </div>
 </header>
 
@@ -64,20 +65,20 @@
     <p class="side_txt">Lista de Certificados</p>
 
     <p-table #dt2 [value]="certificados" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
-        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-certificado" [paginator]="true"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-certificado p-datatable-gridlines" [paginator]="true"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
         <ng-template pTemplate="caption">
-            <!-- <th>
-                <p-columnFilter type="text" field="interprete" class="search_input"></p-columnFilter>
-            </th> -->
-            <div class="p-d-flex">
+            <th>
+                <p-columnFilter type="text" field="tipo" class="search_input"></p-columnFilter>
+            </th>
+            <!-- <div class="p-d-flex">
                 <span class="p-input-icon-left p-ml-auto">
                     <i class="pi pi-search"></i>
                     <input pInputText type="text" (input)="applyFilterGlobal($event.target, 'contains')"
                         placeholder="Filter" />
                 </span>
-            </div>
+            </div> -->
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
@@ -96,7 +97,7 @@
         <ng-template pTemplate="body" let-certificado>
             <tr>
                 <td style="text-align: center">
-                    <img [src]="'../../assets/icons/download_img.png' + certificado.image" [alt]="certificado.image" />
+                    <img [src]="'../../assets/certificado/' + certificado.image" [alt]="certificado.image" />
                 </td>
                 <td style="text-align: center">
                     <span>{{certificado.titulo}}</span>
@@ -114,12 +115,22 @@
                     <span>{{certificado.tipo}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span>{{certificado.download.image}}</span>
+                    <img pButton [src]="'../../assets/certificado/' + certificado.download"
+                        [alt]="certificado.download" class="download_icon"/>
                     <!-- <p-button class="download_icon"></p-button> -->
                 </td>
                 <td style="text-align: center">
-                    <button>{{certificado.rejeitar}}</button>
-                    <button>{{certificado.validar}}</button>
+                    <button pButton label="Rejeitar" class="reject_button"
+                    (click)="rejectCertificate(certificado)"></button>
+                    <button pButton label="Validar" class="accept_button"
+                    (click)="acceptCertificate(certificado)"></button>
+                    <!-- <button pButton pRipple icon="pi pi-times" class="p-button-rounded p-button-danger"
+                        (click)="rejectCertificate(certificado)"></button>
+                    <button pButton pRipple icon="pi pi-check" class="p-button-rounded p-button-success mr-2"
+                        (click)="acceptCertificate(certificado)"></button> -->
+
+                    <!-- <button>{{certificado.rejeitar}}</button>
+                    <button>{{certificado.validar}}</button> -->
                 </td>
                 <!-- <td>
 				<i class="pi" [ngClass]="{'true-icon pi-check-circle': certificado.verified, 'false-icon pi-times-circle': !certificado.verified}"></i>
@@ -132,6 +143,12 @@
             </tr>
         </ng-template>
     </p-table>
+
+    <footer>
+        <p class="footer_back"></p>
+        <p class="inter_txt">2022 © Interprêt.</p>
+        <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
+    </footer>
 </body>
 
 

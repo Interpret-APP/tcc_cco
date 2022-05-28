@@ -11,6 +11,8 @@ import { HomeComponent } from '../pages/home/home.component';
 import { CertificadoComponent } from '../pages/certificado/certificado.component';
 import { EntrevistaComponent } from '../pages/entrevista/entrevista.component';
 import { TribunalComponent } from '../pages/tribunal/tribunal.component';
+import { JudiciariaComponent } from '../pages//judiciaria/judiciaria.component';
+import { CadastroComponent } from '../pages/cadastro/cadastro.component';
 
 // PrimeNG Modules
 import { InputTextModule } from 'primeng/inputtext';
@@ -29,7 +31,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CertificadoService } from '../pages/certificado/certificadoservice';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AudienciaService } from '../pages/tribunal/audienciaservice';
+import { AudienciaService } from '../pages/judiciaria/audienciaservice';
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 import { FormsModule } from '@angular/forms';
 
@@ -44,6 +48,8 @@ import { PasswordComponent } from './password/password.component';
     CertificadoComponent,
     EntrevistaComponent,
     TribunalComponent,
+    JudiciariaComponent,
+    CadastroComponent,
 
     RegisterComponent,
     PasswordComponent,
@@ -76,12 +82,14 @@ import { PasswordComponent } from './password/password.component';
       { path: 'lista-certificados', component: CertificadoComponent },
       { path: 'entrevistas', component: EntrevistaComponent },
       { path: 'tribunal', component: TribunalComponent},
+      { path: 'unidade-judiciaria', component: JudiciariaComponent},
+      { path: 'cadastro', component: CadastroComponent},
 
       { path: 'register', component: RegisterComponent },
       { path: 'password', component: PasswordComponent },
     ]),
   ],
-  providers: [CertificadoService, AudienciaService],
+  providers: [CertificadoService, AudienciaService, ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

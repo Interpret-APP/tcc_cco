@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Certificado, Representative } from '../certificado/certificado';
 import { CertificadoService } from '../certificado/certificadoservice';
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-certificado',
@@ -10,6 +12,8 @@ import { CertificadoService } from '../certificado/certificadoservice';
 export class CertificadoComponent implements OnInit {
 
   certificados: Certificado[];
+
+  certificado: Certificado[];
 
   representatives: Representative[];
 
@@ -21,7 +25,7 @@ export class CertificadoComponent implements OnInit {
 
   dt: any;
 
-  constructor(private certificadoService: CertificadoService) { }
+  constructor(private certificadoService: CertificadoService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
 
   ngOnInit() {
     this.certificadoService.getCertificadosLarge().then(certificados => {
@@ -57,5 +61,24 @@ export class CertificadoComponent implements OnInit {
 
   applyFilterGlobal($event, stringVal) {
     this.dt.filterGlobal(($event.target as HTMLInputElement).value, stringVal);
+  }
+
+  rejectCertificate(certificado: Certificado) {
+    this.confirmationService.confirm({
+      message: 'Are you sure you want to delete ' + certificado.titulo + '?',
+      header: 'Confirm',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.certificados = this.certificados.filter(val => val.titulo !== certificado.titulo);
+        // this.certificado = {};
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000 });
+      }
+    });
+  }
+
+  acceptCertificate(certificado: Certificado) {
+    this.confirmationService.confirm({
+      message: 'Certificado validado!'
+    })
   }
 }

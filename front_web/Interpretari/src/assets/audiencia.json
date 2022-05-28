@@ -3,7 +3,7 @@
         {
             "processo": "000008",
             "modo": "Presencial",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -12,15 +12,13 @@
             "status": "Pendente",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000007",
             "modo": "Remoto",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -29,15 +27,13 @@
             "status": "Pendente",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000006",
             "modo": "Remoto",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -46,15 +42,13 @@
             "status": "Pendente",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000005",
             "modo": "Presencial",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -63,15 +57,13 @@
             "status": "Pendente",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000004",
             "modo": "Remoto",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -80,15 +72,13 @@
             "status": "Pendente",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000003",
             "modo": "Presencial",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -97,15 +87,13 @@
             "status": "Realizado",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000002",
             "modo": "Remoto",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -114,15 +102,13 @@
             "status": "Cancelado",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "processo": "000001",
             "modo": "Presencial",
-            "date": "07 Oct, 2019",
+            "data": "07 Oct, 2019",
             "horario": "9:00 - 11:00",
             "localizacao": "Rua Itapé, 123 - São Paulo - SP",
             "idioma_partida": "Alemão",
@@ -131,10 +117,8 @@
             "status": "Adiado",
             "criado": "07 Oct, 2019",
             "detalhes": "Ver Detalhes",
-            "acoes": {
-                "edit": "icons/edit_icon.svg",
-                "delete": "icons/delete_icon.svg"
-            }
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         }
     ]
 }

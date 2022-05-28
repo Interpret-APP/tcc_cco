@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="tribunal.component.css">
+    <link rel="stylesheet" href="cadastro.component.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
@@ -63,6 +63,13 @@
 
     <p class="title_txt">Tribunal</p>
     <p class="side_txt">Tribunal</p>
+
+    <div class="form_body">
+        <!-- <p class="form_title">Preencha as informações abaixo</p> -->
+        <input type="text" pInputText placeholder="Digite o número do processo" class="process_field"/>
+        <p-dropdown [options]="tipos" [(ngModel)]="selectedTipo" optionLabel="name"></p-dropdown>
+
+    </div>
 
     <footer>
         <p class="footer_back"></p>

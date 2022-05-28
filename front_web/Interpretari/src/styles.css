@@ -5,6 +5,14 @@ header {
 }
 
 /* body {
+    position: relative;
+    width: 1920px;
+    height: 1248px;
+
+    background: #F8F8FB;
+} */
+
+/* body {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -13,7 +21,7 @@ header {
 
 .topbar {
     position: absolute;
-    width: 1920px;
+    width: 1900px; /*1920px*/
     height: 70px;
     left: 0px;
     top: 0px;
@@ -21,7 +29,7 @@ header {
 
 .topbar_body {
     position: absolute;
-    width: 1668px;
+    width: 1651px; /*1668px*/
     height: 70px;
     left: 252px;
     top: 0px;
@@ -56,9 +64,76 @@ header {
     background: #2D4F96;
 }
 
-.bell_icon {}
+.bell_icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 1762px;
+    top: 25px;
 
-.username_txt {}
+    background: url(assets/icons/bx-bell.svg);
+}
+
+.user_txt {
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    left: 1800px;
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #000000;
+}
+
+.user_icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 1847px;
+    top: 14px;
+
+    background: url(assets/icons/user_icon.svg);
+    border-radius: 50px;
+}
+
+.title_txt {
+    position: absolute;
+    width: 186px;
+    height: 24px;
+    left: 276px;
+    top: 94px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: #495057;
+}
+
+.side_txt {
+    position: absolute;
+    width: 134px; /*130px*/
+    height: 20px;
+    left: 1753px;
+    top: 98px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #84889A;
+}
 
 /* The sidebar menu */
 .sidenav {
@@ -141,7 +216,7 @@ header {
 
 .certificate_link {
     position: absolute;
-    width: 132px;
+    width: 134px; /*132px*/
     height: 20px;
     left: 53.56px;
     top: 157.7px;
@@ -247,7 +322,7 @@ header {
 
 .judicial_link {
     position: absolute;
-    width: 123px;
+    width: 124px; /*123px*/
     height: 20px;
     left: 58px;
     top: 333px;
@@ -273,7 +348,7 @@ header {
 
 .certifier_link {
     position: absolute;
-    width: 147px;
+    width: 148px; /*147px*/
     height: 20px;
     left: 58px;
     top: 377.5px;
@@ -352,7 +427,7 @@ header {
 
 .data_link {
     position: absolute;
-    width: 80px;
+    width: 81px; /*80px*/
     height: 20px;
     left: 58px;
     top: 497.5px;
@@ -392,30 +467,23 @@ header {
     color: #EFF2F7;
 }
 
-.title_txt {
+.footer_back {
     position: absolute;
-    width: 186px;
-    height: 24px;
-    left: 276px;
-    top: 94px;
+    width: 1651px; /*1668px*/
+    height: 60px;
+    left: 252px;
+    top: 1188px;
 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-
-    text-transform: uppercase;
-
-    color: #495057;
+    background: #F2F2F5;
 }
 
-.side_txt {
+.inter_txt {
     position: absolute;
-    width: 130px;
+    width: 108px;
+    /*107px*/
     height: 20px;
-    left: 1753px;
-    top: 98px;
+    left: 276px;
+    top: 1208px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -423,5 +491,23 @@ header {
     font-size: 13px;
     line-height: 20px;
 
-    color: #84889A;
+    color: #74788D;
+}
+
+.dev_txt {
+    position: absolute;
+    width: 370px;
+    /*364px*/
+    height: 20px;
+    left: 1510px;
+    /*1547.57px*/
+    top: 1208px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #74788D;
 }
