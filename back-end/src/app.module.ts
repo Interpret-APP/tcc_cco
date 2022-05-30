@@ -30,6 +30,7 @@ import { InterpretesIdiomasModule } from './interpretesIdiomas/interpretesIdioma
 import { InterpretesPostosModule } from './interpretesPostos/interpretesPostos.module';
 import { AudienciasIdiomasModule } from './audienciasIdiomas/audienciasIdiomas.module';
 import { AuthModule } from './usuariosAuth/usuariosAuth.module';
+import { InterpretesAuthModule } from './interpretesAuth/interpretesAuth.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -42,7 +43,7 @@ import { AuthModule } from './usuariosAuth/usuariosAuth.module';
   TribunaisModule, IdiomasModule, InterpretesModule, 
   CertificadorasModule, UnidadesModule, PaisesModule,
   PostosModule, UsuariosModule, InterpretesIdiomasModule,
-  InterpretesPostosModule, AudienciasIdiomasModule, AuthModule],
+  InterpretesPostosModule, AudienciasIdiomasModule, AuthModule, InterpretesAuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

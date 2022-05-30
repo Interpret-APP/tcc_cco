@@ -3,14 +3,14 @@ import { AuthService } from './usuariosAuth.service';
 import { UsuariosAuthGuard } from './usuariosAuth.guard';
 import { UsuariosJwtAuthGuard } from './usuariosAuth-jwt-auth.guard';
 
-@Controller('auth')
+@Controller('auth/usuarios')
 export class AuthController {
     constructor(
         private authService: AuthService
     ) {}
 
     @UseGuards(UsuariosAuthGuard)
-    @Post('usuarios')
+    @Post('token')
     async login (@Request() req) {
         return this.authService.loginUsuario(req.user);
     }
