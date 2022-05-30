@@ -28,8 +28,7 @@ import { InterpreteIdioma } from '../interpretesIdiomas/interpreteIdioma.entity'
 import { AudienciaIdioma } from 'src/audienciasIdiomas/audienciaIdioma.entity';
 import { InterpretePosto } from 'src/interpretesPostos/interpretePosto.entity';
 
-dotenv.config({path: __dirname+'/.env'});
-
+dotenv.config({});
 
 export const databaseProviders = [
   {
