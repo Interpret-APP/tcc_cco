@@ -29,7 +29,7 @@ import * as Joi from 'joi';
 import { InterpretesIdiomasModule } from './interpretesIdiomas/interpretesIdiomas.module';
 import { InterpretesPostosModule } from './interpretesPostos/interpretesPostos.module';
 import { AudienciasIdiomasModule } from './audienciasIdiomas/audienciasIdiomas.module';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './usuariosAuth/usuariosAuth.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
