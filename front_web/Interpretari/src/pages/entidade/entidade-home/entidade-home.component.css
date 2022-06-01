@@ -1,0 +1,182 @@
+.users_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 283px;
+
+    background: url(../../../assets/icons/users_icon.svg);
+}
+
+.interpretes_link {
+    position: absolute;
+    width: 71px;
+    height: 20px;
+    left: 59.56px;
+    top: 283px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.config_group {
+    position: absolute;
+    width: 114px;
+    height: 100px;
+    left: 24px;
+    top: -75px;
+}
+
+.config_txt {
+    position: absolute;
+    width: 95px;
+    height: 17px;
+    left: 24px;
+    top: 324px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.profile_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 365px;
+
+    background: url(../../../assets/icons/profile_icon.svg);
+}
+
+.data_link {
+    position: absolute;
+    width: 81px;
+    /*80px*/
+    height: 20px;
+    left: 58px;
+    top: 364.5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.login_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 404px;
+
+    background: url(../../../assets/icons/login_icon.svg);
+}
+
+.login_link {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    left: 57px;
+    top: 403px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.certificates_table {
+    position: absolute;
+    width: 1620px;
+    height: 798px;
+    left: 276px;
+    top: 143px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(18, 38, 63, 0.0313726);
+    border-radius: 4px;
+}
+
+.search_input {
+    /* position: absolute; */
+    width: 359px;
+    height: 37px;
+}
+
+.download_icon {
+    background-color: transparent;
+    border: none;
+}
+
+.detail_button {
+    width: 92px;
+    height: 25px;
+    background: #5171A5;
+    border-radius: 5px;
+
+    white-space: nowrap;
+    padding: 1em;
+}
+
+.status-pendente {
+    /* position: absolute;
+    width: 81px;
+    height: 18px;
+    left: 1000px;
+    top: 291px; */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    border-radius: 4px;
+
+    color: #FDB807;
+    background: rgba(253, 185, 11, 0.13);
+}
+
+.status-rejeitado {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    border-radius: 4px;
+
+    color: #E2574C;
+    background: rgba(226, 87, 76, 0.13);
+}
+
+.status-validado {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    border-radius: 4px;
+
+    color: #34C38F;
+    background: rgba(52, 195, 143, 0.1);
+}

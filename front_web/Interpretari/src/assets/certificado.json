@@ -1,81 +1,74 @@
 {
    "data": [
       {
-         "image": "../icons/certificate_img.png",
+         "imagem": "../entidade/certificado_moblang.png",
          "titulo": "Certificado MobLang 2022",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
          "status": "Pendente",
          "tipo": "Diploma",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "visualizar": "../entidade/download.png",
+         "acoes": "Avaliar"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
+         "imagem": "../entidade/ata_audiencia.png",
+         "titulo": "Ata de Audiência 25/03/2014",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
-         "status": "Pendente",
+         "status": "Rejeitado",
          "tipo": "Diploma",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "visualizar": "../entidade/download.png",
+         "acoes": "Desfazer"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
+         "imagem": "../entidade/certidao_jucesp.png",
+         "titulo": "Certidão JUCESP",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
-         "status": "Pendente",
+         "status": "Validado",
          "tipo": "Certificado",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "visualizar": "../entidade/download.png",
+         "acoes": "Desfazer"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
+         "imagem": "../entidade/mestrado_letras.png",
+         "titulo": "Diploma Mestrado Letras",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
          "status": "Pendente",
          "tipo": "Carta de recomendação",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "visualizar": "../entidade/download.png",
+         "acoes": "Avaliar"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
+         "imagem": "../entidade/recomendacao.png",
+         "titulo": "Recomendação",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
-         "status": "Pendente",
+         "status": "Validado",
          "tipo": "Certificado",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "visualizar": "../entidade/download.png",
+         "acoes": "Desfazer"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
+         "imagem": "../entidade/entrevista.png",
+         "titulo": "Entrevista",
          "interprete": "Fulano da Silva Santos",
          "carregado": "07 Oct, 2019",
-         "status": "Pendente",
-         "tipo": "Certificado",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "status": "",
+         "tipo": "Entrevista",
+         "visualizar": "../entidade/view.png",
+         "acoes": "Desfazer"
       },
       {
-         "image": "../icons/certificate_img.png",
-         "titulo": "Certificado MobLang 2022",
-         "interprete": "Fulano da Silva Santos",
+         "imagem": "../entidade/entrevista.png",
+         "titulo": "Entrevista",
+         "interprete": "Ciclado de Tal",
          "carregado": "07 Oct, 2019",
-         "status": "Pendente",
-         "tipo": "Carta de recomendação",
-         "download": "../icons/download_img.png",
-         "rejeitar": "reject_btn.png",
-         "validar": "accept_btn.png"
+         "status": "",
+         "tipo": "Entrevista",
+         "visualizar": "../entidade/view.png",
+         "acoes": "Avaliar"
       }
    ]
 }

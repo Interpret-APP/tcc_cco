@@ -65,8 +65,8 @@
     <p class="side_txt">Lista / Detalhes</p>
 
     <p-table #dt2 [value]="audiencias" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
-        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-audiencia p-datatable-gridlines" [paginator]="true"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-audiencia p-datatable-gridlines"
+        [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         [globalFilterFields]="['processo', 'modo', 'date', 'horario', 'localizacao', 'idioma_partida', 'idioma_chegada', 'requisicao', 'status', 'criado', 'detalhes', 'acoes']"
         class="certificates_table">
         <ng-template pTemplate="caption">

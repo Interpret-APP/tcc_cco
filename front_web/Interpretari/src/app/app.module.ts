@@ -7,6 +7,10 @@ import { RouterModule } from '@angular/router';
 
 // Pages Components
 import { LoginComponent } from '../pages/login/login.component';
+
+// Visão Entidade Certificadora
+import { EntidadeHomeComponent } from '../pages/entidade/entidade-home/entidade-home.component';
+
 import { HomeComponent } from '../pages/home/home.component';
 import { CertificadoComponent } from '../pages/certificado/certificado.component';
 import { EntrevistaComponent } from '../pages/entrevista/entrevista.component';
@@ -28,7 +32,7 @@ import { Slider, SliderModule } from 'primeng/slider';
 import { EditorModule } from 'primeng/editor';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CertificadoService } from '../pages/certificado/certificadoservice';
+import { CertificadoService } from '../pages/entidade/entidade-home/certificadoservice';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AudienciaService } from '../pages/judiciaria/audienciaservice';
@@ -37,13 +41,18 @@ import { MessageService } from 'primeng/api';
 
 import { FormsModule } from '@angular/forms';
 
+import { PaginatorModule } from 'primeng/paginator';
+
 import { RegisterComponent } from './register/register.component';
 import { PasswordComponent } from './password/password.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    EntidadeHomeComponent,
+
     HomeComponent,
     CertificadoComponent,
     EntrevistaComponent,
@@ -75,9 +84,13 @@ import { PasswordComponent } from './password/password.component';
 
     FormsModule,
 
+    PaginatorModule,
+
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'entidade-home', component: EntidadeHomeComponent },
+
       { path: 'inicio', component: HomeComponent },
       { path: 'lista-certificados', component: CertificadoComponent },
       { path: 'entrevistas', component: EntrevistaComponent },

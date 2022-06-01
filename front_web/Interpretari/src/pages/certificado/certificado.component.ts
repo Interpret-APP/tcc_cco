@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Certificado, Representative } from '../certificado/certificado';
-import { CertificadoService } from '../certificado/certificadoservice';
+import { Certificado, Representative } from '../entidade/entidade-home/certificado';
+import { CertificadoService } from '../entidade/entidade-home/certificadoservice';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 
