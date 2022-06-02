@@ -1,4 +1,4 @@
-import { Table, Column, Model, BelongsTo, ForeignKey, BelongsToMany } from 'sequelize-typescript';
+import { Table, Column, Model, BelongsTo, ForeignKey, BelongsToMany, Default } from 'sequelize-typescript';
 import { Interprete } from 'src/interpretes/interprete.entity';
 import { Audiencia } from 'src/audiencias/audiencia.entity';
 import { InterpretePosto } from 'src/interpretesPostos/interpretePosto.entity';
@@ -14,6 +14,10 @@ export class Posto extends Model {
 
   @Column
   postoDescricao: string;
+
+  @Default(false)
+  @Column
+  postoCancelado: boolean;
 
   /**
    * ForeignKeys

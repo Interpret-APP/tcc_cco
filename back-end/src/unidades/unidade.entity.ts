@@ -1,4 +1,4 @@
-import { Table, Column, Model, HasMany } from 'sequelize-typescript';
+import { Table, Column, Model, HasMany, DataType, Default } from 'sequelize-typescript';
 import { Usuario } from 'src/usuarios/usuario.entity';
 
 @Table
@@ -39,6 +39,10 @@ export class Unidade extends Model {
 
   @Column
   unidadeEmail: string;
+
+  @Default(false)
+  @Column
+  unidadeRemovida: boolean;
 
   /**
    * Relações da tabela
