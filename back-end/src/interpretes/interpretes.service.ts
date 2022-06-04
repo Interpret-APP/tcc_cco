@@ -13,7 +13,17 @@ export class InterpretesService {
     return this.interpretesRepository.findAll<Interprete>();
   }
 
+  async findOne(cpf: any) {
+    let foundInterprete = await Interprete.findOne({ where: { interpreteCpf: cpf } });
+    if (foundInterprete === null) { throw new Error('Usuário não encontrado.') }
+
+    return foundInterprete;
+  }
+
   async createInterprete(interprete: any): Promise<Interprete> {
+    if (!interprete.interpreteCpf) { throw new Error('Usuário sem CPF.') }
+    if (!interprete.interpreteNome) { throw new Error('Usuário sem nome.') }
+
     return this.interpretesRepository.create<Interprete>(interprete);
   }
 }

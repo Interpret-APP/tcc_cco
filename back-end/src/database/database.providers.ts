@@ -32,40 +32,40 @@ dotenv.config({path: __dirname+'/.env'});
 
 
 export const databaseProviders = [
-  {
-    provide: 'SEQUELIZE',
-    useFactory: async () => { 
-        if(process.env.NODE_ENV == 'dev'){            
-            const sequelize = new Sequelize({          
-            dialect: 'postgres',
-            host: 'localhost',
-            port: 5432,
-            username: 'postgres',
-            password: 'luccas1125947498',
-            database: 'postgres',
-            });
-            sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
-            await sequelize.sync();
-            return sequelize;
-        } else if(process.env.NODE_ENV == 'prod') {            
-            const sequelize = new Sequelize(process.env.DATABASE_URL, {
-                dialectOptions: {
-                    ssl: {
-                      require: true,
-                      rejectUnauthorized: false,
+    {
+        provide: 'SEQUELIZE',
+        useFactory: async () => {
+            if(process.env.NODE_ENV == 'dev'){
+                const sequelize = new Sequelize({
+                    dialect: 'postgres',
+                    host: 'localhost',
+                    port: 5432,
+                    username: 'postgres',
+                    password: '08700201',
+                    database: 'postgres',
+                });
+                sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
+                await sequelize.sync();
+                return sequelize;
+            } else if(process.env.NODE_ENV == 'prod') {
+                const sequelize = new Sequelize(process.env.DATABASE_URL, {
+                    dialectOptions: {
+                        ssl: {
+                            require: true,
+                            rejectUnauthorized: false,
+                        },
                     },
-                },
-            });  
-            sequelize
-                .authenticate()
-                .then(() => {
-                    console.log('Connection has been established successfully.');
-                })    
-            sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);          
-            await sequelize.sync();
-            return sequelize;
-        }
+                });
+                sequelize
+                    .authenticate()
+                    .then(() => {
+                        console.log('Connection has been established successfully.');
+                    })
+                sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
+                await sequelize.sync();
+                return sequelize;
+            }
+        },
     },
-  },
 ];
 
