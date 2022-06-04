@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToHome(): void {
-    const navigationDetails: string[] = ['/inicio'];
+    const navigationDetails: string[] = ['/entidade-home'];
     this.router.navigate(navigationDetails);
   }
 

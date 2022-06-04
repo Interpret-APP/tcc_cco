@@ -35,21 +35,22 @@
     <div class="sidenav">
         <div class="menu_group">
             <i class="home_icon"></i>
-            <a style="text-decoration:none" class="home_link" href="/inicio">Página Inicial</a>
+            <a style="text-decoration:none" class="home_link" href="/entidade-home">Página Inicial</a>
             <i class="certificate_icon"></i>
-            <a style="text-decoration:none" class="certificate_link" href="/lista-certificados">Lista de Certificados</a>
+            <a style="text-decoration:none" class="certificate_link" href="/">Lista de
+                Certificados</a>
             <i class="interview_icon"></i>
-            <a style="text-decoration:none" class="interview_link" href="/entrevistas">Entrevistas</a>
+            <a style="text-decoration:none" class="interview_link" href="/entidade-entrevista">Entrevistas</a>
         </div>
         <div class="users_group">
             <p class="users_txt">Usuários</p>
             <i class="users_icon"></i>
-            <a style="text-decoration:none" class="interpretes_link" href="/interpretes">Intérpretes</a>
+            <a style="text-decoration:none" class="interpretes_link" href="/">Intérpretes</a>
         </div>
         <div class="config_group">
             <p class="config_txt">Configurações</p>
             <i class="profile_icon"></i>
-            <a style="text-decoration:none" class="data_link" href="/meus-dados">Meus Dados</a>
+            <a style="text-decoration:none" class="data_link" href="/">Meus Dados</a>
             <i class="login_icon"></i>
             <a style="text-decoration:none" class="login_link" href="/login">Sair</a>
         </div>
@@ -57,8 +58,9 @@
 
     <p class="title_txt">Lista Credenciais</p>
 
-    <p-table #dt2 [value]="certificados" dataKey="id" [rows]="7" [loading]="loading" styleClass="p-datatable-certificado p-datatable-gridlines"
-        [paginator]="true" [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
+    <p-table #dt2 [value]="certificados" dataKey="id" [rows]="7" [loading]="loading"
+        styleClass="p-datatable-certificado p-datatable-gridlines" [paginator]="true"
+        [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
         <ng-template pTemplate="caption">
             <th>
                 <p-columnFilter placeholder="Procure pelo nome do intérprete..." type="text" field="interprete"
@@ -92,7 +94,8 @@
                     <span>{{certificado.carregado}}</span>
                 </td>
                 <td style="text-align: center">
-                    <span [class]="'certificado status-' + (certificado.status ? certificado.status.toLowerCase() : '')">{{certificado.status}}</span>
+                    <span
+                        [class]="'certificado status-' + (certificado.status ? certificado.status.toLowerCase() : '')">{{certificado.status}}</span>
                 </td>
                 <td style="text-align: center">
                     <span>{{certificado.tipo}}</span>
@@ -102,7 +105,8 @@
                         [alt]="certificado.visualizar" class="download_icon" />
                 </td>
                 <td style="text-align: center">
-                    <button pButton type="button" class="detail_button">{{certificado.acoes}}</button>
+                    <button pButton type="button" (click)="dialogAvaliar(certificado)"
+                        [class]="'certificado acoes-' + (certificado.acoes ? certificado.acoes.toLowerCase() : '')">{{certificado.acoes}}</button>
                 </td>
             </tr>
         </ng-template>
@@ -112,10 +116,37 @@
             </tr>
         </ng-template>
     </p-table>
-
     <footer>
         <p class="footer_back"></p>
         <p class="inter_txt">2022 © Interprêt.</p>
         <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
     </footer>
 </body>
+
+<p-dialog [(visible)]="avaliarDialog" [style]="{width: '450px'}" style="text-align: center"
+    header="Feedback da Validação" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <div class="field">
+            <textarea placeholder="Digite aqui..." id="description" pInputTextarea [(ngModel)]="certificado.validacao"
+                required rows="3" cols="40"></textarea>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Rejeitar" icon="pi pi-times" class="rejeitar_btn"
+            (click)="rejeitarCertificado(certificado)"></button>
+        <button pButton pRipple label="Validar" icon="pi pi-check" class="aceitar_btn"
+            (click)="validarCertificado(certificado)"></button>
+    </ng-template>
+</p-dialog>
+
+<p-dialog [(visible)]="desfazerDialog" [style]="{width: '450px'}" style="text-align: center"
+    header="Você tem certeza que deseja desfazer?" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Não" class="rejeitar_btn"
+            (click)="voltar(certificado)"></button>
+        <button pButton pRipple label="Sim" class="aceitar_btn"
+            (click)="desfazer(certificado)"></button>
+    </ng-template>
+</p-dialog>
+<!-- <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog> -->

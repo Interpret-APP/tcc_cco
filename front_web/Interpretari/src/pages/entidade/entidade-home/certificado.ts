@@ -9,15 +9,16 @@
   }
   
   export interface Certificado {
-    image?: string;
+    id?: string;
+    imagem?: string;
     titulo?: string;
     interprete?: string;
     date?: string | Date;
     status?: string;
     tipo?: string;
-    download?: string;
-    rejeitar: string;
-    validar: string;
+    visualizar?: string;
+    acoes?: string;
+    validacao?: string;
 
     // id?: number;
     // name?: string;
