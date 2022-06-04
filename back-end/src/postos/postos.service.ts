@@ -16,4 +16,31 @@ export class PostosService {
   async createPosto(posto: any): Promise<Posto> {
     return this.postosRepository.create<Posto>(posto);
   }
+
+  async findById(postoId: string): Promise<Posto> {
+    return this.postosRepository.findOne<Posto>(
+      {where: {
+        postoId
+      }}
+    );
+  }
+
+  async updatePosto(postoId: string, posto: any) {
+    return this.postosRepository.update(
+      posto,
+      {where: {
+        postoId
+      }}
+    );
+  }
+
+  async deletePostoById(postoId: string) {
+    return this.postosRepository.update(
+      { postoCancelado: true },
+      {where: {
+        postoId,
+        postoCancelado: false
+      }}
+    );
+  }
 }

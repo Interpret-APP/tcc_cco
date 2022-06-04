@@ -11,5 +11,6 @@ import { DatabaseModule } from '../database/database.module';
     InterpretesService,
     ...interpretesProviders,
   ],
+  exports: [InterpretesService]
 })
 export class InterpretesModule {}

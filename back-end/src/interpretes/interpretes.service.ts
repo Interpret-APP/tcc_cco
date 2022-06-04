@@ -26,4 +26,8 @@ export class InterpretesService {
 
     return this.interpretesRepository.create<Interprete>(interprete);
   }
+
+  async findByCpf(interpreteCpf: string): Promise<Interprete> {
+    return this.interpretesRepository.findOne<Interprete>({where: {interpreteCpf}});
+  }
 }

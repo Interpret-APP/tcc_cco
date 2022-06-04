@@ -28,34 +28,32 @@ import { InterpreteIdioma } from '../interpretesIdiomas/interpreteIdioma.entity'
 import { AudienciaIdioma } from 'src/audienciasIdiomas/audienciaIdioma.entity';
 import { InterpretePosto } from 'src/interpretesPostos/interpretePosto.entity';
 
-dotenv.config({path: __dirname+'/.env'});
-
+dotenv.config({});
 
 export const databaseProviders = [
-    {
-        provide: 'SEQUELIZE',
-        useFactory: async () => {
-            if(process.env.NODE_ENV == 'dev'){
-                const sequelize = new Sequelize({
-                    dialect: 'postgres',
-                    host: 'localhost',
-                    port: 5432,
-                    username: 'postgres',
-                    password: '08700201',
-                    database: 'postgres',
-                });
-                sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
-                await sequelize.sync();
-                return sequelize;
-            } else if(process.env.NODE_ENV == 'prod') {
-                const sequelize = new Sequelize(process.env.DATABASE_URL, {
-                    dialectOptions: {
-                        ssl: {
-                            require: true,
-                            rejectUnauthorized: false,
-                        },
+  {
+    provide: 'SEQUELIZE',
+    useFactory: async () => { 
+        if(process.env.NODE_ENV == 'dev'){            
+            const sequelize = new Sequelize({          
+                dialect: 'postgres',
+                host: 'localhost',
+                port: 5432,
+                username: process.env.DATABASE_USERNAME,
+                password: process.env.DATABASE_PASSWORD,
+                database: process.env.DATABASE_NAME
+            });
+            sequelize.addModels([Audiencia, AudienciaIdioma, Cat, Certificadora, Credencial, Idioma, Interprete, InterpreteIdioma, InterpretePosto, Pais, Posto, Tribunal, Unidade, Usuario]);
+            await sequelize.sync();
+            return sequelize;
+        } else if(process.env.NODE_ENV == 'prod') {            
+            const sequelize = new Sequelize(process.env.DATABASE_URL, {
+                dialectOptions: {
+                    ssl: {
+                      require: true,
+                      rejectUnauthorized: false,
                     },
-                });
+                }});
                 sequelize
                     .authenticate()
                     .then(() => {

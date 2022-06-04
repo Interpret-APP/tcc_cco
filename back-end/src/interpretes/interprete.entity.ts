@@ -79,6 +79,9 @@ export class Interprete extends Model {
   @Column
   interpreteValidacaoTresRecomendacoes: boolean;
   
+  @Column
+  interpreteSenha: string;
+
   /**
    * Foreign Keys
    */

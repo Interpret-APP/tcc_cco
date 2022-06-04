@@ -38,6 +38,9 @@ export class Usuario extends Model {
   @Column
   usuarioEmail: string;
 
+  @Column
+  usuarioSenha: string;
+
   /**
    * Foreign Keys
    */

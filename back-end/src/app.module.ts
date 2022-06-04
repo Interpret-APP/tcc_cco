@@ -29,6 +29,8 @@ import * as Joi from 'joi';
 import { InterpretesIdiomasModule } from './interpretesIdiomas/interpretesIdiomas.module';
 import { InterpretesPostosModule } from './interpretesPostos/interpretesPostos.module';
 import { AudienciasIdiomasModule } from './audienciasIdiomas/audienciasIdiomas.module';
+import { AuthModule } from './usuariosAuth/usuariosAuth.module';
+import { InterpretesAuthModule } from './interpretesAuth/interpretesAuth.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -41,7 +43,7 @@ import { AudienciasIdiomasModule } from './audienciasIdiomas/audienciasIdiomas.m
   TribunaisModule, IdiomasModule, InterpretesModule, 
   CertificadorasModule, UnidadesModule, PaisesModule,
   PostosModule, UsuariosModule, InterpretesIdiomasModule,
-  InterpretesPostosModule, AudienciasIdiomasModule],
+  InterpretesPostosModule, AudienciasIdiomasModule, AuthModule, InterpretesAuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,8 +1,9 @@
-import { Table, Column, Model, BelongsToMany, HasMany, BelongsTo, ForeignKey } from 'sequelize-typescript';
+import { Table, Column, Model, BelongsToMany, HasMany, BelongsTo, ForeignKey, Unique, Default, AllowNull } from 'sequelize-typescript';
 import { Idioma } from 'src/idiomas/idioma.entity';
 import { Posto } from 'src/postos/posto.entity';
 import { AudienciaIdioma } from 'src/audienciasIdiomas/audienciaIdioma.entity';
 import { Usuario } from 'src/usuarios/usuario.entity';
+import { Unidade } from 'src/unidades/unidade.entity';
 
 @Table
 export class Audiencia extends Model {
@@ -28,6 +29,10 @@ export class Audiencia extends Model {
   @Column
   audienciaDescricao: string;
 
+  @Default(false)
+  @Column
+  audienciaCancelada: boolean;
+
   /**
    * Foreign Keys
    */
@@ -35,6 +40,11 @@ export class Audiencia extends Model {
    @ForeignKey(() => Usuario)
    @Column
    usuarioCpf: string;
+  
+   @AllowNull(false)
+   @ForeignKey(() => Unidade)
+   @Column
+   unidadeId: number;
 
   /*
     Relações da tabela
