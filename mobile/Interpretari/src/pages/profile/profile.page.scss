@@ -16,18 +16,28 @@
     top: 12px;
 }
 
-.title {
+.user {
     position: absolute;
-    width: 157px;
-    height: 36px;
-    left: 117px;
-    top: 21px;
+    left: 29.87%;
+    right: 29.6%;
+    top: 5.74%;
+    bottom: 82.15%;
+}
+
+.user_name {
+    position: absolute;
+    width: 375px;
+    height: 38px;
+    left: 0px;
+    top: 190px; //238px
 
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+
+    text-align: center;
 
     color: #5171A5;
 }

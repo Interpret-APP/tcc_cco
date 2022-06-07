@@ -8,12 +8,15 @@ import { SearchPageRoutingModule } from './search-routing.module';
 
 import { SearchPage } from './search.page';
 
+import { InputFieldModule } from '../../components/input-field/input-field.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule
+    SearchPageRoutingModule,
+    InputFieldModule
   ],
   declarations: [SearchPage]
 })
