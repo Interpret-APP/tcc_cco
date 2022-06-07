@@ -18,18 +18,19 @@ img {
 
 .logo_img {
     position: absolute;
-    left: 10.56%;
+    left: 5%;
+    /*10.56%*/
     right: 62.92%;
-    top: 43.07%;
-    bottom: 42.48%;
+    top: 25.24%;
+    bottom: 58.7%;
 }
 
 .admin_img {
     position: absolute;
-    left: 94.24%;
-    right: 2.08%;
-    top: 3.71%;
-    bottom: 91.02%;
+    left: 94.95%;
+    right: 1.37%;
+    top: 1.16%;
+    bottom: 92.98%;
 
     background: url(../../assets/images/admin.png);
     background-repeat: no-repeat;
@@ -37,20 +38,21 @@ img {
 
 .admin_txt {
     position: absolute;
-    left: 80.07%;
-    right: 6.04%;
-    top: 5.47%;
-    bottom: 90.92%;
+    left: 79.38%;
+    right: 0%;
+    /*6.09%*/
+    top: 4.1%;
+    bottom: 93.86%;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 22px;
+
     display: flex;
     align-items: center;
     text-align: center;
-    text-transform: capitalize;
 
     color: #5171A5;
 }
@@ -71,6 +73,16 @@ img {
     align-items: center;
 
     color: #5171A5;
+}
+
+.visible {
+    position: absolute;
+    left: 8.31%;
+    right: 8.31%;
+    top: 8.32%;
+    bottom: 8.31%;
+
+    background: url(../../assets/login/password.svg);
 }
 
 .user_forms {

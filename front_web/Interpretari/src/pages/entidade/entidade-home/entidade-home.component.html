@@ -45,7 +45,7 @@
         <div class="users_group">
             <p class="users_txt">Usuários</p>
             <i class="users_icon"></i>
-            <a style="text-decoration:none" class="interpretes_link" href="/">Intérpretes</a>
+            <a style="text-decoration:none" class="interpretes_link" href="/admin-interprete">Intérpretes</a>
         </div>
         <div class="config_group">
             <p class="config_txt">Configurações</p>
@@ -127,7 +127,7 @@
     header="Feedback da Validação" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
         <div class="field">
-            <textarea placeholder="Digite aqui..." id="description" pInputTextarea [(ngModel)]="certificado.validacao"
+            <textarea placeholder="Digite aqui..." id="description" pInputTextarea [(ngModel)]="certificado.feedback"
                 required rows="3" cols="40"></textarea>
         </div>
     </ng-template>

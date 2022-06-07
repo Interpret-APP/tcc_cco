@@ -55,7 +55,7 @@
     left: 28px;
     top: 207px;
 
-    background: url(../../../assets/admin/tribunal_icon.svg);
+    background: url(../../../assets/icons/balance_icon.svg);
 }
 
 .tribunal_link {
@@ -81,7 +81,7 @@
     left: 28px;
     top: 251px;
 
-    background: url(../../../assets/admin/unidade_icon.svg);
+    background: url(../../../assets/icons/building_icon.svg);
 }
 
 .unidade_link {
@@ -108,7 +108,7 @@
     left: 28px;
     top: 297px;
 
-    background: url(../../../assets/admin/entidade_icon.svg);
+    background: url(../../../assets/icons/checked_icon.svg);
 }
 
 .entidade_link {
@@ -135,7 +135,7 @@
     left: 28px;
     top: 334px;
 
-    background: url(../../../assets/admin/interprete_icon.svg);
+    background: url(../../../assets/icons/users_icon.svg);
 }
 
 .interprete_link {
@@ -187,7 +187,7 @@
     left: 28px;
     top: 427px;    
 
-    background: url(../../../assets/admin/dados_icon.svg);
+    background: url(../../../assets/icons/profile_icon.svg);
 }
 
 .dados_link {
@@ -213,7 +213,7 @@
     left: 28px;
     top: 466px;    
 
-    background: url(../../../assets/admin/sair_icon.svg);
+    background: url(../../../assets/icons/login_icon.svg);
 }
 
 .sair_link {
@@ -259,8 +259,9 @@
 }
 
 .detalhes_btn {
-    width: 92px;
-    height: 25px;
+    /* position: absolute; */
+    /* width: 86.17px;
+    height: 27px;  */
     background: #5171A5;
     border-radius: 5px;
 
@@ -268,8 +269,24 @@
     background-repeat: no-repeat;
     background-position: left; */
 
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    /* filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25)); */
 
-    white-space: nowrap;
-    padding: 1em;
+    font-size: 11.37px;
+    padding: 9px;
+    /* white-space: nowrap; */
+    /* padding: 1em; */
+}
+
+.edit_icon {
+    background-color: transparent;
+    border: none;
+}
+
+.delete_icon {
+    background-color: transparent;
+    border: none;
+}
+
+.align_icons {
+    display: inline-flex;
 }

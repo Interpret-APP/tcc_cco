@@ -45,7 +45,7 @@
         <div class="users_group">
             <p class="users_txt">Usuários</p>
             <i class="users_icon"></i>
-            <a style="text-decoration:none" class="interpretes_link" href="/">Intérpretes</a>
+            <a style="text-decoration:none" class="interpretes_link" href="/admin-interprete">Intérpretes</a>
         </div>
         <div class="config_group">
             <p class="config_txt">Configurações</p>
@@ -61,7 +61,7 @@
 
     <!-- <div class="entrevista_panel"></div> -->
     <p-table #dt2 [value]="certificados" dataKey="id" [rows]="2" styleClass="p-datatable-certificado" [paginator]="true"
-        [globalFilterFields]="['interprete','date','status', 'link']" class="certificates_table">
+        [globalFilterFields]="['interprete','date','status', 'link', 'validacao']" class="certificates_table">
         <ng-template pTemplate="caption">
             <th>
                 <p-columnFilter placeholder="Procure pelo nome do intérprete..." type="text" field="interprete"
@@ -91,7 +91,8 @@
                     <a href="{{certificado.link}}">{{certificado.link}}</a>
                 </td>
             </tr>
-            <textarea [rows]="5" [cols]="100" pInputTextarea autoResize="autoResize">{{certificado.validacao}}</textarea>
+            <textarea [rows]="5" [cols]="140" pInputTextarea
+                autoResize="autoResize">{{certificado.validacao}}</textarea>
         </ng-template>
         <ng-template pTemplate="emptymessage">
             <tr>

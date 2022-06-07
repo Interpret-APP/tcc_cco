@@ -111,7 +111,15 @@
                     <span>{{interprete.cidade}}</span>
                 </td>
                 <td style="text-align: center">
-                    <button pButton type="button" (click)="verDetalhes(interprete)" class="detalhes_btn">{{interprete.detalhes}}</button>
+                    <button pButton type="button" (click)="verDetalhes(interprete)" [style]="{width: '86.17px', height: '27px'}" class="detalhes_btn">{{interprete.detalhes}}</button>
+                </td>
+                <td style="text-align: center">
+                    <div class="align_icons">
+                        <img pButton [src]="'../../../assets/audiencia/' + interprete.editar" [alt]="interprete.editar"
+                            class="edit_icon" />
+                        <img pButton [src]="'../../../assets/audiencia/' + interprete.deletar" [alt]="interprete.deletar"
+                            class="delete_icon" />
+                    </div>
                 </td>
             </tr>
         </ng-template>

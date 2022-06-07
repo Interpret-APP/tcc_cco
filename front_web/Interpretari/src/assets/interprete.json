@@ -11,7 +11,8 @@
             "status": "Ativo",
             "cidade": "São Paulo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "2",
@@ -24,7 +25,8 @@
             "status": "Ativo",
             "cidade": "São Bernardo do Campo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "3",
@@ -37,7 +39,8 @@
             "status": "Inativo",
             "cidade": "São Paulo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "4",
@@ -50,7 +53,8 @@
             "status": "Ativo",
             "cidade": "São Bernardo do Campo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "5",
@@ -63,7 +67,8 @@
             "status": "Ativo",
             "cidade": "São Paulo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "6",
@@ -76,7 +81,8 @@
             "status": "Inativo",
             "cidade": "São Paulo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "7",
@@ -89,7 +95,8 @@
             "status": "Ativo",
             "cidade": "São Bernardo do Campo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         },
         {
             "id": "8",
@@ -102,7 +109,8 @@
             "status": "Ativo",
             "cidade": "São Paulo",
             "detalhes": "Ver Detalhes",
-            "acoes": ""
+            "editar": "../icons/edit_icon.png",
+            "deletar": "../icons/delete_icon.png"
         }
     ]
 }

@@ -18,6 +18,7 @@
     tipo?: string;
     visualizar?: string;
     acoes?: string;
+    feedback?: string;
     validacao?: string;
 
     // id?: number;
