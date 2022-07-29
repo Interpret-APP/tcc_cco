@@ -1,31 +1,39 @@
-<ion-content class="background">
+<ion-content>
   <ion-tabs>
-    <ion-tab-bar slot="bottom" color="primary">
+    <ion-tab-bar slot="bottom">
       <ion-tab-button tab="home">
-        <ion-icon src="../../assets/icon/house_icon.svg"></ion-icon>
-        <ion-label>Início</ion-label>
-        <ion-badge>6</ion-badge>
+        <ion-icon class="frame"></ion-icon>
+        <ion-icon src="../../assets/images/tabs/home.svg" class="home_icon"></ion-icon>
+        <ion-label>Home</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="notifications">
-        <ion-icon src="../../assets/icon/bell_icon.svg"></ion-icon>
+        <ion-icon class="frame"></ion-icon>
+        <ion-icon src="../../assets/images/tabs/bell.svg" class="bell_icon"></ion-icon>
         <ion-label>Notificações</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="search">
-        <ion-icon src="../../assets/icon/search_icon.svg"></ion-icon>
-        <ion-label>Buscar</ion-label>
+        <ion-badge color="danger">3</ion-badge>
       </ion-tab-button>
 
       <ion-tab-button tab="profile">
-        <ion-icon src="../../assets/icon/user_icon.svg"></ion-icon>
+        <ion-icon class="frame"></ion-icon>
+        <ion-icon src="../../assets/images/tabs/user.svg" class="user_icon"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="configurations">
-        <ion-icon src="../../assets/icon/gear_icon.svg"></ion-icon>
+        <ion-icon class="frame"></ion-icon>
+        <ion-icon src="../../assets/images/tabs/gear.svg" class="gear_icon"></ion-icon>
         <ion-label>Configurações</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
 </ion-content>
+
+<!-- Exemplo -->
+<!-- <ion-tab-button tab="home">
+  <ion-icon name="square" class="frame2"></ion-icon>
+  <ion-button expand="full" [color]="buttonValue > 0 ? 'success' : 'primary'" (click)='onClick()'></ion-button>
+  <ion-icon src="../../assets/images/tabs/home.svg" class="home_icon"></ion-icon>
+  <ion-text class="home_text">Início</ion-text>
+  <ion-badge>6</ion-badge>
+</ion-tab-button> -->

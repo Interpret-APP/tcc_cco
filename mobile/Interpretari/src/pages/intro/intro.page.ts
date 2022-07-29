@@ -1,49 +1,44 @@
-import { Component, OnInit } from '@angular/core';
-import Swiper, { SwiperOptions, Pagination, EffectFade, Autoplay } from 'swiper';
+import { AfterContentChecked, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
+import { SwiperOptions } from 'swiper';
+import SwiperCore, { Pagination } from 'swiper';
 
-// import { IonicSlides } from '@ionic/angular';
-// import SwiperCore, { EffectFade } from 'swiper';
-
-// SwiperCore.use([EffectFade, IonicSlides]);
-
+SwiperCore.use([Pagination]);
 @Component({
     selector: 'app-intro',
     templateUrl: 'intro.page.html',
     styleUrls: ['intro.page.scss'],
+    encapsulation: ViewEncapsulation.None
 })
-export class IntroPage implements OnInit {
-    public swiperConfig: SwiperOptions = {
-        // pagination: true,
-        // slidesPerView: 'auto',
-        effect: 'fade',
-        speed: 500,
-        loop: true,
-        fadeEffect: { crossFade: true },
-        slidesPerView: 1,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination"
-        }
-    };
+export class IntroPage implements AfterContentChecked {
+    @ViewChild('swiper') swiper: SwiperComponent;
 
     config: SwiperOptions = {
-
-    }
+        slidesPerView: 1,
+        spaceBetween: 50,
+        pagination: false
+    };
 
     constructor() { }
 
-    ngOnInit() {
-        // Swiper.use([Pagination]);
-        Swiper.use([EffectFade]);
+    ngAfterContentChecked() {
+        if(this.swiper) {
+            this.swiper.updateSwiper({});
+        }
+    }
+
+    swiperSlideChanged(e) {
+        console.log('changed: ', e);
     }
 
     // touchAllowed = false;
 
-    // next() {
-    //     this.swiperConfig.swiperRef.slideNext(500);
+    next() {
+        this.swiper.swiperRef.slideNext(500);
+    }
+
+    // toggleTouch() {
+    //     this.touchAllowed = !this.touchAllowed;
+    //     this.swiper.swiperRef.allowTouchMove = this.touchAllowed;
     // }
 }

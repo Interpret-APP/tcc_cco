@@ -1,25 +1,17 @@
-.background {
-    position: relative;
-    width: 375px;
-    height: 667px;
-
-    background: #FFFFFF;
-}
-
 .logo {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 18px;
-    top: 12px;
+    width: 67px;
+    height: 67px;
+    left: 153px;
+    top: 46px;
 }
 
 .register_text {
     position: absolute;
     width: 157px;
     height: 36px;
-    left: 117px;
-    top: 21px;
+    left: 109px;
+    top: 137px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -27,61 +19,15 @@
     font-size: 24px;
     line-height: 36px;
 
-    color: #5171A5;
+    text-align: center;
 }
-
-.register {
-    position: absolute;
-    width: 375px;
-    height: 667px;
-    left: 0px;
-    top: 0px;
-
-    background: #FFFFFF;
-}
-
-// .text_field {
-//     position: absolute;
-//     left: 1.31%;
-//     right: 59.15%;
-//     top: 0%;
-//     bottom: 68.06%;
-
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 300;
-//     font-size: 15px;
-//     line-height: 22px;
-
-//     color: #5171A5;
-// }
-
-// .box_field {
-//     position: absolute;
-//     left: 0%;
-//     right: 0%;
-//     top: 36.11%;
-//     bottom: 0%;
-
-//     background: #FFFFFF;
-//     border: 1px solid rgba(0, 53, 84, 0.25);
-//     border-radius: 15px;
-// }
 
 .name {
     position: absolute;
     width: 306px;
     height: 72px;
     left: 34px;
-    top: 101px;
-}
-
-.cpf {
-    position: absolute;
-    width: 306px;
-    height: 72px;
-    left: 34px;
-    top: 191px;
+    top: 202px;
 }
 
 .email {
@@ -89,7 +35,15 @@
     width: 306px;
     height: 72px;
     left: 34px;
-    top: 281px;
+    top: 300px;
+}
+
+.cpf {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 398px;
 }
 
 .new_password {
@@ -97,7 +51,7 @@
     width: 306px;
     height: 72px;
     left: 34px;
-    top: 372px;
+    top: 497px;
 }
 
 .confirm_password {
@@ -105,40 +59,40 @@
     width: 306px;
     height: 72px;
     left: 34px;
-    top: 463px;
+    top: 603px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 74px;
+    top: 742px;
+}
+
+.check_text {
+    position: absolute;
+    width: 212px;
+    height: 30px;
+    left: 90px;
+    top: 735px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #000000;
 }
 
 .register_button {
-    box-sizing: border-box;
-
     position: absolute;
     width: 306px;
     height: 41px;
     left: 34px;
-    top: 562px;
-
-    background: #5171A5;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-    // position: absolute;
-    // width: 111px;
-    // height: 24px;
-    // left: 132px;
-    // top: 571px;
-
-    // font-family: 'Poppins';
-    // font-style: normal;
-    // font-weight: 500;
-    // font-size: 16px;
-    // line-height: 24px;
-
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
-
-    // color: #FFFFFF;
+    top: 796.35px;
 }
 
 .cancel_link {
@@ -146,16 +100,14 @@
     width: 69px;
     height: 23px;
     left: 153px;
-    top: 614px;
+    top: 869px;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 12px; // 15px
+    font-size: 15px;
     line-height: 22px;
 
     text-align: center;
     text-decoration-line: underline;
-
-    color: #5171A5;
 }

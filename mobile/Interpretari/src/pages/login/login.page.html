@@ -3,7 +3,7 @@
         rel="stylesheet">
 </ion-header>
 
-<ion-content class="background">
+<ion-content>
     <img src="../assets/images/head.png" class="head">
     <img src="../assets/images/logo2.png" class="logo">
 
@@ -11,36 +11,27 @@
         <input-field-component class="email" type="email" name="E-mail"></input-field-component>
         <input-field-component class="password" type="password" name="Senha"></input-field-component>
 
+        <ion-checkbox class="checkbox" type="checkbox"></ion-checkbox>
+        <ion-text class="check_text" color="tertiary">Lembrar de mim</ion-text>
+
         <ion-button class="enter_button" color="primary">Entrar</ion-button>
+
+        <hr />
+        <ion-text class="option_text" color="tertiary">ou você pode fazer login via</ion-text>
+
+        <ion-button class="facebook_button" fill="clear"></ion-button>
+        <ion-icon class="facebook_icon" name="facebook"></ion-icon>
+        <ion-text class="facebook_text">Facebook</ion-text>
+
+
+        <ion-button class="google_button" fill="clear"></ion-button>
+        <ion-icon class="google_icon" name="google"></ion-icon>
+        <ion-text class="google_text">Google</ion-text>
     </ion-card-content>
 
-    <div class="check">
-        <ion-checkbox class="checkbox" type="checkbox"></ion-checkbox>
-        <ion-label class="check_text">Lembrar de mim</ion-label>
-    </div>
+    <ion-button class="enter_button" color="primary" href="/login-transition">Entrar</ion-button>
 
-    <ion-button class="enter_button" color="primary" href="/tabs">Entrar</ion-button>
-
-    <ion-button class="password_link" href="/password" fill="clear">Esqueceu a senha?</ion-button>
-    <ion-button class="register_link" href="/register" fill="clear">Não tem uma conta? Cadastre-se.</ion-button>
+    <ion-button class="password_link" color="tertiary" href="/password" fill="clear">Esqueceu a senha?</ion-button>
+    <ion-button class="register_link" color="tertiary" href="/register" fill="clear">Não tem uma conta? Cadastre-se.
+    </ion-button>
 </ion-content>
-
-<!-- <div class='flex-center'>
-        <form>
-            <ion-card>
-                <ion-card-content>
-                    <ion-item>
-                        <ion-label class="text_field">Email</ion-label>
-                        <ion-input class="box_field" type="email"></ion-input>
-                    </ion-item>
-
-                    <ion-item>
-                        <ion-label class="text_field">Password</ion-label>
-                        <ion-input class="box_field" type="password"></ion-input>
-                    </ion-item>
-                    <ion-button class="enter_button" color="primary">Entrar</ion-button>
-                </ion-card-content>
-            </ion-card>
-        </form>
-    </div>
-    </ion-content> -->

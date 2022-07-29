@@ -30,5 +30,14 @@
 @import '~swiper/scss/effect-fade';
 
 :root {
-    --ion-color-primary: #5171A5;
+    --ion-color-primary: #2D4F96;
+    --ion-color-secondary: #5D5FEF;
+    --ion-color-tertiary: #5171A5;
+    --ion-color-selected: #1B8950;
+}
+
+.background {
+    position: relative;
+    width: 375px;
+    height: 667px;
 }

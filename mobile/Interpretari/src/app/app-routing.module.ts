@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('../pages/logo/logo.module').then(m => m.LogoPageModule)
   },
   {
-    path: 'tabs',
-    loadChildren: () => import('../pages/tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
     path: 'intro',
     loadChildren: () => import('../pages/intro/intro.module').then(m => m.IntroPageModule)
   },
@@ -19,19 +15,30 @@ const routes: Routes = [
     loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule)
   },
   {
+    path: 'login-transition',
+    loadChildren: () => import('../pages/login-transition/login-transition.module').then( m => m.LoginTransitionPageModule)
+  },
+  {
     path: 'register',
     loadChildren: () => import('../pages/register/register.module').then(m => m.RegisterPageModule)
+  },
+  {
+    path: 'register-transition',
+    loadChildren: () => import('../pages/register-transition/register-transition.module').then( m => m.RegisterTransitionPageModule)
   },
   {
     path: 'password',
     loadChildren: () => import('../pages/password/password.module').then(m => m.PasswordPageModule)
   },
   {
+    path: 'tabs',
+    loadChildren: () => import('../pages/tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
     path: '',
     redirectTo: 'logo',
     pathMatch: 'full'
   },
-
 ];
 
 @NgModule({

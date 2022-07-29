@@ -1,0 +1,45 @@
+.logo {
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 156px;
+    top: 218px;
+}
+
+.text {
+    position: absolute;
+    width: 239px;
+    height: 96px;
+    left: 68px;
+    top: 299px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.tabs_link {
+    position: absolute;
+    width: 99px;
+    height: 30px;
+    left: 139px;
+    top: 569px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #CBE8F6;
+}

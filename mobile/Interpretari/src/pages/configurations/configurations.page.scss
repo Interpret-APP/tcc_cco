@@ -1,33 +1,133 @@
-.background {
+ion-button {
     position: absolute;
-    width: 375px;
-    height: 667px;
-    left: 0px;
-    top: 0px;
+    width: 323px;
+    height: 47px;
+    left: 26px;
 
-    background: #FFFFFF;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+
+    --background: white;
+}
+
+ion-label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #495057;
 }
 
 .logo {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 18px;
-    top: 12px;
+    width: 41px;
+    height: 41px;
+    left: 167px;
+    top: 41px;
 }
 
 .title {
     position: absolute;
-    width: 180px; /*157px*/
-    height: 36px;
-    left: 117px;
-    top: 21px;
+    width: 375px;
+    height: 23px;
+    left: 0px;
+    top: 15px;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 15px;
+    line-height: 22px;
 
-    color: #5171A5;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.notifications_button {
+    top: 132px;
+}
+
+.bell_icon {
+    position: absolute;
+    left: 15.46%;
+    right: 80.01%;
+    top: 21.71%;
+    bottom: 75.11%;
+}
+
+.arrow_icon {
+    position: absolute;
+    left: 84.56%;
+    right: 13.85%;
+    top: 22.49%;
+    bottom: 75.71%;
+}
+
+.notifications_text {
+    position: absolute;
+    width: 87.96px;
+    height: 21px;
+    left: 99.97px;
+    top: 145px;
+}
+
+.help_button {
+    top: 199px;
+}
+
+.help_icon {
+    position: absolute;
+    left: 15.2%;
+    right: 79.48%;
+    top: 31.97%;
+    bottom: 65.03%;
+}
+
+.help_text {
+    position: absolute;
+    width: 122.95px;
+    height: 21px;
+    left: 100.47px;
+    top: 212.22px;
+}
+
+.delete_button {
+    top: 266px;
+}
+
+.trash_icon {
+    position: absolute;
+    left: 15.2%;
+    right: 79.47%;
+    top: 41.98%;
+    bottom: 55.02%;
+}
+
+.delete_text {
+    position: absolute;
+    width: 90px;
+    height: 21px;
+    left: 100px;
+    top: 279px;
+}
+
+.exit_button {
+    position: absolute;
+    width: 208px;
+    height: 47px;
+    left: 84px;
+    top: 390px;
+
+    --background: #E2574C;
+}
+
+.logo2 {
+    position: absolute;
+    left: 22.4%;
+    right: 22.13%;
+    top: 73.01%;
+    bottom: 14.24%;
 }

@@ -4,25 +4,23 @@
 </ion-header>
 
 <ion-content [scrollY]="false">
-    <ion-button class="skip" fill="clear" href="/login">Pular</ion-button>
-    <swiper effect="fade" [config]="swiperConfig">
+    <swiper #swiper effect="fade" [config]="config">
         <ng-template swiperSlide>
             <div class="background">
-                <img src="../assets/images/slide1.png" class="slide1" />
-                <!-- <ion-button class="next_button" color="primary" href="/login" (click)="next()">Iniciar</ion-button> -->
+                <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+                <img src="../assets/images/intro/splash1.png" class="slide1" />
+                <ion-button (click)="next()" class="next_button" color="primary">Próximo</ion-button>
             </div>
         </ng-template>
         <ng-template swiperSlide>
-            <div class="background">
-                <img src="../assets/images/slide2.png" class="slide2" />
-                <!-- <ion-button class="next_button" color="primary" href="/login" (click)="next()">Iniciar</ion-button> -->
-            </div>
+            <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+            <img src="../assets/images/intro/splash2.png" class="slide2" />
+            <ion-button (click)="next()" class="next_button" color="primary">Próximo</ion-button>
         </ng-template>
         <ng-template swiperSlide>
-            <div class="background">
-                <img src="../assets/images/slide3.png" class="slide3" />
-                <ion-button class="start_button" color="primary" href="/login">Iniciar</ion-button>
-            </div>
+            <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+            <img src="../assets/images/intro/splash3.png" class="slide3" />
+            <ion-button class="start_button" color="primary" href="/login">Iniciar</ion-button>
         </ng-template>
     </swiper>
 </ion-content>
