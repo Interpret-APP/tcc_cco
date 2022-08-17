@@ -35,10 +35,26 @@ const routes: Routes = [
     loadChildren: () => import('../pages/tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'profile',
+    loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
+  },
+  {
+    path: 'personal-info',
+    loadChildren: () => import('../pages/personal-info/personal-info.module').then( m => m.PersonalInfoPageModule)
+  },
+  {
+    path: 'professional-info',
+    loadChildren: () => import('../pages/professional-info/professional-info.module').then( m => m.ProfessionalInfoPageModule)
+  },
+  {
+    path: 'work-stations',
+    loadChildren: () => import('../pages/work-stations/work-stations.module').then( m => m.WorkStationsPageModule)
+  },
+  {
     path: '',
     redirectTo: 'logo',
     pathMatch: 'full'
-  },
+  }
 ];
 
 @NgModule({

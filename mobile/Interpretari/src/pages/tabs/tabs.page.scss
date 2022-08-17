@@ -8,6 +8,9 @@ ion-tab-bar {
     background: #FFFFFF;
     box-shadow: inset 0px 4px 4px rgba(219, 219, 219, 0.25);
     border-radius: 3px 3px 0px 0px;
+
+    border: 0;
+    margin-top: -1px;
 }
 
 ion-label {
@@ -41,7 +44,7 @@ ion-label {
     position: absolute;
     width: 16px;
     height: 17px;
-    top: 15px;
+    top: 14px;
 }
 
 .bell_icon {
@@ -55,14 +58,14 @@ ion-label {
     position: absolute;
     width: 15px;
     height: 18px;
-    top: 15px;
+    top: 14px;
 }
 
 .gear_icon {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 15px;
+    top: 13px;
 }
 
 .isActive {

@@ -1,25 +1,71 @@
+// ion-tabs {
+//   position: sticky;
+// }
+
+ion-tab-button {
+  position: absolute;
+  height: 24px;
+  top: 101px;
+
+  background: #2d4f96;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+}
+
+ion-label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 14px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
 .logo {
-    position: absolute;
-    width: 41px;
-    height: 41px;
-    left: 167px;
-    top: 41px;
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  left: 167px;
+  top: 41px;
 }
 
 .title {
-    position: absolute;
-    width: 375px;
-    height: 23px;
-    left: 0px;
-    top: 15px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-    
-    text-align: center;
-    
-    color: #FFFFFF;    
+  position: absolute;
+  width: 375px;
+  height: 23px;
+  left: 0px;
+  top: 15px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.personal_btn {
+  position: absolute;
+  width: 111px;
+  left: 14px;
+
+  background: #1c894f;
+}
+
+.professional_btn {
+  position: absolute;
+  width: 130px;
+  left: 129px;
+}
+
+.work_btn {
+  position: absolute;
+  width: 95px;
+  left: 263px;
 }

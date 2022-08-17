@@ -11,6 +11,9 @@ ion-button {
 }
 
 ion-label {
+    position: absolute;
+    left: 75px;
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -50,68 +53,26 @@ ion-label {
     top: 132px;
 }
 
-.bell_icon {
+.icon {
     position: absolute;
-    left: 15.46%;
-    right: 80.01%;
-    top: 21.71%;
-    bottom: 75.11%;
+    right: 85%;
+    top: 25%;
 }
 
 .arrow_icon {
     position: absolute;
-    left: 84.56%;
-    right: 13.85%;
-    top: 22.49%;
-    bottom: 75.71%;
-}
-
-.notifications_text {
-    position: absolute;
-    width: 87.96px;
-    height: 21px;
-    left: 99.97px;
-    top: 145px;
+    left: 90%;
+    top: 40%;
+    width: 6px;
+    height: 12px;
 }
 
 .help_button {
     top: 199px;
 }
 
-.help_icon {
-    position: absolute;
-    left: 15.2%;
-    right: 79.48%;
-    top: 31.97%;
-    bottom: 65.03%;
-}
-
-.help_text {
-    position: absolute;
-    width: 122.95px;
-    height: 21px;
-    left: 100.47px;
-    top: 212.22px;
-}
-
 .delete_button {
     top: 266px;
-}
-
-.trash_icon {
-    position: absolute;
-    left: 15.2%;
-    right: 79.47%;
-    top: 41.98%;
-    bottom: 55.02%;
-}
-
-.delete_text {
-    position: absolute;
-    width: 90px;
-    height: 21px;
-    left: 100px;
-    top: 279px;
 }
 
 .exit_button {
