@@ -1,0 +1,259 @@
+ion-card {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 323px;
+    height: 153px;
+    left: 10px; //
+    top: 110px; //
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    background: #FFFFFF;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 18.2143px;
+}
+
+.postado {
+    position: absolute;
+    width: 54px;
+    height: 15px;
+    left: 14px;
+    top: 2px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #2D4F96;
+}
+
+.postado_data {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    left: 68px;
+    top: 2px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #2D4F96;
+}
+
+.endereco {
+    position: absolute;
+    width: 302px;
+    height: 19px;
+    left: 14px;
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #74788D;
+}
+
+.linguas {
+    position: absolute;
+    width: 86px;
+    height: 12px;
+    left: 14px;
+    top: 43px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.traducao_chip {
+    position: absolute;
+    width: 58px;
+    height: 15px;
+    left: 10px;
+    top: 61px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #2D4F96;
+}
+
+.interpretacao_chip {
+    position: absolute;
+    width: 82px;
+    height: 15px;
+    left: 80px;
+    top: 61px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #2D4F96;
+}
+
+.data {
+    position: absolute;
+    width: 209px;
+    height: 15px;
+    left: 14px;
+    top: 90px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #74788D;
+}
+
+.status_finalizada {
+    position: absolute;
+    width: 171px;
+    height: 30px;
+    left: 10px;
+    top: 106px;
+
+    background: rgba(52, 195, 143, 0.15);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #34C38F;
+}
+
+.status_cancelada {
+    position: absolute;
+    width: 171px;
+    height: 30px;
+    left: 10px;
+    top: 106px;
+
+    background: rgba(244, 106, 106, 0.15);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #F46A6A;
+}
+
+.status_pendente {
+    position: absolute;
+    width: 171px;
+    height: 30px;
+    left: 10px;
+    top: 106px;
+
+    background: rgba(236, 188, 64, 0.15);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #ECBC40;
+}
+
+.status_icon {
+    width: 7px;
+    height: 8px;
+}
+
+.modo {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 235px;
+    top: 12px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    text-align: center;
+
+    color: #2D4F96;
+}
+
+.detalhes_btn {
+    position: absolute;
+    width: 106px;
+    height: 19px;
+    left: 198px;
+    top: 47px;
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.card2 {
+    position: absolute;
+    top: 270px;
+}
+
+.card3 {
+    position: absolute;
+    top: 430px;
+}

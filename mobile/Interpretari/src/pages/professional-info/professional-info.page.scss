@@ -1,0 +1,139 @@
+ion-card {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 323px;
+    height: 719px;
+    left: 2%; //
+    top: 17%; //
+
+    background: #ffffff;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        -18.21px 18.2143px 36.4286px rgba(211, 209, 216, 0.1);
+    border-radius: 18.2143px;
+}
+
+.edit_btn {
+    position: absolute;
+    width: 43px;
+    height: 15px;
+    left: 268.5px;
+    top: 12px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+
+    background: #2D4F96;
+    border-radius: 5px;
+}
+
+.cadastro_ajg {
+    position: absolute;
+    width: 134px;
+    height: 47px;
+    left: 36px;
+    top: 25px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.resposta_ajg {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    left: 36px;
+    top: 25px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+.comunidade_ling {
+    position: absolute;
+    width: 214px;
+    height: 12px;
+    left: 36px;
+    top: 82px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.resposta_com {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    left: 0px;
+    top: 15px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+.proficiencia_txt {
+    position: absolute;
+    width: 48px;
+    height: 12px;
+    left: 36px;
+    top: 142px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.proficiencia_card {
+    position: absolute;
+    width: 235px;
+    height: 59px;
+    left: 49px;
+    top: 165px;    
+}
