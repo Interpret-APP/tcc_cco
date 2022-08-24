@@ -1,4 +1,4 @@
-ion-card {
+.page_card {
     box-sizing: border-box;
 
     position: absolute;
@@ -61,7 +61,7 @@ ion-card {
     width: 36px;
     height: 32px;
     left: 36px;
-    top: 25px;
+    top: 40px; //
 
     background: #FFFFFF;
     border: 1px solid #CED4DA;
@@ -98,8 +98,8 @@ ion-card {
     position: absolute;
     width: 36px;
     height: 32px;
-    left: 0px;
-    top: 15px;
+    left: 36px;
+    top: 97px; //
 
     background: #FFFFFF;
     border: 1px solid #CED4DA;
@@ -134,6 +134,88 @@ ion-card {
     position: absolute;
     width: 235px;
     height: 59px;
-    left: 49px;
-    top: 165px;    
+    left: 30px; //
+    top: 140px; //   
+}
+
+.idioma_txt {
+    position: absolute;
+    width: 90px; //
+    height: 14px;
+    left: 60px; //
+    top: 5px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+.traducao_chip {
+    position: absolute;
+    width: 77px;
+    height: 18px;
+    left: 20px; //
+    top: 22px;
+
+    background: #5171A5;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.interpretacao_chip {
+    position: absolute;
+    width: 101px;
+    height: 18px;
+    left: 102px; //
+    top: 22px;
+
+    background: #5171A5;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.proficiencia_card2 {
+    position: absolute;
+    width: 235px;
+    height: 59px;
+    left: 30px; //
+    top: 210px; //  
+}
+
+.proficiencia_card3 {
+    position: absolute;
+    width: 235px;
+    height: 59px;
+    left: 30px; //
+    top: 280px; //  
+}
+
+.proficiencia_card4 {
+    position: absolute;
+    width: 235px;
+    height: 59px;
+    left: 30px; //
+    top: 350px; //  
 }
