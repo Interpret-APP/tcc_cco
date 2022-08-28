@@ -16,4 +16,14 @@ export class IdiomasService {
   async createIdioma(idioma: any): Promise<Idioma> {
     return this.idiomasRepository.create<Idioma>(idioma);
   }
+
+  async findOrCreateIdioma(idioma: string) {
+    return this.idiomasRepository.findOrCreate<Idioma>({
+      where: {idiomaNome: idioma},
+      defaults: {
+        idiomaNome: idioma,
+        idiomaValidacao: false
+      }
+    });
+  }
 }

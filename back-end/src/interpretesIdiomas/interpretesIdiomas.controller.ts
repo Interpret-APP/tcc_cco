@@ -6,13 +6,13 @@ import { InterpreteIdioma } from './interpreteIdioma.entity';
 export class InterpretesIdiomasController {
   constructor(private readonly interpreteIdiomaService: InterpretesIdiomasService) {}    
 
-  @Post()
-    async createInterpreteIdioma(@Res() response, @Body() interpreteIdioma: InterpreteIdioma) {
-        const newInterpreteIdioma = await this.interpreteIdiomaService.createInterpreteIdioma(interpreteIdioma);
-        return response.status(HttpStatus.CREATED).json({
-            newInterpreteIdioma
-        })
-    }  
+  // @Post()
+  //   async createInterpreteIdioma(@Res() response, @Body() interpreteIdioma: InterpreteIdioma) {
+  //       const newInterpreteIdioma = await this.interpreteIdiomaService.createInterpreteIdioma(interpreteIdioma);
+  //       return response.status(HttpStatus.CREATED).json({
+  //           newInterpreteIdioma
+  //       })
+  //   }  
 
   @Get()
   getHello(): Promise<InterpreteIdioma[]> {

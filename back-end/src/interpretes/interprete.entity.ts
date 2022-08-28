@@ -82,6 +82,12 @@ export class Interprete extends Model {
   @Column
   interpreteSenha: string;
 
+  @Column
+  interpreteStatus: boolean;
+
+  @Column
+  interpreteRemovido: boolean;
+
   /**
    * Foreign Keys
    */
@@ -95,7 +101,7 @@ export class Interprete extends Model {
   */ 
   
   @BelongsToMany(() => Idioma, () => InterpreteIdioma)
-  idioma: Idioma[];
+  idiomas: Idioma[];
 
   @BelongsToMany(() => Posto, () => InterpretePosto)
   posto: Posto[];
@@ -104,5 +110,5 @@ export class Interprete extends Model {
   pais: Pais;
 
   @HasMany(() => Credencial)
-  certificado: Credencial[];  
+  certificados: Credencial[];  
 }

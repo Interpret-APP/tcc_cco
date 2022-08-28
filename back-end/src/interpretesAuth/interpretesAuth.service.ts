@@ -10,7 +10,7 @@ export class InterpretesAuthService {
     ) {}
 
     async validateInterprete(interpreteCpf: string, senha: string): Promise<any> {
-        const interprete = await (await this.interpretesService.findByCpf(interpreteCpf)).get({plain: true});
+        const interprete = await (await this.interpretesService.getInterpreteByCPF(interpreteCpf)).get({plain: true});
 
         if (!interprete) { return null; }
         if (interprete.interpreteSenha != senha) { return null; }
