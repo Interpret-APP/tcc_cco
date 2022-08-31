@@ -1,31 +1,96 @@
-<ion-card class="page_card">
-    <ion-button class="edit_btn">Editar</ion-button>
+<ion-card>
+    <ion-button (click)="changeBool()" disabled="{{!isDisabled}}" class="edit_btn">
+        <ion-icon src="../../assets/images/personal-info/edit_icon.svg" class="edit_icon"></ion-icon>
+        <ion-label class="edit_txt">Editar</ion-label>
+    </ion-button>
 
-    <ion-text class="cadastro_ajg">Possui cadastro no sistema AJG?</ion-text>
-    <ion-button fill="clear" class="resposta_ajg">Sim</ion-button>
+    <ion-text class="titulo">Possui cadastro no sistema AJG?</ion-text>
+    <ion-button fill="clear" class="resposta">Sim</ion-button>
 
-    <ion-text class="comunidade_ling">Pertence a uma comunidade linguística minoritária?</ion-text>
-    <ion-button fill="clear" class="resposta_com">Não</ion-button>
+    <ion-text class="titulo comunidade">Pertence a uma comunidade linguística minoritária?</ion-text>
+    <ion-button fill="clear" class="resposta r">Não</ion-button>
 
-    <ion-text class="proficiencia_txt">Proficiência</ion-text>
+    <ion-text class="titulo proficiencia">Proficiência</ion-text>
+
     <ion-card class="proficiencia_card">
-        <ion-text class="idioma_txt">Português -> Inglês</ion-text>
-        <ion-chip class="traducao_chip">Tradução</ion-chip>
-        <ion-chip class="interpretacao_chip">Interpretação</ion-chip>
+        <ion-text class="idioma_txt">Português → Inglês</ion-text>
+        <ion-chip class="traducao ativo">
+            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
+            Tradução
+        </ion-chip>
+        <ion-chip class="interpretacao ativo">
+            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+            </ion-icon>
+            Interpretação
+        </ion-chip>
     </ion-card>
-    <ion-card class="proficiencia_card2">
-        <ion-text class="idioma_txt">Inglês -> Português</ion-text>
-        <ion-chip class="traducao_chip">Tradução</ion-chip>
-        <ion-chip class="interpretacao_chip">Interpretação</ion-chip>
+
+    <ion-card class="proficiencia_card p1">
+        <ion-text class="idioma_txt">Inglês → Português</ion-text>
+        <ion-chip class="traducao desativo">
+            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
+            Tradução
+        </ion-chip>
+        <ion-chip class="interpretacao ativo">
+            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+            </ion-icon>
+            Interpretação
+        </ion-chip>
     </ion-card>
-    <ion-card class="proficiencia_card3">
-        <ion-text class="idioma_txt">Alemão -> Inglês</ion-text>
-        <ion-chip class="traducao_chip">Tradução</ion-chip>
-        <ion-chip class="interpretacao_chip">Interpretação</ion-chip>
+
+    <ion-card class="proficiencia_card p2">
+        <ion-text class="idioma_txt">Alemão → Inglês</ion-text>
+        <ion-chip class="traducao ativo">
+            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
+            Tradução
+        </ion-chip>
+        <ion-chip class="interpretacao desativo">
+            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+            </ion-icon>
+            Interpretação
+        </ion-chip>
     </ion-card>
-    <ion-card class="proficiencia_card4">
-        <ion-text class="idioma_txt">Inglês -> Alemão</ion-text>
-        <ion-chip class="traducao_chip">Tradução</ion-chip>
-        <ion-chip class="interpretacao_chip">Interpretação</ion-chip>
+
+    <ion-card class="proficiencia_card p3">
+        <ion-text class="idioma_txt">Inglês → Alemão</ion-text>
+        <ion-chip class="traducao ativo">
+            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
+            Tradução
+        </ion-chip>
+        <ion-chip class="interpretacao ativo">
+            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+            </ion-icon>
+            Interpretação
+        </ion-chip>
     </ion-card>
+
+    <ion-text class="titulo certificacoes">Certificações</ion-text>
+
+    <ion-card class="certificacao_card">
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
+        <ion-text class="certificado_txt">Diploma PUC</ion-text>
+        <ion-chip class="status validado">Validado</ion-chip>
+        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
+        <ion-text class="download_txt">Baixar</ion-text>
+    </ion-card>
+
+    <ion-card class="certificacao_card c1">
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
+        <ion-text class="certificado_txt">Diploma - MobiLang 2022</ion-text>
+        <ion-chip class="status pendente">Pendente</ion-chip>
+        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
+        <ion-text class="download_txt">Baixar</ion-text>
+    </ion-card>
+
+    <ion-card class="certificacao_card c2">
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
+        <ion-text class="certificado_txt">Diploma UNB - MobiLang</ion-text>
+        <ion-chip class="status rejeitado">Rejeitado</ion-chip>
+        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
+        <ion-text class="download_txt">Baixar</ion-text>
+    </ion-card>
+
+    <ion-text class="titulo entrevista">Link da Entrevista</ion-text>
+
+    <ion-text class="entrevista_link">Não houve entrevista.</ion-text>
 </ion-card>

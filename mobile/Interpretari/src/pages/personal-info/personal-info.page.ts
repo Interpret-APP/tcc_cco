@@ -12,4 +12,9 @@ export class PersonalInfoPage implements OnInit {
   ngOnInit() {
   }
 
+  isDisabled: boolean = true;
+
+  changeBool() {
+    this.isDisabled = !this.isDisabled;
+  }
 }

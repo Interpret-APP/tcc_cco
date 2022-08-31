@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-tabs',
@@ -8,30 +7,49 @@ import { Observable } from 'rxjs';
 })
 export class TabsPage implements OnInit {
 
-  profilePicture$: Observable<string>;
-  isActive: boolean = true;
-  buttonState = [
-    { state: true },
-  ];
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  activeCheck(name) {
-    console.log(name);
-    this.isActive = !this.isActive;
+  homeStatus: string = 'ativo';
+  notificationStatus: string = 'desativo';
+  profileStatus: string = 'desativo';
+  configurationStatus: string = 'desativo';
+
+  onHome() {
+    if(this.homeStatus = "desativo"){
+      this.homeStatus = "ativo";
+      this.notificationStatus = "desativo";
+      this.profileStatus = "desativo";
+      this.configurationStatus = "desativo";
+    }
   }
 
-  buttonValue = 0;
+  onNotification() {
+    if(this.notificationStatus = "desativo"){
+      this.notificationStatus = "ativo";
+      this.profileStatus = "desativo";
+      this.configurationStatus = "desativo";
+      this.homeStatus = "desativo";
+    }
+  }
 
-  onClick() {
-    if (this.buttonValue == 1) {
-      this.buttonValue = 0;
-      console.log("azul");
-    }else{
-      this.buttonValue == 0;
+  onProfile() {
+    if(this.profileStatus = "desativo"){
+      this.profileStatus = "ativo";
+      this.configurationStatus = "desativo";
+      this.homeStatus = "desativo";
+      this.notificationStatus = "desativo";
+    }
+  }
+
+  onConfiguration() {
+    if(this.configurationStatus = "desativo"){
+      this.configurationStatus = "ativo";
+      this.homeStatus = "desativo";
+      this.notificationStatus = "desativo";
+      this.profileStatus = "desativo";
     }
   }
 }

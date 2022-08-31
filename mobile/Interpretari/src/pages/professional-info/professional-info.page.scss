@@ -1,11 +1,11 @@
-.page_card {
+ion-card {
     box-sizing: border-box;
 
     position: absolute;
     width: 323px;
     height: 719px;
-    left: 2%; //
-    top: 17%; //
+    left: 10px; //
+    top: 52px; //
 
     background: #ffffff;
     border: 1px solid rgba(81, 113, 165, 0.04);
@@ -14,6 +14,15 @@
     border-radius: 18.2143px;
 }
 
+ion-label {
+    position: absolute;
+    width: 82px; //
+    height: 12px;
+    left: 0px;
+    top: -12px; //
+}
+
+// BOTÃO EDITAR //
 .edit_btn {
     position: absolute;
     width: 43px;
@@ -21,9 +30,25 @@
     left: 268.5px;
     top: 12px;
 
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+    background: #2D4F96;
+    border-radius: 5px;
+}
+
+.edit_icon {
+    position: absolute;
+    right: 130%;
+    width: 9px;
+    height: 9px;
+}
+
+.edit_txt {
+    position: absolute;
+    top: 2px;
+
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500; //
     font-size: 8px;
     line-height: 12px;
     display: flex;
@@ -31,14 +56,10 @@
     text-align: center;
 
     color: #FFFFFF;
-
-    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
-
-    background: #2D4F96;
-    border-radius: 5px;
 }
 
-.cadastro_ajg {
+// PERGUNTAS E TÍTULOS //
+.titulo {
     position: absolute;
     width: 134px;
     height: 47px;
@@ -54,52 +75,43 @@
     color: #495057;
 }
 
-.resposta_ajg {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 36px;
-    height: 32px;
-    left: 36px;
-    top: 40px; //
-
-    background: #FFFFFF;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 9px;
-    line-height: 14px;
-
-    color: #74788D;
-}
-
-.comunidade_ling {
+.comunidade {
     position: absolute;
     width: 214px;
     height: 12px;
-    left: 36px;
     top: 82px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 8px;
-    line-height: 12px;
-
-    color: #495057;
 }
 
-.resposta_com {
+.proficiencia {
+    position: absolute;
+    width: 48px;
+    height: 12px;
+    top: 142px;
+}
+
+.certificacoes {
+    position: absolute;
+    width: 54px;
+    height: 12px;
+    top: 455px;
+}
+
+.entrevista {
+    position: absolute;
+    width: 71px;
+    height: 12px;
+    top: 624px;
+}
+
+// BOTÃO DE RESPOSTA //
+.resposta {
     box-sizing: border-box;
 
     position: absolute;
     width: 36px;
     height: 32px;
-    left: 36px;
-    top: 97px; //
+    left: 34px; //
+    top: 35px; //
 
     background: #FFFFFF;
     border: 1px solid #CED4DA;
@@ -114,30 +126,11 @@
     color: #74788D;
 }
 
-.proficiencia_txt {
-    position: absolute;
-    width: 48px;
-    height: 12px;
-    left: 36px;
-    top: 142px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 8px;
-    line-height: 12px;
-
-    color: #495057;
+.r {
+    top: 92px; //
 }
 
-.proficiencia_card {
-    position: absolute;
-    width: 235px;
-    height: 59px;
-    left: 30px; //
-    top: 140px; //   
-}
-
+// PROFICIÊNCIA INFO //
 .idioma_txt {
     position: absolute;
     width: 90px; //
@@ -154,49 +147,18 @@
     color: #74788D;
 }
 
-.traducao_chip {
+// PROFICIÊNCIA CARD //
+.proficiencia_card {
     position: absolute;
-    width: 77px;
-    height: 18px;
-    left: 20px; //
-    top: 22px;
+    width: 235px;
+    height: 59px;
+    left: 30px; //
+    top: 140px; //
 
-    background: #5171A5;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 14px;
-    display: flex;
-    align-items: center;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
-.interpretacao_chip {
-    position: absolute;
-    width: 101px;
-    height: 18px;
-    left: 102px; //
-    top: 22px;
-
-    background: #5171A5;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 14px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-.proficiencia_card2 {
+.p1 {
     position: absolute;
     width: 235px;
     height: 59px;
@@ -204,7 +166,7 @@
     top: 210px; //  
 }
 
-.proficiencia_card3 {
+.p2 {
     position: absolute;
     width: 235px;
     height: 59px;
@@ -212,10 +174,210 @@
     top: 280px; //  
 }
 
-.proficiencia_card4 {
+.p3 {
     position: absolute;
     width: 235px;
     height: 59px;
     left: 30px; //
     top: 350px; //  
+}
+
+// TRADUÇÃO CHIP //
+.traducao {
+    position: absolute;
+    width: 77px;
+    height: 18px;
+    left: 20px; //
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    padding-left: 22px;
+}
+
+.traducao_icon {
+    position: absolute;
+    width: 8.8px; //
+    height: 9.77px; //
+    left: 2%; //
+    top: 45%; //
+}
+
+.ativo {
+    background: #5171A5;
+    ;
+}
+
+.desativo {
+    background: rgba(168, 170, 184, 0.5);
+}
+
+// INTERPRETAÇÃO CHIP //
+.interpretacao {
+    position: absolute;
+    width: 101px;
+    height: 18px;
+    left: 102px; //
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    padding-left: 25px;
+}
+
+.interpretacao_icon {
+    position: absolute;
+    width: 11.92px; //
+    height: 8.5px; //
+    left: 0%; //
+    top: 50%; //
+}
+
+// CERTIFICADO CARD //
+.certificacao_card {
+    position: absolute;
+    width: 279px;
+    height: 36px;
+    left: 6px; //
+    top: 458px; //
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.c1 {
+    top: 498px; //
+}
+
+.c2 {
+    top: 538px; //
+}
+
+// CERTIFICADO INFO //
+.certificado_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 7px; //
+}
+
+.certificado_txt {
+    position: absolute;
+    width: 138px;
+    height: 13px;
+    left: 36px;
+    top: 11px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #495057;
+}
+
+// STATUS CHIP //
+.status {
+    position: absolute;
+    width: 44px;
+    height: 12px;
+    left: 169px; //
+    top: 7px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+
+    padding-left: 8px; //
+    padding-right: 40px; //
+}
+
+.validado {
+    background: rgba(52, 195, 143, 0.15);
+    color: #34C38F;
+}
+
+.pendente {
+    background: rgba(243, 233, 122, 0.27);
+    color: #ECBC40;
+}
+
+.rejeitado {
+    background: rgba(226, 87, 76, 0.15);
+    color: #E2574C;
+}
+
+// BOTÃO DE DOWNLOAD //
+.download_icon {
+    position: absolute;
+    width: 11px;
+    height: 12px;
+    left: 228px;
+    top: 11px; //
+}
+
+.download_txt {
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    left: 242px;
+    top: 12px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #5171A5;
+}
+
+// LINK DA ENTREVISTA
+.entrevista_link {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 258px;
+    height: 32px;
+    left: 36px;
+    top: 642px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+
+    padding-left: 10px; //
+    padding-top: 8px; //
 }

@@ -1,11 +1,12 @@
-// ion-tabs {
-//   position: sticky;
-// }
+ion-tabs {
+  position: static;
+  height: 946px;
+}
 
 ion-tab-button {
   position: absolute;
   height: 24px;
-  top: 101px;
+  top: 41px; //101px
 
   background: #2d4f96;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -54,8 +55,6 @@ ion-label {
   position: absolute;
   width: 111px;
   left: 14px;
-
-  background: #1c894f;
 }
 
 .professional_btn {
@@ -68,4 +67,8 @@ ion-label {
   position: absolute;
   width: 95px;
   left: 263px;
+}
+
+.ativo {
+  background: #1c894f;
 }

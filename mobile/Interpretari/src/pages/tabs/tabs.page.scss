@@ -3,7 +3,7 @@ ion-tab-bar {
     width: 375px;
     height: 55px;
     left: 0px;
-    top: 612px;
+    top: 613px; //
 
     background: #FFFFFF;
     box-shadow: inset 0px 4px 4px rgba(219, 219, 219, 0.25);
@@ -28,6 +28,8 @@ ion-label {
     display: block; //flex
     align-items: flex-end;
     text-align: center;
+
+    color: #2D4F96;
 }
 
 .frame {
@@ -36,8 +38,15 @@ ion-label {
     height: 36px;
     top: 5px;
 
-    background: #2D4F96;
     border-radius: 50px;
+}
+
+.ativo {
+    background: #1C894F;
+}
+
+.desativo {
+    background: #2D4F96;
 }
 
 .home_icon {
@@ -66,8 +75,4 @@ ion-label {
     width: 20px;
     height: 20px;
     top: 13px;
-}
-
-.isActive {
-    color: #1B8950;
 }
