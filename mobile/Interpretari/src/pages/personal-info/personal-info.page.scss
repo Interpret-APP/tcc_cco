@@ -3,7 +3,7 @@ ion-card {
 
   position: absolute;
   width: 323px;
-  height: 775px; //
+  // height: 719px;
   left: 10px; //
   top: 52px; //
 
@@ -94,7 +94,7 @@ ion-input {
   padding-left: 10px; //
 }
 
-// DATA DE CRIAÇÃO
+// DATA DE CRIAÇÃO //
 .start_date {
   position: absolute;
   width: 228px;
@@ -145,6 +145,20 @@ ion-input {
   text-align: center;
 
   color: #FFFFFF;
+}
+
+// BOTÃO INVISÍVEL //
+.ocultar {
+  display: none;
+}
+
+// CONTROLAR O TAMANHO DO CARD //
+.retrair {
+  height: 719px;
+}
+
+.expandir {
+  height: 775px;
 }
 
 // INPUTS //

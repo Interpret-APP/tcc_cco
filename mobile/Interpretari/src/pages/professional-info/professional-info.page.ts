@@ -13,8 +13,18 @@ export class ProfessionalInfoPage implements OnInit {
   }
 
   isDisabled: boolean = true;
+  // isHidden: string = "hide";
+  onEdit: string = "";
+  offEdit: string = "ocultar";
 
   changeBool() {
+    if(this.isDisabled) {
+      this.onEdit = "ocultar";
+      this.offEdit = "";
+    } else {
+      this.onEdit = "";
+      this.offEdit = "ocultar";
+    }
     this.isDisabled = !this.isDisabled;
   }
 }

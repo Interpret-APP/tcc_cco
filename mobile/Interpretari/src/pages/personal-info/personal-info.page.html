@@ -1,18 +1,18 @@
-<ion-card>
+<ion-card class="{{isRetract}}">
   <img src="../../assets/images/personal-info/user_icon.svg" class="user_photo">
 
   <ion-chip class="status_chip">Ativo</ion-chip>
 
   <ion-text class="start_date">Criado em 03 de Fevereiro de 2020</ion-text>
 
-  <ion-button (click)="changeBool()" disabled="{{!isDisabled}}" class="edit_btn">
+  <ion-button (click)="changeInfo()" class="edit_btn {{onEdit}}">
     <ion-icon src="../../assets/images/personal-info/edit_icon.svg" class="edit_icon"></ion-icon>
     <ion-label class="edit_txt">Editar</ion-label>
   </ion-button>
 
   <ion-item>
     <ion-label>Nome Completo</ion-label>
-    <ion-input readonly="{{isDisabled}}" type="name" placeholder="Fulano da Silva" tag="nameInput"></ion-input>
+    <ion-input readonly="{{isDisabled}}" type="name" placeholder="{{nome}}" tag="nameInput" [(ngModel)]="nome"></ion-input>
   </ion-item>
 
   <ion-item class="cpf_input">
@@ -65,7 +65,7 @@
     <ion-input readonly="{{isDisabled}}" type="email" placeholder="fulano_silva@hotmail.com"></ion-input>
   </ion-item>
 
-  <ion-button (click)="changeBool()" disabled="{{isDisabled}}" class="save_btn">
+  <ion-button (click)="changeInfo()" class="save_btn {{offEdit}}">
     <ion-icon src="../../assets/images/personal-info/save_icon.svg" class="save_icon"></ion-icon>
     <ion-label class="save_txt">Salvar Alterações</ion-label>
   </ion-button>

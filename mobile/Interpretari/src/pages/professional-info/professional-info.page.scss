@@ -103,6 +103,23 @@ ion-label {
     top: 624px;
 }
 
+// ÍCONES DE INFORMAÇÃO //
+.info_icon {
+    position: absolute;
+    width: 9.17px;
+    height: 9.17px;
+    left: 53.5%; //
+    top: 3.55%; //
+}
+
+.info_icon2 {
+    position: absolute;
+    width: 9.17px;
+    height: 9.17px;
+    left: 78.5%; //
+    top: 11.5%; //
+}
+
 // BOTÃO DE RESPOSTA //
 .resposta {
     box-sizing: border-box;
@@ -128,23 +145,6 @@ ion-label {
 
 .r {
     top: 92px; //
-}
-
-// PROFICIÊNCIA INFO //
-.idioma_txt {
-    position: absolute;
-    width: 90px; //
-    height: 14px;
-    left: 60px; //
-    top: 5px; //
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 9px;
-    line-height: 14px;
-
-    color: #74788D;
 }
 
 // PROFICIÊNCIA CARD //
@@ -182,6 +182,40 @@ ion-label {
     top: 350px; //  
 }
 
+// PROFICIÊNCIA INFO //
+.idioma_txt {
+    position: absolute;
+    width: 90px; //
+    height: 14px;
+    left: 70px; //
+    top: 5px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+// ÍCONES DE LIXEIRA //
+.trash_icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 91.49%;
+    top: 11.86%;
+}
+
+.c {
+    position: absolute;
+    left: 90%; //
+    right: 4.3%;
+    top: 33.33%;
+    bottom: 33.33%;
+}
+
 // TRADUÇÃO CHIP //
 .traducao {
     position: absolute;
@@ -214,7 +248,6 @@ ion-label {
 
 .ativo {
     background: #5171A5;
-    ;
 }
 
 .desativo {
@@ -251,24 +284,50 @@ ion-label {
     top: 50%; //
 }
 
+// BOTÃO ADICIONAR //
+.more_btn {
+    position: absolute;
+    width: 235px;
+    height: 20px;
+    left: 44px; //
+    top: 441px;
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    --background: white;
+}
+
+.more_icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    // left: 156px;
+    // top: 0px;
+}
+
 // CERTIFICADO CARD //
 .certificacao_card {
     position: absolute;
     width: 279px;
     height: 36px;
     left: 6px; //
-    top: 458px; //
 
     background: rgba(239, 242, 247, 0.07);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
-.c1 {
+.certificacao_card.c1 {
+    top: 458px; //
+}
+
+.certificacao_card.c2 {
     top: 498px; //
 }
 
-.c2 {
+.certificacao_card.c3 {
     top: 538px; //
 }
 
@@ -356,7 +415,7 @@ ion-label {
     color: #5171A5;
 }
 
-// LINK DA ENTREVISTA
+// LINK DA ENTREVISTA //
 .entrevista_link {
     box-sizing: border-box;
 
@@ -380,4 +439,67 @@ ion-label {
 
     padding-left: 10px; //
     padding-top: 8px; //
+}
+
+// BOTÃO ADICIONAR 2 //
+.more_btn2 {
+    position: absolute;
+    width: 279px;
+    height: 20px;
+    left: 22px;
+    top: 630px;
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    --background: white;
+}
+
+// SALVAR ALTERAÇÕES //
+.save_btn {
+    position: absolute;
+    width: 106px;
+    height: 19px;
+    left: 105px; //
+    top: 675px;
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.save_icon {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    right: 70px; //
+    top: 5px; //
+
+    mix-blend-mode: normal;
+    border: 0.7px solid #FFFFFF;
+}
+
+.save_txt {
+    position: absolute;
+    width: 78.61px;
+    height: 19px;
+    left: 14px; //
+    top: 0px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+// FUNÇÃO OCULTAR //
+.ocultar {
+    display: none;
 }

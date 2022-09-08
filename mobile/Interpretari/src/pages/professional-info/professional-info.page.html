@@ -1,19 +1,23 @@
 <ion-card>
-    <ion-button (click)="changeBool()" disabled="{{!isDisabled}}" class="edit_btn">
+    <ion-button (click)="changeBool()" class="edit_btn {{onEdit}}">
         <ion-icon src="../../assets/images/personal-info/edit_icon.svg" class="edit_icon"></ion-icon>
         <ion-label class="edit_txt">Editar</ion-label>
     </ion-button>
 
     <ion-text class="titulo">Possui cadastro no sistema AJG?</ion-text>
     <ion-button fill="clear" class="resposta">Sim</ion-button>
+    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon {{offEdit}}"></ion-icon>
 
     <ion-text class="titulo comunidade">Pertence a uma comunidade linguística minoritária?</ion-text>
     <ion-button fill="clear" class="resposta r">Não</ion-button>
+    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon2 {{offEdit}}"></ion-icon>
 
     <ion-text class="titulo proficiencia">Proficiência</ion-text>
 
     <ion-card class="proficiencia_card">
         <ion-text class="idioma_txt">Português → Inglês</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
+        </ion-icon>
         <ion-chip class="traducao ativo">
             <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
             Tradução
@@ -27,6 +31,8 @@
 
     <ion-card class="proficiencia_card p1">
         <ion-text class="idioma_txt">Inglês → Português</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
+        </ion-icon>
         <ion-chip class="traducao desativo">
             <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
             Tradução
@@ -40,6 +46,8 @@
 
     <ion-card class="proficiencia_card p2">
         <ion-text class="idioma_txt">Alemão → Inglês</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
+        </ion-icon>
         <ion-chip class="traducao ativo">
             <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
             Tradução
@@ -51,8 +59,14 @@
         </ion-chip>
     </ion-card>
 
+    <ion-button class="more_btn {{offEdit}}">
+        <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
+    </ion-button>
+
     <ion-card class="proficiencia_card p3">
         <ion-text class="idioma_txt">Inglês → Alemão</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
+        </ion-icon>
         <ion-chip class="traducao ativo">
             <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
             Tradução
@@ -66,31 +80,49 @@
 
     <ion-text class="titulo certificacoes">Certificações</ion-text>
 
-    <ion-card class="certificacao_card">
-        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
+    <ion-card class="certificacao_card c1">
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
+        </ion-icon>
         <ion-text class="certificado_txt">Diploma PUC</ion-text>
         <ion-chip class="status validado">Validado</ion-chip>
-        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
-        <ion-text class="download_txt">Baixar</ion-text>
-    </ion-card>
-
-    <ion-card class="certificacao_card c1">
-        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
-        <ion-text class="certificado_txt">Diploma - MobiLang 2022</ion-text>
-        <ion-chip class="status pendente">Pendente</ion-chip>
-        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
-        <ion-text class="download_txt">Baixar</ion-text>
+        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon">
+        </ion-icon>
+        <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
+        </ion-icon>
     </ion-card>
 
     <ion-card class="certificacao_card c2">
-        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon"></ion-icon>
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
+        </ion-icon>
+        <ion-text class="certificado_txt">Diploma - MobiLang 2022</ion-text>
+        <ion-chip class="status pendente">Pendente</ion-chip>
+        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
+        <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
+        </ion-icon>
+    </ion-card>
+
+    <ion-card class="certificacao_card c3">
+        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
+        </ion-icon>
         <ion-text class="certificado_txt">Diploma UNB - MobiLang</ion-text>
         <ion-chip class="status rejeitado">Rejeitado</ion-chip>
         <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
-        <ion-text class="download_txt">Baixar</ion-text>
+        <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
+        </ion-icon>
     </ion-card>
 
-    <ion-text class="titulo entrevista">Link da Entrevista</ion-text>
+    <ion-text class="titulo entrevista {{onEdit}}">Link da Entrevista</ion-text>
+    <ion-text class="entrevista_link {{onEdit}}">Não houve entrevista.</ion-text>
 
-    <ion-text class="entrevista_link">Não houve entrevista.</ion-text>
+    <ion-button class="more_btn2 {{offEdit}}">
+        <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="changeBool()" class="save_btn {{offEdit}}">
+        <ion-icon src="../../assets/images/personal-info/save_icon.svg" class="save_icon"></ion-icon>
+        <ion-label class="save_txt">Salvar Alterações</ion-label>
+    </ion-button>
 </ion-card>

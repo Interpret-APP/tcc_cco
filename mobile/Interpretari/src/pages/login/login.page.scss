@@ -113,6 +113,7 @@ hr {
     line-height: 20px;
 }
 
+// BOTÃO DO FACEBOOK //
 .facebook_button {
     box-sizing: border-box;
 
@@ -132,18 +133,16 @@ hr {
     position: absolute;
     width: 26px;
     height: 26px;
-    left: 45px;
-    top: 490px;
-
-    background: url(../../assets/images/login/facebook.png);
+    right: 92px; //
+    top: 6px; //
 }
 
-.facebook_text {
+.facebook_txt {
     position: absolute;
     width: 80px;
     height: 24px;
-    left: 82px;
-    top: 492px;
+    left: 25px; //
+    top: 8px; //
 
     font-family: 'Poppins';
     font-style: normal;
@@ -158,6 +157,7 @@ hr {
     color: #FFFFFF;
 }
 
+// BOTÃO DO GOOGLE //
 .google_button {
     box-sizing: border-box;
 
@@ -177,18 +177,16 @@ hr {
     position: absolute;
     width: 26px;
     height: 26px;
-    left: 205px;
-    top: 490px;
-
-    background: url(../../assets/images/login/google.png);
+    right: 92px; //
+    top: 6px; //
 }
 
-.google_text {
+.google_txt {
     position: absolute;
     width: 64px;
     height: 24px;
-    left: 252px;
-    top: 492px;
+    left: 25px; //
+    top: 8px; //
 
     font-family: 'Poppins';
     font-style: normal;
