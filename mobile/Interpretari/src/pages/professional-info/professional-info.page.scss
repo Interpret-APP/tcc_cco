@@ -22,6 +22,13 @@ ion-label {
     top: -12px; //
 }
 
+ion-modal {
+    --width: 277px;
+    --height: 161px;
+    --border-radius: 18.21px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
 // BOTÃO EDITAR //
 .edit_btn {
     position: absolute;
@@ -87,6 +94,14 @@ ion-label {
     width: 48px;
     height: 12px;
     top: 142px;
+}
+
+.modal {
+    position: absolute;
+    width: 231px;
+    height: 12px;
+    left: 14px;
+    top: 10px;
 }
 
 .certificacoes {
@@ -290,7 +305,7 @@ ion-label {
     width: 235px;
     height: 20px;
     left: 44px; //
-    top: 441px;
+    top: 155px; //441px
 
     background: rgba(239, 242, 247, 0.07);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -306,6 +321,224 @@ ion-label {
     // left: 156px;
     // top: 0px;
 }
+
+// MODAL //
+.traducao_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 14px;
+    top: 30px;
+}
+
+.interpretacao_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 78px;
+    top: 30px;
+}
+
+.label {
+    position: absolute;
+    height: 12px;
+    top: 30px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.label.traducao {
+    width: 39px;
+    left: 5px; //
+}
+
+.label.interpretacao {
+    width: 55px;
+    left: 65px; //
+}
+
+.label.partida {
+    width: 73px;
+    height: 12px;
+    left: 12.5px;
+    top: 52px;
+}
+
+.label.chegada {
+    width: 81px; //
+    height: 12px;
+    left: 159.5px;
+    top: 52px;
+}
+
+.label.nativo {
+    width: 26px;
+    height: 12px;
+    left: 26px;
+    top: 110px;
+}
+
+.label.nativo2 {
+    width: 26px;
+    height: 12px;
+    left: 174px;
+    top: 110px;
+}
+
+.partida_input {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 105px;
+    height: 32px;
+    left: 12.5px;
+    top: 67px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    --padding-start: 8.5px;
+
+    font-size: 9px;
+}
+
+.chegada_input {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 105px;
+    height: 32px;
+    left: 159.5px;
+    top: 67px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    --padding-start: 8.5px;
+
+    font-size: 9px;
+}
+
+.arrow_icon {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 130px; //
+    top: 75px; //
+}
+
+.partida_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 12.5px;
+    top: 110px;
+}
+
+.chegada_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 159.5px;
+    top: 110px;
+}
+
+.cancel_btn {
+    position: absolute;
+    width: 75px;
+    height: 19px;
+    left: 51px;
+    top: 132px;
+
+    background: #E2574C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.save_proficiencia {
+    position: absolute;
+    width: 75px;
+    height: 19px;
+    left: 151px;
+    top: 132px;
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+// .traducao_txt {
+//     position: absolute;
+//     width: 39px;
+//     height: 12px;
+//     left: 26px;
+//     top: 29px;
+
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 8px;
+//     line-height: 12px;
+
+//     color: #495057;
+// }
+
+// .interpretacao_txt {
+//     position: absolute;
+//     width: 55px;
+//     height: 12px;
+//     left: 90px;
+//     top: 29px;
+
+//     font-family: 'Poppins';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 8px;
+//     line-height: 12px;
+
+//     color: #495057;
+// }
+
+// .wrapper {
+//     position: relative;
+//     width: 277px;
+//     height: 161px;
+//     left: 13.5%;
+//     top: 37.5%;
+
+//     background: #FFFFFF;
+//     border-radius: 18.21px;
+// }
 
 // CERTIFICADO CARD //
 .certificacao_card {

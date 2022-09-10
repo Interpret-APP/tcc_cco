@@ -14,69 +14,54 @@
 
     <ion-text class="titulo proficiencia">Proficiência</ion-text>
 
-    <ion-card class="proficiencia_card">
-        <ion-text class="idioma_txt">Português → Inglês</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
-        </ion-icon>
-        <ion-chip class="traducao ativo">
-            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
-            Tradução
-        </ion-chip>
-        <ion-chip class="interpretacao ativo">
-            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
-            </ion-icon>
-            Interpretação
-        </ion-chip>
-    </ion-card>
-
-    <ion-card class="proficiencia_card p1">
-        <ion-text class="idioma_txt">Inglês → Português</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
-        </ion-icon>
-        <ion-chip class="traducao desativo">
-            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
-            Tradução
-        </ion-chip>
-        <ion-chip class="interpretacao ativo">
-            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
-            </ion-icon>
-            Interpretação
-        </ion-chip>
-    </ion-card>
-
-    <ion-card class="proficiencia_card p2">
-        <ion-text class="idioma_txt">Alemão → Inglês</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
-        </ion-icon>
-        <ion-chip class="traducao ativo">
-            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
-            Tradução
-        </ion-chip>
-        <ion-chip class="interpretacao desativo">
-            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
-            </ion-icon>
-            Interpretação
-        </ion-chip>
-    </ion-card>
-
-    <ion-button class="more_btn {{offEdit}}">
+    <ion-button id="open-custom-dialog" expand="block" class="more_btn {{offEdit}}">
         <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
     </ion-button>
 
-    <ion-card class="proficiencia_card p3">
-        <ion-text class="idioma_txt">Inglês → Alemão</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
-        </ion-icon>
-        <ion-chip class="traducao ativo">
-            <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon"></ion-icon>
-            Tradução
-        </ion-chip>
-        <ion-chip class="interpretacao ativo">
-            <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+    <ion-modal #modal trigger="open-custom-dialog">
+        <ng-template>
+            <ion-text class="titulo modal">Selecione um ou mais domínios:</ion-text>
+
+            <ion-checkbox [(ngModel)]="idioma_traducao" class="traducao_checkbox"></ion-checkbox>
+            <ion-label class="label traducao">Tradução</ion-label>
+
+            <ion-checkbox [(ngModel)]="idioma_interpretacao" class="interpretacao_checkbox"></ion-checkbox>
+            <ion-label class="label interpretacao">Interpretação</ion-label>
+
+            <ion-label class="label partida">Idioma de Partida</ion-label>
+            <ion-input [(ngModel)]="idioma_partida" placeholder="Digite o idioma" class="partida_input"></ion-input>
+            <ion-checkbox [(ngModel)]="nativo_partida" class="partida_checkbox"></ion-checkbox>
+            <ion-label class="label nativo">Nativo</ion-label>
+
+            <ion-icon src="../../assets/images/professional-info/arrow_icon.svg" class="arrow_icon"></ion-icon>
+
+            <ion-label class="label chegada">Idioma de Chegada</ion-label>
+            <ion-input [(ngModel)]="idioma_chegada" placeholder="Digite o idioma" class="chegada_input"></ion-input>
+            <ion-checkbox [(ngModel)]="nativo_chegada" class="chegada_checkbox"></ion-checkbox>
+            <ion-label class="label nativo2">Nativo</ion-label>
+
+            <ion-button fill="clear" (click)="modal.dismiss()" class="cancel_btn">Cancelar</ion-button>
+            <ion-button (click)="addProficiencia()" class="save_proficiencia">Salvar</ion-button>
+        </ng-template>
+    </ion-modal>
+
+    <!-- <ion-list> -->
+        <ion-card *ngFor="let proficiencia of proficienciaList" class="proficiencia_card">
+            <ion-text class="idioma_txt">{{idioma_partida}} → {{idioma_chegada}}</ion-text>
+            <ion-icon (click)="removeProficiencia(0)" src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon p {{offEdit}}">
             </ion-icon>
-            Interpretação
-        </ion-chip>
-    </ion-card>
+            <ion-chip class="traducao {{idiomaT}}">
+                <ion-icon src="../../assets/images/professional-info/traducao_icon.svg" class="traducao_icon">
+                </ion-icon>
+                Tradução
+            </ion-chip>
+            <ion-chip class="interpretacao {{idiomaI}}">
+                <ion-icon src="../../assets/images/professional-info/interpretacao_icon.svg" class="interpretacao_icon">
+                </ion-icon>
+                Interpretação
+            </ion-chip>
+        </ion-card>
+    <!-- </ion-list> -->
 
     <ion-text class="titulo certificacoes">Certificações</ion-text>
 
