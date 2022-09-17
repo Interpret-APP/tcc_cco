@@ -1,5 +1,5 @@
 ion-card {
-    box-sizing: border-box;
+    // box-sizing: border-box;
 
     position: absolute;
     width: 323px;
@@ -12,6 +12,8 @@ ion-card {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
         -18.21px 18.2143px 36.4286px rgba(211, 209, 216, 0.1);
     border-radius: 18.2143px;
+
+    // --padding-end: 100px;
 }
 
 ion-label {
@@ -22,11 +24,18 @@ ion-label {
     top: -12px; //
 }
 
-ion-modal {
+.proficiencia_modal {
     --width: 277px;
     --height: 161px;
-    --border-radius: 18.21px;
     --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --border-radius: 18.21px;
+}
+
+.certificacao_modal {
+    --width: 277px;
+    --height: 373px;
+    --box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    --border-radius: 18.21px;
 }
 
 // BOTÃO EDITAR //
@@ -105,10 +114,10 @@ ion-modal {
 }
 
 .certificacoes {
-    position: absolute;
+    position: relative;
     width: 54px;
     height: 12px;
-    top: 455px;
+    top: 170px; //
 }
 
 .entrevista {
@@ -162,40 +171,51 @@ ion-modal {
     top: 92px; //
 }
 
+.main_content_div {
+    padding: 16px;
+
+    .card_div {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
+
 // PROFICIÊNCIA CARD //
 .proficiencia_card {
-    position: absolute;
+    position: relative;
     width: 235px;
     height: 59px;
     left: 30px; //
     top: 140px; //
 
     text-align: center;
+
+    margin-bottom: -15px; //
 }
 
-.p1 {
-    position: absolute;
-    width: 235px;
-    height: 59px;
-    left: 30px; //
-    top: 210px; //  
-}
+// .p1 {
+//     position: absolute;
+//     width: 235px;
+//     height: 59px;
+//     left: 30px; //
+//     top: 210px; //  
+// }
 
-.p2 {
-    position: absolute;
-    width: 235px;
-    height: 59px;
-    left: 30px; //
-    top: 280px; //  
-}
+// .p2 {
+//     position: absolute;
+//     width: 235px;
+//     height: 59px;
+//     left: 30px; //
+//     top: 280px; //  
+// }
 
-.p3 {
-    position: absolute;
-    width: 235px;
-    height: 59px;
-    left: 30px; //
-    top: 350px; //  
-}
+// .p3 {
+//     position: absolute;
+//     width: 235px;
+//     height: 59px;
+//     left: 30px; //
+//     top: 350px; //  
+// }
 
 // PROFICIÊNCIA INFO //
 .idioma_txt {
@@ -261,14 +281,6 @@ ion-modal {
     top: 45%; //
 }
 
-.ativo {
-    background: #5171A5;
-}
-
-.desativo {
-    background: rgba(168, 170, 184, 0.5);
-}
-
 // INTERPRETAÇÃO CHIP //
 .interpretacao {
     position: absolute;
@@ -301,11 +313,26 @@ ion-modal {
 
 // BOTÃO ADICIONAR //
 .more_btn {
-    position: absolute;
+    position: relative;
     width: 235px;
     height: 20px;
     left: 44px; //
-    top: 155px; //441px
+    top: 160px; //441px
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    --background: white;
+}
+
+// BOTÃO ADICIONAR 2 //
+.more_btn2 {
+    position: relative;
+    width: 279px;
+    height: 20px;
+    left: 22px;
+    top: 180px; //
 
     background: rgba(239, 242, 247, 0.07);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -389,6 +416,13 @@ ion-modal {
     height: 12px;
     left: 174px;
     top: 110px;
+}
+
+.label.credencial {
+    width: 75px;
+    height: 12px;
+    left: 15px;
+    top: 35px;
 }
 
 .partida_input {
@@ -674,20 +708,7 @@ ion-modal {
     padding-top: 8px; //
 }
 
-// BOTÃO ADICIONAR 2 //
-.more_btn2 {
-    position: absolute;
-    width: 279px;
-    height: 20px;
-    left: 22px;
-    top: 630px;
 
-    background: rgba(239, 242, 247, 0.07);
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-
-    --background: white;
-}
 
 // SALVAR ALTERAÇÕES //
 .save_btn {
@@ -735,4 +756,32 @@ ion-modal {
 // FUNÇÃO OCULTAR //
 .ocultar {
     display: none;
+}
+
+
+
+// MODAL 2 //
+.credencial_slc {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 118px;
+    height: 26px;
+    left: 12px;
+    top: 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #74788D;
+
+    padding-left: 0px;
 }
