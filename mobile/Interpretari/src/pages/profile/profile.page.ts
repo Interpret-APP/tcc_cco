@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    //if (this.router.url = '');
   }
 
   personalStatus: string = 'ativo';
@@ -17,7 +19,7 @@ export class ProfilePage implements OnInit {
   workStatus: string = 'desativo';
 
   personalBtn() {
-    if(this.personalStatus = 'desativo') {
+    if (this.personalStatus = 'desativo') {
       this.personalStatus = 'ativo';
       this.professionalStatus = 'desativo';
       this.workStatus = 'desativo';
@@ -25,7 +27,7 @@ export class ProfilePage implements OnInit {
   }
 
   professionalBtn() {
-    if(this.professionalStatus = 'desativo') {
+    if (this.professionalStatus = 'desativo') {
       this.professionalStatus = 'ativo';
       this.workStatus = 'desativo';
       this.personalStatus = 'desativo';
@@ -33,7 +35,7 @@ export class ProfilePage implements OnInit {
   }
 
   workBtn() {
-    if(this.workStatus = 'desativo') {
+    if (this.workStatus = 'desativo') {
       this.workStatus = 'ativo';
       this.personalStatus = 'desativo';
       this.professionalStatus = 'desativo';

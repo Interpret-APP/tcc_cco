@@ -18,7 +18,7 @@ export class TabsPage implements OnInit {
   configurationStatus: string = 'desativo';
 
   onHome() {
-    if(this.homeStatus = "desativo"){
+    if (this.homeStatus = "desativo") {
       this.homeStatus = "ativo";
       this.notificationStatus = "desativo";
       this.profileStatus = "desativo";
@@ -27,7 +27,7 @@ export class TabsPage implements OnInit {
   }
 
   onNotification() {
-    if(this.notificationStatus = "desativo"){
+    if (this.notificationStatus = "desativo") {
       this.notificationStatus = "ativo";
       this.profileStatus = "desativo";
       this.configurationStatus = "desativo";
@@ -36,7 +36,7 @@ export class TabsPage implements OnInit {
   }
 
   onProfile() {
-    if(this.profileStatus = "desativo"){
+    if (this.profileStatus = "desativo") {
       this.profileStatus = "ativo";
       this.configurationStatus = "desativo";
       this.homeStatus = "desativo";
@@ -45,7 +45,7 @@ export class TabsPage implements OnInit {
   }
 
   onConfiguration() {
-    if(this.configurationStatus = "desativo"){
+    if (this.configurationStatus = "desativo") {
       this.configurationStatus = "ativo";
       this.homeStatus = "desativo";
       this.notificationStatus = "desativo";

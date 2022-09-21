@@ -74,8 +74,8 @@ ion-label {
     color: #FFFFFF;
 }
 
-// PERGUNTAS E TÍTULOS //
-.titulo {
+// TÍTULOS //
+.title {
     position: absolute;
     width: 134px;
     height: 47px;
@@ -91,40 +91,37 @@ ion-label {
     color: #495057;
 }
 
-.comunidade {
-    position: absolute;
+.title.comunidade {
     width: 214px;
     height: 12px;
     top: 82px;
 }
 
-.proficiencia {
-    position: absolute;
+.title.proficiencia {
     width: 48px;
     height: 12px;
     top: 142px;
 }
 
-.modal {
-    position: absolute;
+.title.dominios {
     width: 231px;
     height: 12px;
     left: 14px;
     top: 10px;
 }
 
-.certificacoes {
+.title.certificacoes {
     position: relative;
     width: 54px;
     height: 12px;
-    top: 170px; //
+    top: 170px;
 }
 
-.entrevista {
-    position: absolute;
-    width: 71px;
+.title.upload {
+    width: 231px;
     height: 12px;
-    top: 624px;
+    left: 14px;
+    top: 10px;
 }
 
 // ÍCONES DE INFORMAÇÃO //
@@ -132,14 +129,14 @@ ion-label {
     position: absolute;
     width: 9.17px;
     height: 9.17px;
+}
+
+.info_icon.ajg {
     left: 53.5%; //
     top: 3.55%; //
 }
 
-.info_icon2 {
-    position: absolute;
-    width: 9.17px;
-    height: 9.17px;
+.info_icon.com {
     left: 78.5%; //
     top: 11.5%; //
 }
@@ -152,7 +149,7 @@ ion-label {
     width: 36px;
     height: 32px;
     left: 34px; //
-    top: 35px; //
+    top: 0px; //
 
     background: #FFFFFF;
     border: 1px solid #CED4DA;
@@ -167,17 +164,12 @@ ion-label {
     color: #74788D;
 }
 
-.r {
-    top: 92px; //
+.resposta.ajg {
+    top: 35px; //
 }
 
-.main_content_div {
-    padding: 16px;
-
-    .card_div {
-        padding: 10px;
-        margin-bottom: 15px;
-    }
+.resposta.comunidade {
+    top: 92px; //
 }
 
 // PROFICIÊNCIA CARD //
@@ -192,30 +184,6 @@ ion-label {
 
     margin-bottom: -15px; //
 }
-
-// .p1 {
-//     position: absolute;
-//     width: 235px;
-//     height: 59px;
-//     left: 30px; //
-//     top: 210px; //  
-// }
-
-// .p2 {
-//     position: absolute;
-//     width: 235px;
-//     height: 59px;
-//     left: 30px; //
-//     top: 280px; //  
-// }
-
-// .p3 {
-//     position: absolute;
-//     width: 235px;
-//     height: 59px;
-//     left: 30px; //
-//     top: 350px; //  
-// }
 
 // PROFICIÊNCIA INFO //
 .idioma_txt {
@@ -243,12 +211,17 @@ ion-label {
     top: 11.86%;
 }
 
-.c {
+.trash_icon.certificacao {
     position: absolute;
     left: 90%; //
     right: 4.3%;
     top: 33.33%;
     bottom: 33.33%;
+}
+
+.trash_icon.modal {
+    left: 205px;
+    top: 4px;
 }
 
 // TRADUÇÃO CHIP //
@@ -314,10 +287,7 @@ ion-label {
 // BOTÃO ADICIONAR //
 .more_btn {
     position: relative;
-    width: 235px;
     height: 20px;
-    left: 44px; //
-    top: 160px; //441px
 
     background: rgba(239, 242, 247, 0.07);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -326,27 +296,22 @@ ion-label {
     --background: white;
 }
 
-// BOTÃO ADICIONAR 2 //
-.more_btn2 {
-    position: relative;
+.more_btn.proficiencia {
+    width: 235px;
+    left: 44px;
+    top: 160px;
+}
+
+.more_btn.certificacao {
     width: 279px;
-    height: 20px;
-    left: 22px;
-    top: 180px; //
-
-    background: rgba(239, 242, 247, 0.07);
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-
-    --background: white;
+    left: 20px;
+    top: 175px;
 }
 
 .more_icon {
     position: absolute;
     width: 14px;
     height: 14px;
-    // left: 156px;
-    // top: 0px;
 }
 
 // MODAL //
@@ -366,6 +331,7 @@ ion-label {
     top: 30px;
 }
 
+// LABELS //
 .label {
     position: absolute;
     height: 12px;
@@ -374,6 +340,22 @@ ion-label {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.label.entrevista {
+    position: absolute;
+    width: 71px;
+    height: 12px;
+    left: 36px;
+    top: 624px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
     font-size: 8px;
     line-height: 12px;
 
@@ -392,46 +374,53 @@ ion-label {
 
 .label.partida {
     width: 73px;
-    height: 12px;
     left: 12.5px;
     top: 52px;
 }
 
 .label.chegada {
     width: 81px; //
-    height: 12px;
     left: 159.5px;
     top: 52px;
 }
 
 .label.nativo {
     width: 26px;
-    height: 12px;
     left: 26px;
     top: 110px;
 }
 
 .label.nativo2 {
     width: 26px;
-    height: 12px;
     left: 174px;
     top: 110px;
 }
 
 .label.credencial {
     width: 75px;
-    height: 12px;
     left: 15px;
     top: 35px;
 }
 
-.partida_input {
+.label.descricao {
+    width: 104px;
+    left: 18px;
+    top: 10px;
+}
+
+.label.data {
+    width: 84px;
+    left: 20px;
+    top: 100px;
+}
+
+.input {
     box-sizing: border-box;
 
     position: absolute;
     width: 105px;
     height: 32px;
-    left: 12.5px;
+    left: 0px;
     top: 67px;
 
     background: #FFFFFF;
@@ -443,22 +432,26 @@ ion-label {
     font-size: 9px;
 }
 
-.chegada_input {
-    box-sizing: border-box;
+.input.partida {
+    left: 12.5px;
+}
 
-    position: absolute;
-    width: 105px;
-    height: 32px;
+.input.chegada {
     left: 159.5px;
-    top: 67px;
+}
 
-    background: #FFFFFF;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
+.input.desc {
+    width: 208px;
+    height: 56px;
+    left: 16px;
+    top: 25px;
+}
 
-    --padding-start: 8.5px;
-
-    font-size: 9px;
+.input.data {
+    width: 118px;
+    height: 26px;
+    left: 18px;
+    top: 115px;
 }
 
 .arrow_icon {
@@ -490,7 +483,6 @@ ion-label {
     width: 75px;
     height: 19px;
     left: 51px;
-    top: 132px;
 
     background: #E2574C;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -508,12 +500,21 @@ ion-label {
     color: white;
 }
 
-.save_proficiencia {
-    position: absolute;
-    width: 75px;
+.cancel_btn.modal1 {
+    top: 130px;
+}
+
+.cancel_btn.modal2 {
+    top: 336px;
+}
+
+// SALVAR ALTERAÇÕES //
+.save_btn {
+    position: relative; //
+    width: 106px;
     height: 19px;
-    left: 151px;
-    top: 132px;
+    left: 105px; //
+    top: 195px; //675px
 
     background: #2D4F96;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -531,72 +532,106 @@ ion-label {
     color: #FFFFFF;
 }
 
-// .traducao_txt {
-//     position: absolute;
-//     width: 39px;
-//     height: 12px;
-//     left: 26px;
-//     top: 29px;
+.save_btn.modal1 {
+    width: 75px;
+    left: 151px;
+    top: 130px;
+}
 
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 8px;
-//     line-height: 12px;
+.save_btn.modal2 {
+    width: 75px;
+    left: 151px;
+    top: 336px;
+}
 
-//     color: #495057;
-// }
+.save_icon {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 3px;
+    top: 5px; //
 
-// .interpretacao_txt {
-//     position: absolute;
-//     width: 55px;
-//     height: 12px;
-//     left: 90px;
-//     top: 29px;
+    mix-blend-mode: normal;
+    border: 0.7px solid #FFFFFF;
+}
 
-//     font-family: 'Poppins';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 8px;
-//     line-height: 12px;
+.save_txt {
+    position: absolute;
+    width: 78.61px;
+    height: 19px;
+    left: 20px; //
+    top: 0px; //
 
-//     color: #495057;
-// }
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-// .wrapper {
-//     position: relative;
-//     width: 277px;
-//     height: 161px;
-//     left: 13.5%;
-//     top: 37.5%;
+    color: #FFFFFF;
+}
 
-//     background: #FFFFFF;
-//     border-radius: 18.21px;
-// }
+.load_btn {
+    position: absolute;
+    width: 76px;
+    height: 19px;
+    left: 80px;
+    top: 150px;
+
+    background: #5171A5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
 
 // CERTIFICADO CARD //
 .certificacao_card {
-    position: absolute;
+    position: relative;
     width: 279px;
     height: 36px;
     left: 6px; //
+    top: 155px;
 
     background: rgba(239, 242, 247, 0.07);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+
+    margin-bottom: -15px;
 }
 
-.certificacao_card.c1 {
-    top: 458px; //
+.certificacao_card.modal {
+    position: absolute;
+    width: 242px;
+    height: 20px;
+    left: 0px;
+    top: 82px; //
+
+    border-radius: 5px;
 }
 
-.certificacao_card.c2 {
-    top: 498px; //
+.certificacao_card.modal2 {
+    position: absolute;
+    width: 242px;
+    height: 189px;
+    left: 0px; //
+    top: 80px; //107px com o outro modal ativado
+
+    border-radius: 5px;
 }
 
-.certificacao_card.c3 {
-    top: 538px; //
-}
+// .certificacao_card.c1 {
+//     top: 458px; //
+// }
+
+// .certificacao_card.c2 {
+//     top: 498px; //
+// }
+
+// .certificacao_card.c3 {
+//     top: 538px; //
+// }
 
 // CERTIFICADO INFO //
 .certificado_icon {
@@ -605,6 +640,14 @@ ion-label {
     height: 20px;
     left: 10px;
     top: 7px; //
+}
+
+.certificado_icon.modal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 19px;
+    top: 5px;
 }
 
 .certificado_txt {
@@ -623,6 +666,10 @@ ion-label {
     color: #495057;
 }
 
+.certificado_txt.modal {
+    top: 3px;
+}
+
 // STATUS CHIP //
 .status {
     position: absolute;
@@ -638,7 +685,7 @@ ion-label {
     line-height: 10px;
     text-align: center;
 
-    padding-left: 8px; //
+    padding-left: 6px; //
     padding-right: 40px; //
 }
 
@@ -708,66 +755,19 @@ ion-label {
     padding-top: 8px; //
 }
 
-
-
-// SALVAR ALTERAÇÕES //
-.save_btn {
-    position: absolute;
-    width: 106px;
-    height: 19px;
-    left: 105px; //
-    top: 675px;
-
-    background: #2D4F96;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-.save_icon {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    right: 70px; //
-    top: 5px; //
-
-    mix-blend-mode: normal;
-    border: 0.7px solid #FFFFFF;
-}
-
-.save_txt {
-    position: absolute;
-    width: 78.61px;
-    height: 19px;
-    left: 14px; //
-    top: 0px; //
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500; //
-    font-size: 8px;
-    line-height: 12px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
 // FUNÇÃO OCULTAR //
 .ocultar {
     display: none;
 }
 
-
-
-// MODAL 2 //
+// ION-SELECT DO MODAL //
 .credencial_slc {
     box-sizing: border-box;
 
     position: absolute;
     width: 118px;
     height: 26px;
-    left: 12px;
+    left: 15px; //
     top: 50px;
 
     background: #FFFFFF;
@@ -784,4 +784,37 @@ ion-label {
     color: #74788D;
 
     padding-left: 0px;
+}
+
+.upload_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 90%;
+    top: 21.07%;
+}
+
+.load_txt {
+    position: absolute;
+    width: 46px;
+    height: 19px;
+    left: 12px; //
+    top: 0px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.baby_icon {
+    position: absolute;
+    left: 55px;
+    top: 5px;
 }

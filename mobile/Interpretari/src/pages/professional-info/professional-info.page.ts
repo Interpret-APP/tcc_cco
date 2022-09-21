@@ -93,30 +93,50 @@ export class ProfessionalInfoPage implements OnInit {
     {
       tipo: 'Diploma',
       download: '../../assets/images/professional-info/download_icon.svg',
-      desc: 'PUC Formação A...',
+      descricao: 'PUC FORMAÇÃO',
       data: '12/11/19',
       status: 'validado',
     },
     {
       tipo: 'Diploma',
       download: '../../assets/images/professional-info/download_icon.svg',
-      desc: 'MobiLang 2022',
+      descricao: 'MobiLang 2022',
       data: '12/11/22',
       status: 'pendente',
     },
     {
       tipo: 'Diploma',
       download: '../../assets/images/professional-info/download_icon.svg',
-      desc: 'UNB - Mobilang B...',
+      descricao: 'UNB MobiLang',
       data: '12/11/20',
       status: 'rejeitado',
     }
-  ]
+  ];
 
+  tipo
+  download
+  descricao
+  data
+  status
 
+  newCertificacao
 
+  addCertificacao() {
+    this.newCertificacao = ({
+      tipo: this.tipo,
+      download: this.download,
+      descricao: this.descricao,
+      data: this.data,
+      status: this.status,
+    })
+    this.modalCtrl.dismiss();
+    this.certificacaoList.push(this.newCertificacao);
+    console.log(this.certificacaoList);
+  }
 
-
+  removeCertificacao(index) {
+    this.certificacaoList.splice(index, 1);
+  }
 
 
 
@@ -131,8 +151,6 @@ export class ProfessionalInfoPage implements OnInit {
   // nativo_chegada: boolean = false;
 
   // certificacaoList = [];
-
-
 
   // addProficiencia() {
   //   if (this.idioma_partida.length > 0) {

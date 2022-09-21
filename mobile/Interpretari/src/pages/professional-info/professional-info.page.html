@@ -4,46 +4,47 @@
         <ion-label class="edit_txt">Editar</ion-label>
     </ion-button>
 
-    <ion-text class="titulo">Possui cadastro no sistema AJG?</ion-text>
-    <ion-button fill="clear" class="resposta">Sim</ion-button>
-    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon {{offEdit}}"></ion-icon>
+    <ion-text class="title">Possui cadastro no sistema AJG?</ion-text>
+    <ion-button fill="clear" class="resposta ajg">Sim</ion-button>
+    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon ajg {{offEdit}}"></ion-icon>
 
-    <ion-text class="titulo comunidade">Pertence a uma comunidade linguística minoritária?</ion-text>
-    <ion-button fill="clear" class="resposta r">Não</ion-button>
-    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon2 {{offEdit}}"></ion-icon>
+    <ion-text class="title comunidade">Pertence a uma comunidade linguística minoritária?</ion-text>
+    <ion-button fill="clear" class="resposta comunidade">Não</ion-button>
+    <ion-icon src="../../assets/images/professional-info/info_icon.svg" class="info_icon com {{offEdit}}"></ion-icon>
 
-    <ion-text class="titulo proficiencia">Proficiência</ion-text>
+    <ion-text class="title proficiencia">Proficiência</ion-text>
 
     <ion-modal #modal trigger="open-proficiencia-dialog" class="proficiencia_modal">
         <ng-template>
-            <ion-text class="titulo modal">Selecione um ou mais domínios:</ion-text>
+            <ion-text class="title dominios">Selecione um ou mais domínios:</ion-text>
 
             <ion-checkbox [(ngModel)]="onTraducao" class="traducao_checkbox"></ion-checkbox>
-            <ion-label class="label traducao">Tradução</ion-label>
+            <ion-text class="label traducao">Tradução</ion-text>
 
             <ion-checkbox [(ngModel)]="onInterpretacao" class="interpretacao_checkbox"></ion-checkbox>
             <ion-label class="label interpretacao">Interpretação</ion-label>
 
             <ion-label class="label partida">Idioma de Partida</ion-label>
-            <ion-input [(ngModel)]="idioma_partida" placeholder="Digite o idioma" class="partida_input"></ion-input>
+            <ion-input [(ngModel)]="idioma_partida" placeholder="Digite o idioma" class="input partida"></ion-input>
             <ion-checkbox [(ngModel)]="nativo_partida" class="partida_checkbox"></ion-checkbox>
             <ion-label class="label nativo">Nativo</ion-label>
 
             <ion-icon src="../../assets/images/professional-info/arrow_icon.svg" class="arrow_icon"></ion-icon>
 
             <ion-label class="label chegada">Idioma de Chegada</ion-label>
-            <ion-input [(ngModel)]="idioma_chegada" placeholder="Digite o idioma" class="chegada_input"></ion-input>
+            <ion-input [(ngModel)]="idioma_chegada" placeholder="Digite o idioma" class="input chegada"></ion-input>
             <ion-checkbox [(ngModel)]="nativo_chegada" class="chegada_checkbox"></ion-checkbox>
             <ion-label class="label nativo2">Nativo</ion-label>
 
-            <ion-button fill="clear" (click)="modal.dismiss()" class="cancel_btn">Cancelar</ion-button>
-            <ion-button (click)="addProficiencia()" class="save_proficiencia">Salvar</ion-button>
+            <ion-button fill="clear" (click)="modal.dismiss()" class="cancel_btn modal1">Cancelar</ion-button>
+            <ion-button (click)="addProficiencia()" class="save_btn modal1">Salvar</ion-button>
         </ng-template>
     </ion-modal>
 
     <ion-card *ngFor="let proficiencia of proficienciaList; let i = index" class="proficiencia_card">
         <ion-text class="idioma_txt">{{proficiencia.idioma_partida}} → {{proficiencia.idioma_chegada}}
         </ion-text>
+        <ion-icon src="../../assets/images/professional-info/baby_icon.svg" class="baby_icon"></ion-icon>
         <ion-icon src="../../assets/images/professional-info/trash_icon.svg" (click)="removeProficiencia(i)"
             class="trash_icon p {{offEdit}}">
         </ion-icon>
@@ -61,83 +62,71 @@
         </ion-chip>
     </ion-card>
 
-    <ion-button id="open-proficiencia-dialog" expand="block" class="more_btn {{offEdit}}">
+    <ion-button id="open-proficiencia-dialog" expand="block" class="more_btn proficiencia {{offEdit}}">
         <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
     </ion-button>
 
-    <ion-text class="titulo certificacoes">Certificações</ion-text>
+    <ion-text class="title certificacoes">Certificações</ion-text>
 
     <ion-modal #modal trigger="open-certificacao-dialog" class="certificacao_modal">
         <ng-template>
-            <ion-text class="titulo modal">Faça o upload de seus documentos:</ion-text>
+            <ion-text class="title upload">Faça o upload de seus documentos:</ion-text>
 
             <ion-label class="label credencial">Tipo de credencial</ion-label>
-            <ion-select interface="popover" placeholder="Selecione" class="credencial_slc">
-                <ion-select-option value="diploma">Diploma</ion-select-option>
+            <ion-select [(ngModel)]="tipo" interface="popover" placeholder="Selecione" class="credencial_slc">
+                <ion-select-option>Certificação MobiLang</ion-select-option>
+                <ion-select-option>Experiência em Audiências</ion-select-option>
+                <ion-select-option>Formação Acadêmica</ion-select-option>
+                <ion-select-option>Tradutor Juramentado</ion-select-option>
+                <ion-select-option>Recomendação</ion-select-option>
+                <ion-select-option>Entrevista</ion-select-option>
             </ion-select>
 
-            <!-- <ion-checkbox [(ngModel)]="onTraducao" class="traducao_checkbox"></ion-checkbox>
-            <ion-label class="label traducao">Tradução</ion-label>
+            <!-- <ion-card class="certificacao_card modal">
+                <ion-icon src="../../assets/images/professional-info/certificado_icon.svg"
+                    class="certificado_icon modal"></ion-icon>
+                <ion-text class="certificado_txt modal">Tipo - Descrição (ou título)...</ion-text>
+                <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon modal">
+                </ion-icon>
+            </ion-card> -->
 
-            <ion-checkbox [(ngModel)]="onInterpretacao" class="interpretacao_checkbox"></ion-checkbox>
-            <ion-label class="label interpretacao">Interpretação</ion-label>
+            <ion-card class="certificacao_card modal2">
+                <ion-label class="label descricao">Descrição do documento:</ion-label>
+                <ion-input [(ngModel)]="descricao" placeholder="Digite aqui..." class="input desc"></ion-input>
 
-            <ion-label class="label partida">Idioma de Partida</ion-label>
-            <ion-input [(ngModel)]="idioma_partida" placeholder="Digite o idioma" class="partida_input"></ion-input>
-            <ion-checkbox [(ngModel)]="nativo_partida" class="partida_checkbox"></ion-checkbox>
-            <ion-label class="label nativo">Nativo</ion-label>
+                <ion-label class="label data">Data do documento:</ion-label>
+                <ion-input [(ngModel)]="data" type="date" class="input data"></ion-input>
 
-            <ion-icon src="../../assets/images/professional-info/arrow_icon.svg" class="arrow_icon"></ion-icon>
+                <ion-button fill="clear" (click)="changeBool()" class="load_btn">
+                    <ion-icon src="../../assets/images/professional-info/upload_icon.svg" class="upload_icon">
+                    </ion-icon>
+                    <ion-label class="load_txt">Carregar</ion-label>
+                </ion-button>
+            </ion-card>
 
-            <ion-label class="label chegada">Idioma de Chegada</ion-label>
-            <ion-input [(ngModel)]="idioma_chegada" placeholder="Digite o idioma" class="chegada_input"></ion-input>
-            <ion-checkbox [(ngModel)]="nativo_chegada" class="chegada_checkbox"></ion-checkbox>
-            <ion-label class="label nativo2">Nativo</ion-label>
-
-            <ion-button fill="clear" (click)="modal.dismiss()" class="cancel_btn">Cancelar</ion-button>
-            <ion-button (click)="addProficiencia()" class="save_proficiencia">Salvar</ion-button> -->
+            <ion-button fill="clear" (click)="modal.dismiss()" class="cancel_btn modal2">Cancelar</ion-button>
+            <ion-button (click)="addCertificacao()" class="save_btn modal2">Salvar</ion-button>
         </ng-template>
     </ion-modal>
 
-    <ion-button id="open-certificacao-dialog" expand="block" class="more_btn2 {{offEdit}}">
-        <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
-    </ion-button>
-
-    <!-- <ion-card class="certificacao_card c1">
+    <ion-card *ngFor="let certificacao of certificacaoList; let i = index" class="certificacao_card">
         <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
         </ion-icon>
-        <ion-text class="certificado_txt">Diploma PUC</ion-text>
-        <ion-chip class="status validado">Validado</ion-chip>
+        <ion-text class="certificado_txt">{{certificacao.tipo}} - {{certificacao.descricao}}</ion-text>
+        <ion-chip class="status {{certificacao.status}}">{{certificacao.status}}</ion-chip>
         <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon">
         </ion-icon>
         <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
+        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" (click)="removeCertificacao(i)"
+            class="trash_icon certificacao {{offEdit}}">
         </ion-icon>
     </ion-card>
 
-    <ion-card class="certificacao_card c2">
-        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
-        </ion-icon>
-        <ion-text class="certificado_txt">Diploma - MobiLang 2022</ion-text>
-        <ion-chip class="status pendente">Pendente</ion-chip>
-        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
-        <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
-        </ion-icon>
-    </ion-card>
+    <ion-button id="open-certificacao-dialog" expand="block" class="more_btn certificacao {{offEdit}}">
+        <ion-icon src="../../assets/images/professional-info/more_icon.svg" class="more_icon"></ion-icon>
+    </ion-button>
 
-    <ion-card class="certificacao_card c3">
-        <ion-icon src="../../assets/images/professional-info/certificado_icon.svg" class="certificado_icon">
-        </ion-icon>
-        <ion-text class="certificado_txt">Diploma UNB - MobiLang</ion-text>
-        <ion-chip class="status rejeitado">Rejeitado</ion-chip>
-        <ion-icon src="../../assets/images/professional-info/download_icon.svg" class="download_icon"></ion-icon>
-        <ion-text class="download_txt {{onEdit}}">Baixar</ion-text>
-        <ion-icon src="../../assets/images/professional-info/trash_icon.svg" class="trash_icon c {{offEdit}}">
-        </ion-icon>
-    </ion-card> -->
-
-    <ion-text class="titulo entrevista {{onEdit}}">Link da Entrevista</ion-text>
+    <ion-text class="label entrevista {{onEdit}}">Link da Entrevista</ion-text>
     <ion-text class="entrevista_link {{onEdit}}">Não houve entrevista.</ion-text>
 
     <ion-button (click)="changeBool()" class="save_btn {{offEdit}}">
