@@ -9,4 +9,48 @@
   <img src="../../assets/images/home/head.png">
   <img src="../../assets/images/logo2.png" class="logo">
   <ion-text class="title">Postos de Trabalho</ion-text>
+
+  <ion-searchbar placeholder="Pesquisar por..." class="pesquisa_sb"></ion-searchbar>
+
+  <ion-card *ngFor="let postos of postosList; let i = index" class="postos_card">
+    <ion-text class="postado_txt">Postado em:
+      <ion-text class="dt_postagem">{{postos.dt_postagem}}</ion-text>
+    </ion-text>
+
+    <ion-text class="endereco_txt">{{postos.endereco}}</ion-text>
+
+    <ion-text class="dt_sessao">{{postos.dt_sessao}}</ion-text>
+
+    <ion-text class="idioma_partida">{{postos.idioma_partida}}
+      <ion-text>→
+        <ion-text class="idioma_chegada">{{postos.idioma_chegada}}</ion-text>
+      </ion-text>
+    </ion-text>
+
+    <ion-chip class="traducao_chip">
+      <ion-icon src="../../assets/images/home/traducao_icon.svg" class="traducao_icon"></ion-icon>
+      Tradução
+    </ion-chip>
+
+    <ion-chip class="interpretacao_chip">
+      <ion-icon src="../../assets/images/home/interpretacao_icon.svg" class="interpretacao_icon"></ion-icon>
+      Interpretação
+    </ion-chip>
+
+    <ion-text class="limite_txt">Data limite para candidatura:
+      <ion-text class="dt_limite">{{postos.dt_limite}}</ion-text>
+    </ion-text>
+
+    <ion-chip *ngIf="postos.modo === 'Presencial'" class="modo_chip">
+      <ion-icon src="../../assets/images/home/presencial_icon.svg" class="modo_icon"></ion-icon>
+      Presencial
+    </ion-chip>
+
+    <ion-chip *ngIf="postos.modo === 'Remoto'" class="modo_chip">
+      <ion-icon src="../../assets/images/home/remoto_icon.svg" class="modo_icon"></ion-icon>
+      Remoto
+    </ion-chip>
+
+    <ion-button class="detalhes_btn">Detalhes</ion-button>
+  </ion-card>
 </ion-content>

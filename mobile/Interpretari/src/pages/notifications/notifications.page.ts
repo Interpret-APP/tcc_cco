@@ -11,4 +11,34 @@ export class NotificationsPage implements OnInit {
 
   ngOnInit() {
   }
+
+  notificationsList = [
+    {
+      endereco: 'Rua ABCDE, 123 - São Paulo - SP',
+      idioma_partida: 'Português',
+      idioma_chegada: 'Alemão',
+      traducao: 'true',
+      interpretacao: 'true',
+      modo: 'Presencial',
+      status: 'recusado',
+    },
+    {
+      endereco: 'Rua ABCDE, 123 - São Paulo - SP',
+      idioma_partida: 'Português',
+      idioma_chegada: 'Alemão',
+      traducao: 'true',
+      interpretacao: 'true',
+      modo: 'Remoto',
+      status: 'selecionado',
+    },
+    {
+      endereco: 'Rua ABCDE, 123 - São Paulo - SP',
+      idioma_partida: 'Português',
+      idioma_chegada: 'Alemão',
+      traducao: 'true',
+      interpretacao: 'true',
+      modo: 'Presencial',
+      status: 'cancelado',
+    }
+  ];
 }

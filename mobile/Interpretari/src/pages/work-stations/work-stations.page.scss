@@ -1,11 +1,11 @@
-ion-card {
-    box-sizing: border-box;
+.postos_card {
+    // box-sizing: border-box;
 
-    position: absolute;
+    position: relative; //
     width: 323px;
     height: 153px;
-    left: 10px; //
-    top: 52px; //
+    left: 0px; //
+    top: 50px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -13,6 +13,8 @@ ion-card {
     border: 1px solid rgba(81, 113, 165, 0.04);
     box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
     border-radius: 18.2143px;
+
+    margin-bottom: -15px;
 }
 
 .postado {
@@ -20,7 +22,7 @@ ion-card {
     width: 54px;
     height: 15px;
     left: 14px;
-    top: 2px;
+    top: 5px; //
 
     font-family: 'Poppins';
     font-style: normal;
@@ -36,7 +38,7 @@ ion-card {
     width: 100px;
     height: 15px;
     left: 68px;
-    top: 2px;
+    top: 5px; //
 
     font-family: 'Poppins';
     font-style: normal;
@@ -63,7 +65,7 @@ ion-card {
     color: #74788D;
 }
 
-.linguas {
+.idioma_partida {
     position: absolute;
     width: 86px;
     height: 12px;
@@ -77,6 +79,30 @@ ion-card {
     line-height: 12px;
 
     color: #495057;
+}
+
+.arrow {
+    position: absolute;
+    top: -1px;
+
+    padding-left: 5px;
+}
+
+.idioma_chegada {
+    position: absolute;
+    width: 86px;
+    height: 12px;
+    top: 1px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+
+    padding-left: 5px;
 }
 
 .traducao_chip {
@@ -99,6 +125,16 @@ ion-card {
     text-align: center;
 
     color: #2D4F96;
+
+    padding-left: 14px;
+}
+
+.traducao_icon {
+    position: absolute;
+    width: 6px; //6.67
+    height: 6px; //6.02
+    left: -3px;
+    top: 8px;
 }
 
 .interpretacao_chip {
@@ -121,6 +157,15 @@ ion-card {
     text-align: center;
 
     color: #2D4F96;
+
+    padding-left: 18px;
+}
+
+.interpretacao_icon {
+    position: absolute;
+    width: 9px; //9.17
+    height: 9px; //6.25
+    left: -3px;
 }
 
 .data {
@@ -200,8 +245,11 @@ ion-card {
 }
 
 .status_icon {
+    position: relative;
     width: 7px;
     height: 8px;
+    left: 3px;
+    top: -1px;
 }
 
 .modo {
@@ -223,6 +271,17 @@ ion-card {
     text-align: center;
 
     color: #2D4F96;
+
+    padding-left: 18px; //
+    padding-top: 8px; //
+}
+
+.modo_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -3px;
+    top: 8px;
 }
 
 .detalhes_btn {
@@ -248,12 +307,12 @@ ion-card {
     color: #FFFFFF;
 }
 
-.card2 {
-    position: absolute;
-    top: 212px;
-}
+// .card2 {
+//     position: absolute;
+//     top: 212px;
+// }
 
-.card3 {
-    position: absolute;
-    top: 372px;
-}
+// .card3 {
+//     position: absolute;
+//     top: 372px;
+// }

@@ -40,7 +40,7 @@ export class ProfessionalInfoPage implements OnInit {
       onTraducao: 'false',
       onInterpretacao: 'true',
       idioma_partida: 'Inglês',
-      nativo_partida: 'true',
+      nativo_partida: 'false',
       idioma_chegada: 'Português',
       nativo_chegada: 'true',
     },
@@ -48,9 +48,9 @@ export class ProfessionalInfoPage implements OnInit {
       onTraducao: 'true',
       onInterpretacao: 'false',
       idioma_partida: 'Alemão',
-      nativo_partida: 'true',
+      nativo_partida: 'false',
       idioma_chegada: 'Inglês',
-      nativo_chegada: 'true',
+      nativo_chegada: 'false',
     },
     {
       onTraducao: 'true',
@@ -58,12 +58,12 @@ export class ProfessionalInfoPage implements OnInit {
       idioma_partida: 'Inglês',
       nativo_partida: 'true',
       idioma_chegada: 'Alemão',
-      nativo_chegada: 'true',
+      nativo_chegada: 'false',
     }
   ];
   
-  onTraducao
-  onInterpretacao
+  onTraducao: boolean = false;
+  onInterpretacao: boolean = false;
   idioma_partida
   nativo_partida
   idioma_chegada
@@ -82,7 +82,13 @@ export class ProfessionalInfoPage implements OnInit {
     })
     this.modalCtrl.dismiss();
     this.proficienciaList.push(this.newProficiencia);
-    console.log(this.proficienciaList);
+    console.log(this.newProficiencia);
+  }
+
+  _ionChange(e): void {
+    // var isChecked = e.currentTarget.checked;
+    console.log(event);
+    this.onTraducao = !this.onTraducao;
   }
 
   removeProficiencia(index) {

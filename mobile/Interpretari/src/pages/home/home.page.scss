@@ -1,3 +1,31 @@
+ion-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    color: #2D4F96;
+}
+
+ion-chip {
+    position: absolute;
+    height: 15px;
+    top: 81px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2D4F96;
+}
+
 .logo {
     position: absolute;
     width: 41px;
@@ -12,14 +40,194 @@
     height: 23px;
     left: 0px;
     top: 15px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
+
     font-size: 15px;
     line-height: 22px;
-    
     text-align: center;
-    
-    color: #FFFFFF;    
+    color: #FFFFFF;
+}
+
+.pesquisa_sb {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 323px;
+    height: 33px;
+    left: 26px;
+    top: 95px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 18.2143px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    color: #74788D;
+}
+
+.postos_card {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 323px;
+    height: 133px;
+    left: 10px;
+    top: 70px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 18.2143px;
+
+    margin-bottom: -15px;
+}
+
+.postado_txt {
+    position: absolute;
+    width: 54px;
+    height: 15px;
+    left: 15px;
+    top: 10px;
+
+    font-weight: 600;
+}
+
+.dt_postagem {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    left: 54px;
+
+    color: #2D4F96;
+}
+
+.endereco_txt {
+    position: absolute;
+    width: 302px;
+    height: 19px;
+    left: 15px;
+    top: 29px;
+
+    color: #74788D;
+}
+
+.dt_sessao {
+    position: absolute;
+    width: 209px;
+    height: 15px;
+    left: 15px;
+    top: 47px;
+
+    color: #74788D;
+}
+
+.idioma_partida {
+    position: absolute;
+    width: 86px;
+    height: 12px;
+    left: 15px;
+    top: 64px;
+
+    font-weight: 600;
+
+    color: #495057;
+}
+
+.idioma_chegada {
+    font-weight: 600;
+
+    color: #495057;
+}
+
+.traducao_chip {
+    width: 58px;
+    left: 10px;
+
+    padding-left: 15px;
+}
+
+.traducao_icon {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: -2px;
+    top: 7px;
+}
+
+.interpretacao_chip {
+    width: 82px;
+    left: 79px;
+
+    padding-left: 20px;
+}
+
+.interpretacao_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -2px;
+    top: 7px;
+}
+
+.limite_txt {
+    position: absolute;
+    width: 124px;
+    height: 15px;
+    left: 15px;
+    top: 110px;
+
+    font-weight: 600;
+}
+
+.dt_limite {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    left: 126px;
+}
+
+.modo_chip {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 235px;
+    top: 10px;
+
+    padding-left: 20px;
+    padding-top: 8px;
+}
+
+.modo_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -2px;
+    top: 8px;
+}
+
+.detalhes_btn {
+    position: absolute;
+    width: 106px;
+    height: 19px;
+    left: 198px;
+    top: 78px;
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
 }

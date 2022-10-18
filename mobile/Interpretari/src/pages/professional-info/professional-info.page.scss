@@ -4,6 +4,7 @@ ion-card {
     position: absolute;
     width: 323px;
     height: 719px;
+    // min-height: 719px;
     left: 10px; //
     top: 52px; //
 
@@ -14,6 +15,7 @@ ion-card {
     border-radius: 18.2143px;
 
     // --padding-end: 100px;
+    // margin-bottom: 50px; //////
 }
 
 ion-label {
@@ -180,17 +182,17 @@ ion-label {
     left: 30px; //
     top: 140px; //
 
-    text-align: center;
+    // text-align: center;
 
     margin-bottom: -15px; //
 }
 
 // PROFICIÊNCIA INFO //
 .idioma_txt {
-    position: absolute;
-    width: 90px; //
+    position: fixed;
+    width: 120px; //
     height: 14px;
-    left: 70px; //
+    left: 60px; //
     top: 5px; //
 
     font-family: 'Poppins';
@@ -814,7 +816,13 @@ ion-label {
 }
 
 .baby_icon {
-    position: absolute;
-    left: 55px;
-    top: 5px;
+    position: relative;
+    top: 3px;
+    font-size: 12px;
 }
+
+// .baby_icon {
+//     position: absolute;
+//     // right: 85px;
+//     top: 3px;
+// }

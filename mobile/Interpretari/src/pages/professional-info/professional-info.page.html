@@ -18,10 +18,10 @@
         <ng-template>
             <ion-text class="title dominios">Selecione um ou mais domínios:</ion-text>
 
-            <ion-checkbox [(ngModel)]="onTraducao" class="traducao_checkbox"></ion-checkbox>
+            <ion-checkbox (ionChange)="_ionChange($event)" [(ngModel)]="onTraducao" class="traducao_checkbox"></ion-checkbox>
             <ion-text class="label traducao">Tradução</ion-text>
 
-            <ion-checkbox [(ngModel)]="onInterpretacao" class="interpretacao_checkbox"></ion-checkbox>
+            <ion-checkbox (click)="onInterpretacao = !onInterpretacao" [(ngModel)]="onInterpretacao" class="interpretacao_checkbox"></ion-checkbox>
             <ion-label class="label interpretacao">Interpretação</ion-label>
 
             <ion-label class="label partida">Idioma de Partida</ion-label>
@@ -42,9 +42,15 @@
     </ion-modal>
 
     <ion-card *ngFor="let proficiencia of proficienciaList; let i = index" class="proficiencia_card">
-        <ion-text class="idioma_txt">{{proficiencia.idioma_partida}} → {{proficiencia.idioma_chegada}}
+        <ion-text class="idioma_txt">
+            <ion-icon *ngIf="proficiencia.nativo_partida === 'true'"
+                src="../../assets/images/professional-info/baby_icon.svg" class="baby_icon"></ion-icon>
+            {{proficiencia.idioma_partida}}
+            →
+            <ion-icon *ngIf="proficiencia.nativo_chegada === 'true'"
+                src="../../assets/images/professional-info/baby_icon.svg" class="baby_icon"></ion-icon>
+            {{proficiencia.idioma_chegada}}
         </ion-text>
-        <ion-icon src="../../assets/images/professional-info/baby_icon.svg" class="baby_icon"></ion-icon>
         <ion-icon src="../../assets/images/professional-info/trash_icon.svg" (click)="removeProficiencia(i)"
             class="trash_icon p {{offEdit}}">
         </ion-icon>
