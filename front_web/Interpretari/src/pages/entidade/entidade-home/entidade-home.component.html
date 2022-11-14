@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="entidade-home.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+    <div class="topbar">
+        <i class="topbar_body"></i>
+        <div class="logo">
+            <i class="logo_background"></i>
+            <p-image src="../../../assets/images/logoHome.png" class="logo_img"></p-image>
+        </div>
+        <i class="bell_icon"></i>
+        <p class="user_txt">Henry</p>
+        <i class="user_icon"></i>
+    </div>
+</header>
+
+<body>
+    <div class="sidenav">
+        <div class="menu_group">
+            <i class="home_icon"></i>
+            <a style="text-decoration:none" class="home_link" href="/entidade-home">Página Inicial</a>
+            <i class="certificate_icon"></i>
+            <a style="text-decoration:none" class="certificate_link" href="/">Lista de
+                Certificados</a>
+            <i class="interview_icon"></i>
+            <a style="text-decoration:none" class="interview_link" href="/entidade-entrevista">Entrevistas</a>
+        </div>
+        <div class="users_group">
+            <p class="users_txt">Usuários</p>
+            <i class="users_icon"></i>
+            <a style="text-decoration:none" class="interpretes_link" href="/admin-interprete">Intérpretes</a>
+        </div>
+        <div class="config_group">
+            <p class="config_txt">Configurações</p>
+            <i class="profile_icon"></i>
+            <a style="text-decoration:none" class="data_link" href="/">Meus Dados</a>
+            <i class="login_icon"></i>
+            <a style="text-decoration:none" class="login_link" href="/login">Sair</a>
+        </div>
+    </div>
+
+    <p class="title_txt">Lista Credenciais</p>
+
+    <p-table #dt2 [value]="certificados" dataKey="id" [rows]="7" [loading]="loading"
+        styleClass="p-datatable-certificado p-datatable-gridlines" [paginator]="true"
+        [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
+        <ng-template pTemplate="caption">
+            <th>
+                <p-columnFilter placeholder="Procure pelo nome do intérprete..." type="text" field="interprete"
+                    class="search_input"></p-columnFilter>
+            </th>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="imagem" style="text-align: center">Certificado</th>
+                <th pSortableColumn="titulo" style="text-align: center">Título</th>
+                <th pSortableColumn="interprete" style="text-align: center">Intérprete</th>
+                <th pSortableColumn="carregado" style="text-align: center">Carregado em</th>
+                <th pSortableColumn="status" style="text-align: center">Status</th>
+                <th pSortableColumn="tipo" style="text-align: center">Tipo</th>
+                <th pSortableColumn="visualizar" style="text-align: center">Visualizar</th>
+                <th pSortableColumn="acoes" style="text-align: center">Ações</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-certificado>
+            <tr>
+                <td style="text-align: center">
+                    <img [src]="'../../../assets/certificado/' + certificado.imagem" [alt]="certificado.imagem" />
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.titulo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.interprete}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.carregado}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span
+                        [class]="'certificado status-' + (certificado.status ? certificado.status.toLowerCase() : '')">{{certificado.status}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.tipo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <img pButton [src]="'../../../assets/certificado/' + certificado.visualizar"
+                        [alt]="certificado.visualizar" class="download_icon" />
+                </td>
+                <td style="text-align: center">
+                    <button pButton type="button" (click)="dialogAvaliar(certificado)"
+                        [class]="'certificado acoes-' + (certificado.acoes ? certificado.acoes.toLowerCase() : '')">{{certificado.acoes}}</button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="5">Nenhum certificado encontrado.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <footer>
+        <p class="footer_back"></p>
+        <p class="inter_txt">2022 © Interprêt.</p>
+        <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
+    </footer>
+</body>
+
+<p-dialog [(visible)]="avaliarDialog" [style]="{width: '450px'}" style="text-align: center"
+    header="Feedback da Validação" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <div class="field">
+            <textarea placeholder="Digite aqui..." id="description" pInputTextarea [(ngModel)]="certificado.feedback"
+                required rows="3" cols="40"></textarea>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Rejeitar" icon="pi pi-times" class="rejeitar_btn"
+            (click)="rejeitarCertificado(certificado)"></button>
+        <button pButton pRipple label="Validar" icon="pi pi-check" class="aceitar_btn"
+            (click)="validarCertificado(certificado)"></button>
+    </ng-template>
+</p-dialog>
+
+<p-dialog [(visible)]="desfazerDialog" [style]="{width: '450px'}" style="text-align: center"
+    header="Você tem certeza que deseja desfazer?" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Não" class="rejeitar_btn"
+            (click)="voltar(certificado)"></button>
+        <button pButton pRipple label="Sim" class="aceitar_btn"
+            (click)="desfazer(certificado)"></button>
+    </ng-template>
+</p-dialog>
+<!-- <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog> -->

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="login.component.css">
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div>
+        <img src="../../assets/images/background.png">
+        <p-image src="../../assets/login/logo.png" class="logo_img"></p-image>
+
+        <p class="admin_txt">Bem vindo(a) ao Portal Super Admin</p>
+        <i class="admin_img"></i>
+
+        <p class="title_txt">Primeiro Acesso</p>
+
+        <span class="user_forms">
+            <input type="text" pInputText class="user_input">
+            <label class="user_txt">Usuário</label>
+        </span>
+
+        <span class="password_forms">
+            <!-- <p-password [toggleMask]="true"></p-password> -->
+            <input type="password" pPassword class="password_input">
+            <label class="password_txt">Senha</label>
+        </span>
+
+        <button pButton type="button" label="Entrar" class="enter_button" (click)="goToHome()"></button>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <p class="intro">Seja bem-vindo(a) ao<br>Interprêt!</p> -->
+
+<!-- <db-form-field class="email" label="E-mail" type="text" error-message="E-mail inválido!" required> -->
+<!-- <div class="email">
+            <label class="text_field">E-mail</label>
+            <input class="box_field" type="email" />
+            <span class="error">E-mail inválido!</span>
+        </div> -->
+
+<!-- </db-form-field> -->
+
+<!-- <db-form-field class="password" label="Senha" type="password" error-message="Senha incorreta!" required> -->
+<!-- <div class="password">
+            <label class="text_field">Senha</label>
+            <input class="box_field" type="password" />
+            <img src="assets/invisible.png" alt="invisible" class="invisible_field">
+            <span class="error">Senha incorreta!</span>
+        </div> -->
+<!-- </db-form-field> -->
+
+<!-- <div class="checkbox">
+            <input type="checkbox" value="remember">
+        </div>
+
+        <label class="checkbox_text" for="checkbox">Lembrar de mim</label> -->
+
+<!-- <button class="enter_button" type="submit" value="Entrar" (click)="goToHome()">Entrar</button> -->

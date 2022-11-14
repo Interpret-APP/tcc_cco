@@ -1,0 +1,828 @@
+ion-card {
+    // box-sizing: border-box;
+
+    position: absolute;
+    width: 323px;
+    height: 719px;
+    // min-height: 719px;
+    left: 10px; //
+    top: 52px; //
+
+    background: #ffffff;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        -18.21px 18.2143px 36.4286px rgba(211, 209, 216, 0.1);
+    border-radius: 18.2143px;
+
+    // --padding-end: 100px;
+    // margin-bottom: 50px; //////
+}
+
+ion-label {
+    position: absolute;
+    width: 82px; //
+    height: 12px;
+    left: 0px;
+    top: -12px; //
+}
+
+.proficiencia_modal {
+    --width: 277px;
+    --height: 161px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --border-radius: 18.21px;
+}
+
+.certificacao_modal {
+    --width: 277px;
+    --height: 373px;
+    --box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    --border-radius: 18.21px;
+}
+
+// BOTÃO EDITAR //
+.edit_btn {
+    position: absolute;
+    width: 43px;
+    height: 15px;
+    left: 268.5px;
+    top: 12px;
+
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+    background: #2D4F96;
+    border-radius: 5px;
+}
+
+.edit_icon {
+    position: absolute;
+    right: 130%;
+    width: 9px;
+    height: 9px;
+}
+
+.edit_txt {
+    position: absolute;
+    top: 2px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+// TÍTULOS //
+.title {
+    position: absolute;
+    width: 134px;
+    height: 47px;
+    left: 36px;
+    top: 25px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.title.comunidade {
+    width: 214px;
+    height: 12px;
+    top: 82px;
+}
+
+.title.proficiencia {
+    width: 48px;
+    height: 12px;
+    top: 142px;
+}
+
+.title.dominios {
+    width: 231px;
+    height: 12px;
+    left: 14px;
+    top: 10px;
+}
+
+.title.certificacoes {
+    position: relative;
+    width: 54px;
+    height: 12px;
+    top: 170px;
+}
+
+.title.upload {
+    width: 231px;
+    height: 12px;
+    left: 14px;
+    top: 10px;
+}
+
+// ÍCONES DE INFORMAÇÃO //
+.info_icon {
+    position: absolute;
+    width: 9.17px;
+    height: 9.17px;
+}
+
+.info_icon.ajg {
+    left: 53.5%; //
+    top: 3.55%; //
+}
+
+.info_icon.com {
+    left: 78.5%; //
+    top: 11.5%; //
+}
+
+// BOTÃO DE RESPOSTA //
+.resposta {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    left: 34px; //
+    top: 0px; //
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+.resposta.ajg {
+    top: 35px; //
+}
+
+.resposta.comunidade {
+    top: 92px; //
+}
+
+// PROFICIÊNCIA CARD //
+.proficiencia_card {
+    position: relative;
+    width: 235px;
+    height: 59px;
+    left: 30px; //
+    top: 140px; //
+
+    // text-align: center;
+
+    margin-bottom: -15px; //
+}
+
+// PROFICIÊNCIA INFO //
+.idioma_txt {
+    position: fixed;
+    width: 120px; //
+    height: 14px;
+    left: 60px; //
+    top: 5px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+}
+
+// ÍCONES DE LIXEIRA //
+.trash_icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 91.49%;
+    top: 11.86%;
+}
+
+.trash_icon.certificacao {
+    position: absolute;
+    left: 90%; //
+    right: 4.3%;
+    top: 33.33%;
+    bottom: 33.33%;
+}
+
+.trash_icon.modal {
+    left: 205px;
+    top: 4px;
+}
+
+// TRADUÇÃO CHIP //
+.traducao {
+    position: absolute;
+    width: 77px;
+    height: 18px;
+    left: 20px; //
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    padding-left: 22px;
+}
+
+.traducao_icon {
+    position: absolute;
+    width: 8.8px; //
+    height: 9.77px; //
+    left: 2%; //
+    top: 45%; //
+}
+
+// INTERPRETAÇÃO CHIP //
+.interpretacao {
+    position: absolute;
+    width: 101px;
+    height: 18px;
+    left: 102px; //
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    padding-left: 25px;
+}
+
+.interpretacao_icon {
+    position: absolute;
+    width: 11.92px; //
+    height: 8.5px; //
+    left: 0%; //
+    top: 50%; //
+}
+
+// BOTÃO ADICIONAR //
+.more_btn {
+    position: relative;
+    height: 20px;
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    --background: white;
+}
+
+.more_btn.proficiencia {
+    width: 235px;
+    left: 44px;
+    top: 160px;
+}
+
+.more_btn.certificacao {
+    width: 279px;
+    left: 20px;
+    top: 175px;
+}
+
+.more_icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+}
+
+// MODAL //
+.traducao_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 14px;
+    top: 30px;
+}
+
+.interpretacao_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 78px;
+    top: 30px;
+}
+
+// LABELS //
+.label {
+    position: absolute;
+    height: 12px;
+    top: 30px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.label.entrevista {
+    position: absolute;
+    width: 71px;
+    height: 12px;
+    left: 36px;
+    top: 624px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #495057;
+}
+
+.label.traducao {
+    width: 39px;
+    left: 5px; //
+}
+
+.label.interpretacao {
+    width: 55px;
+    left: 65px; //
+}
+
+.label.partida {
+    width: 73px;
+    left: 12.5px;
+    top: 52px;
+}
+
+.label.chegada {
+    width: 81px; //
+    left: 159.5px;
+    top: 52px;
+}
+
+.label.nativo {
+    width: 26px;
+    left: 26px;
+    top: 110px;
+}
+
+.label.nativo2 {
+    width: 26px;
+    left: 174px;
+    top: 110px;
+}
+
+.label.credencial {
+    width: 75px;
+    left: 15px;
+    top: 35px;
+}
+
+.label.descricao {
+    width: 104px;
+    left: 18px;
+    top: 10px;
+}
+
+.label.data {
+    width: 84px;
+    left: 20px;
+    top: 100px;
+}
+
+.input {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 105px;
+    height: 32px;
+    left: 0px;
+    top: 67px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    --padding-start: 8.5px;
+
+    font-size: 9px;
+}
+
+.input.partida {
+    left: 12.5px;
+}
+
+.input.chegada {
+    left: 159.5px;
+}
+
+.input.desc {
+    width: 208px;
+    height: 56px;
+    left: 16px;
+    top: 25px;
+}
+
+.input.data {
+    width: 118px;
+    height: 26px;
+    left: 18px;
+    top: 115px;
+}
+
+.arrow_icon {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 130px; //
+    top: 75px; //
+}
+
+.partida_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 12.5px;
+    top: 110px;
+}
+
+.chegada_checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 159.5px;
+    top: 110px;
+}
+
+.cancel_btn {
+    position: absolute;
+    width: 75px;
+    height: 19px;
+    left: 51px;
+
+    background: #E2574C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.cancel_btn.modal1 {
+    top: 130px;
+}
+
+.cancel_btn.modal2 {
+    top: 336px;
+}
+
+// SALVAR ALTERAÇÕES //
+.save_btn {
+    position: relative; //
+    width: 106px;
+    height: 19px;
+    left: 105px; //
+    top: 195px; //675px
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.save_btn.modal1 {
+    width: 75px;
+    left: 151px;
+    top: 130px;
+}
+
+.save_btn.modal2 {
+    width: 75px;
+    left: 151px;
+    top: 336px;
+}
+
+.save_icon {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 3px;
+    top: 5px; //
+
+    mix-blend-mode: normal;
+    border: 0.7px solid #FFFFFF;
+}
+
+.save_txt {
+    position: absolute;
+    width: 78.61px;
+    height: 19px;
+    left: 20px; //
+    top: 0px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.load_btn {
+    position: absolute;
+    width: 76px;
+    height: 19px;
+    left: 80px;
+    top: 150px;
+
+    background: #5171A5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+// CERTIFICADO CARD //
+.certificacao_card {
+    position: relative;
+    width: 279px;
+    height: 36px;
+    left: 6px; //
+    top: 155px;
+
+    background: rgba(239, 242, 247, 0.07);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin-bottom: -15px;
+}
+
+.certificacao_card.modal {
+    position: absolute;
+    width: 242px;
+    height: 20px;
+    left: 0px;
+    top: 82px; //
+
+    border-radius: 5px;
+}
+
+.certificacao_card.modal2 {
+    position: absolute;
+    width: 242px;
+    height: 189px;
+    left: 0px; //
+    top: 80px; //107px com o outro modal ativado
+
+    border-radius: 5px;
+}
+
+// .certificacao_card.c1 {
+//     top: 458px; //
+// }
+
+// .certificacao_card.c2 {
+//     top: 498px; //
+// }
+
+// .certificacao_card.c3 {
+//     top: 538px; //
+// }
+
+// CERTIFICADO INFO //
+.certificado_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 7px; //
+}
+
+.certificado_icon.modal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 19px;
+    top: 5px;
+}
+
+.certificado_txt {
+    position: absolute;
+    width: 138px;
+    height: 13px;
+    left: 36px;
+    top: 11px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #495057;
+}
+
+.certificado_txt.modal {
+    top: 3px;
+}
+
+// STATUS CHIP //
+.status {
+    position: absolute;
+    width: 44px;
+    height: 12px;
+    left: 169px; //
+    top: 7px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+
+    padding-left: 6px; //
+    padding-right: 40px; //
+}
+
+.validado {
+    background: rgba(52, 195, 143, 0.15);
+    color: #34C38F;
+}
+
+.pendente {
+    background: rgba(243, 233, 122, 0.27);
+    color: #ECBC40;
+}
+
+.rejeitado {
+    background: rgba(226, 87, 76, 0.15);
+    color: #E2574C;
+}
+
+// BOTÃO DE DOWNLOAD //
+.download_icon {
+    position: absolute;
+    width: 11px;
+    height: 12px;
+    left: 228px;
+    top: 11px; //
+}
+
+.download_txt {
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    left: 242px;
+    top: 12px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #5171A5;
+}
+
+// LINK DA ENTREVISTA //
+.entrevista_link {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 258px;
+    height: 32px;
+    left: 36px;
+    top: 642px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+
+    color: #74788D;
+
+    padding-left: 10px; //
+    padding-top: 8px; //
+}
+
+// FUNÇÃO OCULTAR //
+.ocultar {
+    display: none;
+}
+
+// ION-SELECT DO MODAL //
+.credencial_slc {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 118px;
+    height: 26px;
+    left: 15px; //
+    top: 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #74788D;
+
+    padding-left: 0px;
+}
+
+.upload_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 90%;
+    top: 21.07%;
+}
+
+.load_txt {
+    position: absolute;
+    width: 46px;
+    height: 19px;
+    left: 12px; //
+    top: 0px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; //
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.baby_icon {
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+}
+
+// .baby_icon {
+//     position: absolute;
+//     // right: 85px;
+//     top: 3px;
+// }

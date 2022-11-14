@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="admin-interprete.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+    <div class="topbar">
+        <i class="topbar_body"></i>
+        <div class="logo">
+            <i class="logo_background"></i>
+            <p-image src="../../assets/images/logoHome.png" class="logo_img"></p-image>
+        </div>
+        <i class="bell_icon"></i>
+        <p class="user_txt">Henry</p>
+        <i class="user_icon"></i>
+    </div>
+</header>
+
+<body>
+    <div class="sidenav">
+        <div class="menu_group">
+            <i class="home_icon"></i>
+            <a style="text-decoration:none" class="home_link" href="/">Página Inicial</a>
+        </div>
+        <div class="users_group">
+            <p class="users_txt">Usuários</p>
+            <i class="tribunal_icon"></i>
+            <a style="text-decoration:none" class="tribunal_link" href="/">Tribunal</a>
+            <i class="unidade_icon"></i>
+            <a style="text-decoration:none" class="unidade_link" href="/">Unidade Judiciária</a>
+            <i class="entidade_icon"></i>
+            <a style="text-decoration:none" class="entidade_link" href="/">Entidade Certificadora</a>
+            <i class="interprete_icon"></i>
+            <a style="text-decoration:none" class="interprete_link" href="/admin-interprete">Intérpretes</a>
+        </div>
+        <div class="config_group">
+            <p class="config_txt">Configurações</p>
+            <i class="dados_icon"></i>
+            <a style="text-decoration:none" class="dados_link" href="/">Meus Dados</a>
+            <i class="sair_icon"></i>
+            <a style="text-decoration:none" class="sair_link" href="/login">Sair</a>
+        </div>
+    </div>
+
+    <p class="title_txt">Lista de Intérpretes</p>
+    <p class="side_txt">Lista</p>
+
+    <p-table #dt2 [value]="interpretes" dataKey="id" [rows]="8" styleClass="p-datatable-interprete" [paginator]="true"
+        [globalFilterFields]="['nome', 'cpf', 'ajg', 'partida', 'chegada', 'email', 'status', 'cidade', 'detalhes', 'acoes']"
+        class="interpretes_table">
+        <ng-template pTemplate="caption">
+            <th>
+                <p-columnFilter placeholder="Procure pelo nome abreviado ou CNPJ..." type="text" field="nome"
+                    class="search_input"></p-columnFilter>
+            </th>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="nome" style="text-align: center">Nome Completo</th>
+                <th pSortableColumn="cpf" style="text-align: center">CPF</th>
+                <th pSortableColumn="ajg" style="text-align: center">Possui cadastro no AJG?</th>
+                <th pSortableColumn="partida" style="text-align: center">Idioma de partida</th>
+                <th pSortableColumn="chegada" style="text-align: center">Idioma de chegada</th>
+                <th pSortableColumn="email" style="text-align: center">E-mail</th>
+                <th pSortableColumn="status" style="text-align: center">Status</th>
+                <th pSortableColumn="cidade" style="text-align: center">Cidade</th>
+                <th pSortableColumn="detalhes" style="text-align: center">Ver Detalhes</th>
+                <th pSortableColumn="acoes" style="text-align: center">Ações</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-interprete>
+            <tr>
+                <td style="text-align: center">
+                    <span>{{interprete.nome}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.cpf}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.ajg}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.partida}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.chegada}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.email}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span
+                        [class]="'interprete status-' + (interprete.status ? interprete.status.toLowerCase() : '')">{{interprete.status}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{interprete.cidade}}</span>
+                </td>
+                <td style="text-align: center">
+                    <button pButton type="button" (click)="verDetalhes(interprete)" [style]="{width: '86.17px', height: '27px'}" class="detalhes_btn">{{interprete.detalhes}}</button>
+                </td>
+                <td style="text-align: center">
+                    <div class="align_icons">
+                        <img pButton [src]="'../../../assets/audiencia/' + interprete.editar" [alt]="interprete.editar"
+                            class="edit_icon" />
+                        <img pButton [src]="'../../../assets/audiencia/' + interprete.deletar" [alt]="interprete.deletar"
+                            class="delete_icon" />
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="5">Nenhum certificado encontrado.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <footer>
+        <p class="footer_back"></p>
+        <p class="inter_txt">2022 © Interprêt.</p>
+        <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
+    </footer>
+</body>

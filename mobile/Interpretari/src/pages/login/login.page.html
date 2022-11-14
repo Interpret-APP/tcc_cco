@@ -1,0 +1,33 @@
+<ion-content>
+    <img src="../assets/images/head.png" class="head">
+    <img src="../assets/images/logo2.png" class="logo">
+
+    <ion-card-content>
+        <input-field-component class="email" type="email" name="E-mail"></input-field-component>
+        <input-field-component class="password" type="password" name="Senha"></input-field-component>
+
+        <ion-checkbox class="checkbox" type="checkbox"></ion-checkbox>
+        <ion-text class="check_text" color="tertiary">Lembrar de mim</ion-text>
+
+        <ion-button class="enter_button" color="primary">Entrar</ion-button>
+
+        <hr />
+        <ion-text class="option_text" color="tertiary">ou você pode fazer login via</ion-text>
+
+        <ion-button class="facebook_button" fill="clear">
+            <ion-icon src="../../assets/images/login/facebook_icon.svg" class="facebook_icon"></ion-icon>
+            <ion-label class="facebook_txt">Facebook</ion-label>
+        </ion-button>
+
+        <ion-button class="google_button" fill="clear">
+            <ion-icon src="../../assets/images/login/google_icon.svg" class="google_icon"></ion-icon>
+            <ion-label class="google_txt">Google</ion-label>
+        </ion-button>
+    </ion-card-content>
+
+    <ion-button class="enter_button" color="primary" href="/login-transition">Entrar</ion-button>
+
+    <ion-button class="password_link" color="tertiary" href="/password" fill="clear">Esqueceu a senha?</ion-button>
+    <ion-button class="register_link" color="tertiary" href="/register" fill="clear">Não tem uma conta? Cadastre-se.
+    </ion-button>
+</ion-content>

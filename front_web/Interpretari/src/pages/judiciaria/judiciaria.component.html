@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="judiciaria.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+    <div class="topbar">
+        <i class="topbar_body"></i>
+        <div class="logo">
+            <i class="logo_background"></i>
+            <p-image src="../../assets/images/logoHome.png" class="logo_img"></p-image>
+        </div>
+        <i class="bell_icon"></i>
+        <p class="user_txt">Henry</p>
+        <i class="user_icon"></i>
+    </div>
+</header>
+
+<body>
+    <div class="sidenav">
+        <div class="menu_group">
+            <i class="home_icon"></i>
+            <a class="home_link" href="/inicio">Página Inicial</a>
+            <i class="certificate_icon"></i>
+            <a class="certificate_link" href="/lista-certificados">Lista de Certificados</a>
+            <i class="interview_icon"></i>
+            <a class="interview_link" href="/entrevistas">Entrevistas</a>
+        </div>
+        <div class="users_group">
+            <p class="users_txt">Usuários</p>
+            <i class="balance_icon"></i>
+            <a class="court_link" href="/tribunal">Tribunal</a>
+            <i class="building_icon"></i>
+            <a class="judicial_link" href="/unidade-judiciaria">Unidade Judiciária</a>
+            <i class="checked_icon"></i>
+            <a class="certifier_link" href="/entidade-certificadora">Entidade Certificadora</a>
+            <i class="users_icon"></i>
+            <a class="interpreter_link" href="/interpretes">Intérpretes</a>
+        </div>
+        <div class="config_group">
+            <p class="config_txt">Configurações</p>
+            <i class="profile_icon"></i>
+            <a class="data_link" href="/meus-dados">Meus Dados</a>
+            <i class="login_icon"></i>
+            <a class="login_link" href="/login">Sair</a>
+        </div>
+    </div>
+
+    <p class="title_txt">Lista de Audiências</p>
+    <p class="side_txt">Lista / Detalhes</p>
+
+    <p-table #dt2 [value]="audiencias" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-audiencia p-datatable-gridlines"
+        [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['processo', 'modo', 'date', 'horario', 'localizacao', 'idioma_partida', 'idioma_chegada', 'requisicao', 'status', 'criado', 'detalhes', 'acoes']"
+        class="certificates_table">
+        <ng-template pTemplate="caption">
+            <th>
+                <p-columnFilter type="text" field="interprete" class="search_input"></p-columnFilter>
+            </th>
+            <button pButton type="button" label="Cadastrar Novo Usuário" class="register_button"
+                (click)="goToCadastro()"></button>
+            <!-- <div class="p-d-flex">
+                <span class="p-input-icon-left p-ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')"
+                        placeholder="Filter" />
+                </span>
+            </div> -->
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="text-align: center">Processo</th>
+                <th style="text-align: center">Modo</th>
+                <th style="text-align: center">Data</th>
+                <th style="text-align: center">Horário</th>
+                <th style="text-align: center">Localização</th>
+                <th style="text-align: center">Idioma de Partida</th>
+                <th style="text-align: center">Idioma de Chegada</th>
+                <th style="text-align: center">Requisição</th>
+                <th style="text-align: center">Status</th>
+                <th style="text-align: center">Criado em</th>
+                <th style="text-align: center">Ver Detalhes</th>
+                <th style="text-align: center">Ações</th>
+                <!-- <th style="width: 6rem">Verified</th> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-audiencia>
+            <tr>
+                <td style="text-align: center">
+                    <span>{{audiencia.processo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.modo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.data}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.horario}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.localizacao}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.idioma_partida}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.idioma_chegada}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.requisicao}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.status}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{audiencia.criado}}</span>
+                </td>
+                <td style="text-align: center">
+                    <button pButton class="detail_button">{{audiencia.detalhes}}</button>
+                </td>
+                <td style="text-align: center">
+                    <div class="align_icons">
+                        <img pButton [src]="'../../assets/audiencia/' + audiencia.editar" [alt]="audiencia.editar"
+                            class="edit_icon" />
+                        <img pButton [src]="'../../assets/audiencia/' + audiencia.deletar" [alt]="audiencia.deletar"
+                            class="delete_icon" />
+                    </div>
+                </td>
+
+                <!-- <td>
+				<i class="pi" [ngClass]="{'true-icon pi-check-circle': certificado.verified, 'false-icon pi-times-circle': !certificado.verified}"></i>
+			</td> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="5">Nenhum certificado encontrado.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <footer>
+        <p class="footer_back"></p>
+        <p class="inter_txt">2022 © Interprêt.</p>
+        <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
+    </footer>
+</body>

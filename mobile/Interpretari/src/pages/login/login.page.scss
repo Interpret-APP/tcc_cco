@@ -1,0 +1,235 @@
+.head {
+    position: absolute;
+    width: 375px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 154px;
+    top: 46px;
+}
+
+// .text_field {
+//     position: absolute;
+//     width: 306px;
+//     height: 72px;
+//     left: 34px;
+//     top: 123px;
+// }
+
+// .box_field {
+//     position: absolute;
+//     left: 0%;
+//     right: 0%;
+//     top: 36.11%;
+//     bottom: 0%;
+
+//     padding: 10px;
+
+//     // background: #FFFFFF;
+//     border: 1px solid rgba(0, 53, 84, 0.25);
+//     border-radius: 15px;
+// }
+
+.email {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 123px;
+}
+
+.password {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 210px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 34px;
+    top: 308px;
+}
+
+.check_text {
+    position: absolute;
+    width: 101px;
+    height: 18px;
+    left: 56px;
+    top: 306px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.enter_button {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 306px;
+    height: 41px;
+    left: 34px;
+    top: 349px;
+
+    background: #2D4F96;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+hr {
+    position: absolute;
+    width: 306px;
+    height: 0px;
+    left: 34px;
+    top: 421.5px;
+
+    border: 1px solid rgba(81, 113, 165, 0.1);
+}
+
+.option_text {
+    position: absolute;
+    width: 184px;
+    height: 20px;
+    left: 95px;
+    top: 431px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+// BOTÃO DO FACEBOOK //
+.facebook_button {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 145px;
+    height: 41px;
+    left: 34px;
+    top: 479px;
+
+    background: #3764B9;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.facebook_icon {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 92px; //
+    top: 6px; //
+}
+
+.facebook_txt {
+    position: absolute;
+    width: 80px;
+    height: 24px;
+    left: 25px; //
+    top: 8px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+// BOTÃO DO GOOGLE //
+.google_button {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 145px;
+    height: 41px;
+    left: 195px;
+    top: 480px;
+
+    background: #E2574C;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.google_icon {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 92px; //
+    top: 6px; //
+}
+
+.google_txt {
+    position: absolute;
+    width: 64px;
+    height: 24px;
+    left: 25px; //
+    top: 8px; //
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.password_link {
+    position: absolute;
+    width: 145px;
+    height: 23px;
+    left: 123px;
+    top: 561px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.register_link {
+    position: absolute;
+    width: 261px;
+    height: 23px;
+    left: 65px;
+    top: 599px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+
+    text-decoration-line: underline;
+}

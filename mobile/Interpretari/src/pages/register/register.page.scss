@@ -1,0 +1,113 @@
+.logo {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 153px;
+    top: 46px;
+}
+
+.register_text {
+    position: absolute;
+    width: 157px;
+    height: 36px;
+    left: 109px;
+    top: 137px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    text-align: center;
+}
+
+.name {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 202px;
+}
+
+.email {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 300px;
+}
+
+.cpf {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 398px;
+}
+
+.new_password {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 497px;
+}
+
+.confirm_password {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 34px;
+    top: 603px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 74px;
+    top: 742px;
+}
+
+.check_text {
+    position: absolute;
+    width: 212px;
+    height: 30px;
+    left: 90px;
+    top: 735px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.register_button {
+    position: absolute;
+    width: 306px;
+    height: 41px;
+    left: 34px;
+    top: 796.35px;
+}
+
+.cancel_link {
+    position: absolute;
+    width: 69px;
+    height: 23px;
+    left: 153px;
+    top: 869px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+
+    text-align: center;
+    text-decoration-line: underline;
+}

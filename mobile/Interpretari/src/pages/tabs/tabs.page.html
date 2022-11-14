@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="onHome()" tab="home">
+        <ion-text class="frame {{homeStatus}}"></ion-text>
+        <ion-icon src="../../assets/images/tabs/home.svg" class="home_icon"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="onNotification()" tab="notifications">
+        <ion-text class="frame {{notificationStatus}}"></ion-text>
+        <ion-icon src="../../assets/images/tabs/bell.svg" class="bell_icon"></ion-icon>
+        <ion-label>Notificações</ion-label>
+        <ion-badge color="danger">3</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="onProfile()" tab="profile">
+        <ion-text class="frame {{profileStatus}}"></ion-text>
+        <ion-icon src="../../assets/images/tabs/user.svg" class="user_icon"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="onConfiguration()" tab="configurations">
+        <ion-text class="frame {{configurationStatus}}"></ion-text>
+        <ion-icon src="../../assets/images/tabs/gear.svg" class="gear_icon"></ion-icon>
+        <ion-label>Configurações</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
+<!-- Exemplo -->
+<!-- <ion-tab-button tab="home">
+  <ion-icon name="square" class="frame2"></ion-icon>
+  <ion-button expand="full" [color]="buttonValue > 0 ? 'success' : 'primary'" (click)='onClick()'></ion-button>
+  <ion-icon src="../../assets/images/tabs/home.svg" class="home_icon"></ion-icon>
+  <ion-text class="home_text">Início</ion-text>
+  <ion-badge>6</ion-badge>
+</ion-tab-button> -->

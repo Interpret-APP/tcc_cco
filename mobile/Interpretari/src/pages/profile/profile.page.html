@@ -1,0 +1,26 @@
+<ion-header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@500&display=swap"
+    rel="stylesheet">
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/images/profile/head.png">
+  <img src="../../assets/images/logo2.png" class="logo">
+  <ion-text class="title">Meu Perfil</ion-text>
+
+  <ion-tabs>
+    <ion-tab-button (click)="personalBtn()" tab="personal-info" class="personal_btn {{personalStatus}}">
+      <ion-label>Informações Pessoais</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="professionalBtn()" tab="professional-info" class="professional_btn {{professionalStatus}}">
+      <ion-label>Informações Profissionais</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="workBtn()" tab="work-stations" class="work_btn {{workStatus}}">
+      <ion-label>Meus Postos</ion-label>
+    </ion-tab-button>
+  </ion-tabs>
+</ion-content>

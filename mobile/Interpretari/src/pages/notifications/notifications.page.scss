@@ -1,0 +1,234 @@
+ion-content {
+    height: 1000%;
+}
+
+ion-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.logo {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 167px;
+    top: 41px;
+}
+
+.title {
+    position: absolute;
+    width: 375px;
+    height: 23px;
+    left: 0px;
+    top: 15px;
+
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contador_txt {
+    position: absolute;
+    width: 111px;
+    height: 14px;
+    left: 35%;
+    top: 100px;
+
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+    color: #2D4F96;
+}
+
+.notifications_card {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 323px;
+    height: 153px;
+    left: 10px;
+    top: 50px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    background: #FFFFFF;
+    border: 1px solid rgba(81, 113, 165, 0.04);
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 18.2143px;
+
+    margin-bottom: -5px;
+}
+
+.endereco_txt {
+    position: absolute;
+    width: 221px;
+    height: 15px;
+    left: 15px;
+    top: 15px;
+
+    font-size: 8px;
+    line-height: 12px;
+    color: #74788D;
+}
+
+.idioma_txt {
+    position: absolute;
+    width: 86px;
+    height: 12px;
+    left: 16px;
+    top: 35px;
+
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    color: #495057;
+}
+
+.traducao_chip {
+    position: absolute;
+    width: 58px;
+    height: 15px;
+    left: 10px;
+    top: 50px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 15px;
+    color: #2D4F96;
+}
+
+.traducao_icon {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: -3px;
+    top: 8px;
+}
+
+.interpretacao_chip {
+    position: absolute;
+    width: 82px;
+    height: 15px;
+    left: 80px;
+    top: 50px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    color: #2D4F96;
+}
+
+.interpretacao_icon {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -3px;
+}
+
+.modo_chip {
+    position: absolute;
+    width: 68px;
+    height: 18px;
+    left: 230px;
+    top: 12px;
+
+    background: rgba(45, 79, 150, 0.09);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: center;
+    color: #2D4F96;
+
+    padding-left: 18px;
+    padding-top: 8px;
+}
+
+.modo_icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -2px;
+    top: 8px;
+}
+
+.detalhes_btn {
+    position: absolute;
+    width: 108px;
+    height: 19px;
+    left: 195px;
+    top: 47px;
+
+    background: #2D4F96;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.status {
+    position: absolute;
+    width: 295px;
+    height: 42px;
+    left: 8px;
+    top: 89px;
+
+    box-shadow: 18.2143px 18.2143px 36.4286px rgba(211, 209, 216, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    padding-left: 40px;
+}
+
+.selecionado {
+    background: rgba(52, 195, 143, 0.15);
+    color: #34C38F;
+}
+
+.recusado {
+    background: rgba(244, 106, 106, 0.25);
+    color: #F46A6A;
+}
+
+.status_icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 20px;
+}

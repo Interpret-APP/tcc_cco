@@ -1,0 +1,161 @@
+.background {
+    position: relative;
+    width: 375px;
+    height: 667px;
+
+    background: #FFFFFF;
+}
+
+.head {
+    position: absolute;
+    width: 375px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 154px;
+    top: 46px;
+}
+
+.text_field {
+    position: absolute;
+    left: 1.31%;
+    right: 50%; // 82.03%
+    top: 0%;
+    bottom: 66.67%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #5171A5;
+}
+
+.box_field {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 36.11%;
+    bottom: 0%;
+
+    padding: 10px;
+
+    // background: #FFFFFF;
+    border: 1px solid rgba(0, 53, 84, 0.25);
+    border-radius: 15px;
+}
+
+.email {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 35px;
+    top: 181px;
+}
+
+.password {
+    position: absolute;
+    width: 306px;
+    height: 72px;
+    left: 35px;
+    top: 268px;
+}
+
+.check {
+    position: absolute;
+    width: 122px;
+    height: 18px;
+    left: 0px; // 39px
+    top: 0px; // 374px
+}
+
+.checkbox {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 39px;
+    top: 376px;
+
+    // border: 1px solid rgba(0, 53, 84, 0.25);
+    // border-radius: 3px;
+}
+
+.check_text {
+    position: absolute;
+    width: 101px; // 100px
+    height: 18px;
+    left: 61px;
+    top: 374px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #5171A5;
+}
+
+.enter_button {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 306px;
+    height: 41px;
+    left: 35px;
+    top: 451px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.password_link {
+    position: absolute;
+    width: 145px;
+    height: 23px;
+    left: 115px;
+    top: 554px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px; // 15px
+    line-height: 22px;
+
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #5171A5;
+}
+
+.register_link {
+    position: absolute;
+    width: 261px;
+    height: 23px;
+    left: 57px;
+    top: 592px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px; // 15px
+    line-height: 22px;
+
+    text-decoration-line: underline;
+
+    color: #5171A5;
+}

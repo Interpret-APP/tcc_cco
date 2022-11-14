@@ -1,0 +1,78 @@
+ion-tab-bar {
+    position: absolute;
+    width: 375px;
+    height: 55px;
+    left: 0px;
+    top: 613px; //
+
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(219, 219, 219, 0.25);
+    border-radius: 3px 3px 0px 0px;
+
+    border: 0;
+    margin-top: -1px;
+}
+
+ion-label {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 75%;
+    bottom: 0%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 15px; //10px
+    display: block; //flex
+    align-items: flex-end;
+    text-align: center;
+
+    color: #2D4F96;
+}
+
+.frame {
+    position: absolute;
+    width: 55px;
+    height: 36px;
+    top: 5px;
+
+    border-radius: 50px;
+}
+
+.ativo {
+    background: #1C894F;
+}
+
+.desativo {
+    background: #2D4F96;
+}
+
+.home_icon {
+    position: absolute;
+    width: 16px;
+    height: 17px;
+    top: 14px;
+}
+
+.bell_icon {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 15px;
+}
+
+.user_icon {
+    position: absolute;
+    width: 15px;
+    height: 18px;
+    top: 14px;
+}
+
+.gear_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 13px;
+}

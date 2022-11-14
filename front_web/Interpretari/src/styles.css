@@ -1,1 +1,513 @@
 /* You can add global styles to this file, and also import other style files */
+
+header {
+    background: #FFFFFF;
+}
+
+/* body {
+    position: relative;
+    width: 1920px;
+    height: 1248px;
+
+    background: #F8F8FB;
+} */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+} */
+
+.topbar {
+    position: absolute;
+    width: 1900px; /*1920px*/
+    height: 70px;
+    left: 0px;
+    top: 0px;
+}
+
+.topbar_body {
+    position: absolute;
+    width: 1651px; /*1668px*/
+    height: 70px;
+    left: 252px;
+    top: 0px;
+
+    box-shadow: 0px 10px 20px rgba(18, 38, 63, 0.0313726);
+}
+
+.logo {
+    position: absolute;
+    width: 252px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo_img {
+    position: absolute;
+    width: 142px;
+    height: 55px;
+    left: 45px;
+    /*55px*/
+    top: 15px;
+}
+
+.logo_background {
+    position: absolute;
+    width: 252px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #2D4F96;
+}
+
+.bell_icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 1762px;
+    top: 25px;
+
+    background: url(assets/icons/bx-bell.svg);
+}
+
+.user_txt {
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    left: 1800px;
+    top: 22px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #000000;
+}
+
+.user_icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 1847px;
+    top: 14px;
+
+    background: url(assets/icons/user_icon.svg);
+    border-radius: 50px;
+}
+
+.title_txt {
+    position: absolute;
+    width: 186px;
+    height: 24px;
+    left: 276px;
+    top: 94px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: #495057;
+}
+
+.side_txt {
+    position: absolute;
+    width: 134px; /*130px*/
+    height: 20px;
+    left: 1753px;
+    top: 98px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #84889A;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 1178px;
+    /* Full-height: remove this if you want "auto" height */
+    width: 252px;
+    /* Set the width of the sidebar */
+    position: absolute;
+    /* Fixed Sidebar (stay in place on scroll) */
+    /* z-index: 1; Stay on top */
+    top: 70px;
+    /* Stay at the top */
+    left: 0;
+    background: #2D4F96;
+    ;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+/* .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+} */
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: lightgreen;
+}
+
+.menu_group {
+    position: absolute;
+    width: 161.56pxpx;
+    height: 100px;
+    left: 24px;
+    top: -75px;
+    /*119px*/
+}
+
+.home_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 119px;
+
+    background: url(assets/icons/home_icon.svg);
+}
+
+.home_link {
+    position: relative;
+    width: 87px;
+    height: 20px;
+    left: 53.56px;
+    top: 119px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.certificate_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 159px;
+
+    background: url(assets/icons/certificates_icon.svg);
+}
+
+.certificate_link {
+    position: absolute;
+    width: 134px; /*132px*/
+    height: 20px;
+    left: 53.56px;
+    top: 157.7px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.interview_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 199px;
+
+    background: url(assets/icons/interview_icon.svg);
+}
+
+.interview_link {
+    position: absolute;
+    width: 71px;
+    height: 20px;
+    left: 53.56px;
+    top: 199px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.users_group {
+    position: absolute;
+    width: 181px;
+    height: 100px;
+    /*189px*/
+    left: 24px;
+    top: -75px;
+    /*248px*/
+}
+
+.users_txt {
+    position: absolute;
+    width: 56px;
+    height: 17px;
+    left: 24px;
+    top: 248px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.balance_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 290px;
+
+    background: url(assets/icons/balance_icon.svg);
+}
+
+.court_link {
+    position: absolute;
+    width: 53px;
+    height: 20px;
+    left: 58px;
+    top: 288.5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.building_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 334px;
+
+    background: url(assets/icons/building_icon.svg);
+}
+
+.judicial_link {
+    position: absolute;
+    width: 124px; /*123px*/
+    height: 20px;
+    left: 58px;
+    top: 333px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.checked_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 380px;
+
+    background: url(assets/icons/checked_icon.svg);
+}
+
+.certifier_link {
+    position: absolute;
+    width: 148px; /*147px*/
+    height: 20px;
+    left: 58px;
+    top: 377.5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.users_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 417px;
+
+    background: url(assets/icons/users_icon.svg);
+}
+
+.interpreter_link {
+    position: absolute;
+    width: 71px;
+    height: 20px;
+    left: 59.56px;
+    top: 417px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.config_group {
+    position: absolute;
+    width: 114px;
+    height: 100px;
+    left: 24px;
+    top: -75px;
+    /*457px*/
+}
+
+.config_txt {
+    position: absolute;
+    width: 95px;
+    height: 17px;
+    left: 24px;
+    top: 457px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.profile_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 498px;
+
+    background: url(assets/icons/profile_icon.svg);
+}
+
+.data_link {
+    position: absolute;
+    width: 81px; /*80px*/
+    height: 20px;
+    left: 58px;
+    top: 497.5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.login_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 537px;
+
+    background: url(assets/icons/login_icon.svg);
+}
+
+.login_link {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    left: 57px;
+    top: 536px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #EFF2F7;
+}
+
+.footer_back {
+    position: absolute;
+    width: 1651px; /*1668px*/
+    height: 60px;
+    left: 252px;
+    top: 1188px;
+
+    background: #F2F2F5;
+}
+
+.inter_txt {
+    position: absolute;
+    width: 108px;
+    /*107px*/
+    height: 20px;
+    left: 276px;
+    top: 1208px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #74788D;
+}
+
+.dev_txt {
+    position: absolute;
+    width: 370px;
+    /*364px*/
+    height: 20px;
+    left: 1510px;
+    /*1547.57px*/
+    top: 1208px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #74788D;
+}

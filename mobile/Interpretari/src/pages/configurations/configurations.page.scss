@@ -1,0 +1,94 @@
+ion-button {
+    position: absolute;
+    width: 323px;
+    height: 47px;
+    left: 26px;
+
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+
+    --background: white;
+}
+
+ion-label {
+    position: absolute;
+    left: 75px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #495057;
+}
+
+.logo {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 167px;
+    top: 41px;
+}
+
+.title {
+    position: absolute;
+    width: 375px;
+    height: 23px;
+    left: 0px;
+    top: 15px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.notifications_button {
+    top: 132px;
+}
+
+.icon {
+    position: absolute;
+    right: 85%;
+    top: 25%;
+}
+
+.arrow_icon {
+    position: absolute;
+    left: 90%;
+    top: 40%;
+    width: 6px;
+    height: 12px;
+}
+
+.help_button {
+    top: 199px;
+}
+
+.delete_button {
+    top: 266px;
+}
+
+.exit_button {
+    position: absolute;
+    width: 208px;
+    height: 47px;
+    left: 84px;
+    top: 390px;
+
+    --background: #E2574C;
+}
+
+.logo2 {
+    position: absolute;
+    left: 22.4%;
+    right: 22.13%;
+    top: 73.01%;
+    bottom: 14.24%;
+}

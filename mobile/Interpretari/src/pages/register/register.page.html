@@ -1,0 +1,24 @@
+<ion-header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@500&display=swap"
+    rel="stylesheet">
+</ion-header>
+
+<ion-content>
+    <img src="../../assets/images/head.png">
+    <img src="../../assets/images/logo2.png" class="logo">
+    <ion-text class="register_text" color="primary">Cadastro</ion-text>
+
+    <input-field-component class="name" type="name" name="Nome Completo"></input-field-component>
+    <input-field-component class="email" type="email" name="E-mail"></input-field-component>
+    <input-field-component class="cpf" type="cpf" name="CPF"></input-field-component>
+    <input-field-component class="new_password" type="password" name="Nova Senha"></input-field-component>
+    <input-field-component class="confirm_password" type="password" name="Confirmar Senha"></input-field-component>
+
+    <ion-checkbox class="checkbox" type="checkbox"></ion-checkbox>
+    <ion-text class="check_text" color="tertiary">Eu aceito os Termos de Serviço e a Politica de Privacidade do Interprêt.</ion-text>
+
+    <ion-button class="register_button" color="primary" href="/register-transition">Cadastrar</ion-button>
+    <ion-button class="cancel_link" color="primary" href="/login" fill="clear">Cancelar</ion-button>
+</ion-content>

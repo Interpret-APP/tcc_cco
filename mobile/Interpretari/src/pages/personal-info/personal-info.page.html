@@ -1,0 +1,72 @@
+<ion-card class="{{isRetract}}">
+  <img src="../../assets/images/personal-info/user_icon.svg" class="user_photo">
+
+  <ion-chip class="status_chip">Ativo</ion-chip>
+
+  <ion-text class="start_date">Criado em 03 de Fevereiro de 2020</ion-text>
+
+  <ion-button (click)="changeInfo()" class="edit_btn {{onEdit}}">
+    <ion-icon src="../../assets/images/personal-info/edit_icon.svg" class="edit_icon"></ion-icon>
+    <ion-label class="edit_txt">Editar</ion-label>
+  </ion-button>
+
+  <ion-item>
+    <ion-label>Nome Completo</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="name" placeholder="{{nome}}" tag="nameInput" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+
+  <ion-item class="cpf_input">
+    <ion-label>CPF</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="485.569.166-17"></ion-input>
+  </ion-item>
+
+  <ion-item class="nationality_input">
+    <ion-label>Nacionalidade</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="Brasileiro(a)"></ion-input>
+  </ion-item>
+
+  <ion-item class="date_input">
+    <ion-label>Data de nascimento</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="03/02/1987"></ion-input>
+  </ion-item>
+
+  <ion-item class="address_input">
+    <ion-label>Endereço</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="Rua ABC, 234"></ion-input>
+  </ion-item>
+
+  <ion-item class="complement_input">
+    <ion-label>Complemento</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="Em frente à igreja"></ion-input>
+  </ion-item>
+
+  <ion-item class="cep_input">
+    <ion-label>CEP</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="08956-000"></ion-input>
+  </ion-item>
+
+  <ion-item class="city_input">
+    <ion-label>Cidade</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="São Paulo"></ion-input>
+  </ion-item>
+
+  <ion-item class="state_input">
+    <ion-label>Estado</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="São Paulo"></ion-input>
+  </ion-item>
+
+  <ion-item class="cell_input">
+    <ion-label>Celular</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="text" placeholder="+55 (11) 93654-4758"></ion-input>
+  </ion-item>
+
+  <ion-item class="email_input">
+    <ion-label>E-mail</ion-label>
+    <ion-input readonly="{{isDisabled}}" type="email" placeholder="fulano_silva@hotmail.com"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="changeInfo()" class="save_btn {{offEdit}}">
+    <ion-icon src="../../assets/images/personal-info/save_icon.svg" class="save_icon"></ion-icon>
+    <ion-label class="save_txt">Salvar Alterações</ion-label>
+  </ion-button>
+</ion-card>

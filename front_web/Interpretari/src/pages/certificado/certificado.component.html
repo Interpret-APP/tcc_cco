@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Interpretari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="certificado.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+    <div class="topbar">
+        <i class="topbar_body"></i>
+        <div class="logo">
+            <i class="logo_background"></i>
+            <p-image src="../../assets/images/logoHome.png" class="logo_img"></p-image>
+        </div>
+        <i class="bell_icon"></i>
+        <p class="user_txt">Henry</p>
+        <i class="user_icon"></i>
+    </div>
+</header>
+
+<body>
+    <div class="sidenav">
+        <div class="menu_group">
+            <i class="home_icon"></i>
+            <a class="home_link" href="/inicio">Página Inicial</a>
+            <i class="certificate_icon"></i>
+            <a class="certificate_link" href="/lista-certificados">Lista de Certificados</a>
+            <i class="interview_icon"></i>
+            <a class="interview_link" href="/entrevistas">Entrevistas</a>
+        </div>
+        <div class="users_group">
+            <p class="users_txt">Usuários</p>
+            <i class="balance_icon"></i>
+            <a class="court_link" href="/tribunal">Tribunal</a>
+            <i class="building_icon"></i>
+            <a class="judicial_link" href="/unidade-judiciaria">Unidade Judiciária</a>
+            <i class="checked_icon"></i>
+            <a class="certifier_link" href="/entidade-certificadora">Entidade Certificadora</a>
+            <i class="users_icon"></i>
+            <a class="interpreter_link" href="/interpretes">Intérpretes</a>
+        </div>
+        <div class="config_group">
+            <p class="config_txt">Configurações</p>
+            <i class="profile_icon"></i>
+            <a class="data_link" href="/meus-dados">Meus Dados</a>
+            <i class="login_icon"></i>
+            <a class="login_link" href="/login">Sair</a>
+        </div>
+    </div>
+
+    <p class="title_txt">Lista de Certificados</p>
+    <p class="side_txt">Lista de Certificados</p>
+
+    <p-table #dt2 [value]="certificados" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-certificado p-datatable-gridlines" [paginator]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['titulo','interprete','date','status', 'tipo']" class="certificates_table">
+        <ng-template pTemplate="caption">
+            <th>
+                <p-columnFilter type="text" field="tipo" class="search_input"></p-columnFilter>
+            </th>
+            <!-- <div class="p-d-flex">
+                <span class="p-input-icon-left p-ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event.target, 'contains')"
+                        placeholder="Filter" />
+                </span>
+            </div> -->
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="text-align: center">Certificado</th>
+                <th style="text-align: center">Título</th>
+                <th style="text-align: center">Intérprete</th>
+                <th style="text-align: center">Carregado em</th>
+                <th style="text-align: center">Status</th>
+                <th style="text-align: center">Tipo</th>
+                <th style="text-align: center">Download</th>
+                <th style="text-align: center">Ações</th>
+
+                <!-- <th style="width: 6rem">Verified</th> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-certificado>
+            <tr>
+                <td style="text-align: center">
+                    <img [src]="'../../assets/certificado/' + certificado.image" [alt]="certificado.image" />
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.titulo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.interprete}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.carregado}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.status}}</span>
+                </td>
+                <td style="text-align: center">
+                    <span>{{certificado.tipo}}</span>
+                </td>
+                <td style="text-align: center">
+                    <img pButton [src]="'../../assets/certificado/' + certificado.download"
+                        [alt]="certificado.download" class="download_icon"/>
+                    <!-- <p-button class="download_icon"></p-button> -->
+                </td>
+                <td style="text-align: center">
+                    <button pButton label="Rejeitar" class="reject_button"
+                    (click)="rejectCertificate(certificado)"></button>
+                    <button pButton label="Validar" class="accept_button"
+                    (click)="acceptCertificate(certificado)"></button>
+                    <!-- <button pButton pRipple icon="pi pi-times" class="p-button-rounded p-button-danger"
+                        (click)="rejectCertificate(certificado)"></button>
+                    <button pButton pRipple icon="pi pi-check" class="p-button-rounded p-button-success mr-2"
+                        (click)="acceptCertificate(certificado)"></button> -->
+
+                    <!-- <button>{{certificado.rejeitar}}</button>
+                    <button>{{certificado.validar}}</button> -->
+                </td>
+                <!-- <td>
+				<i class="pi" [ngClass]="{'true-icon pi-check-circle': certificado.verified, 'false-icon pi-times-circle': !certificado.verified}"></i>
+			</td> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="5">Nenhum certificado encontrado.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <footer>
+        <p class="footer_back"></p>
+        <p class="inter_txt">2022 © Interprêt.</p>
+        <p class="dev_txt">Produzido e Desenvolvido por Alunos Anhembi Morumbi.</p>
+    </footer>
+</body>
+
+
+
+<!-- <tr>
+    <th>
+        <p-columnFilter type="text" field="certificado.titulo"></p-columnFilter>
+    </th>
+    <th>
+        <p-columnFilter type="text" field="certificado.titulo"></p-columnFilter>
+    </th>
+    <th>
+        <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any"
+                    (onChange)="filter($event.value)" optionLabel="certificado.titulo">
+                    <ng-template let-option pTemplate="item">
+                        <div class="p-multiselect-representative-option">
+                            <span class="p-ml-1">{{option.titulo}}</span>
+                        </div>
+                    </ng-template>
+                </p-multiSelect>
+            </ng-template>
+        </p-columnFilter>
+    </th>
+    <th>
+        <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)"
+                    placeholder="Any" [showClear]="true">
+                    <ng-template let-option pTemplate="item">
+                        <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
+                    </ng-template>
+                </p-dropdown>
+            </ng-template>
+        </p-columnFilter>
+    </th>
+    <th>
+        <p-columnFilter type="boolean" field="verified"></p-columnFilter>
+    </th>
+</tr> -->

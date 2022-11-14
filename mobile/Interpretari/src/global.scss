@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "~swiper/scss";
+@import "~swiper/scss/pagination";
+@import '~swiper/scss/effect-fade';
+
+:root {
+    --ion-color-primary: #2D4F96;
+    --ion-color-secondary: #5D5FEF;
+    --ion-color-tertiary: #5171A5;
+    --ion-color-selected: #1B8950;
+}
+
+.background {
+    position: relative;
+    width: 375px;
+    height: 667px;
+}
+
+ion-searchbar ion-icon {
+    right: 16px !important;
+    left: auto !important;
+}

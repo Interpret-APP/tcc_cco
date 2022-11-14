@@ -1,0 +1,60 @@
+<ion-header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@500&display=swap"
+    rel="stylesheet">
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/images/notifications/head.png">
+  <img src="../../assets/images/logo2.png" class="logo">
+  <ion-text class="title">Notificações</ion-text>
+
+  <ion-text class="contador_txt">3 notificações</ion-text>
+
+  <ion-card *ngFor="let notification of notificationsList; let i = index" class="notifications_card">
+    <ion-text class="endereco_txt">{{notification.endereco}}</ion-text>
+
+    <ion-text class="idioma_txt">{{notification.idioma_partida}}
+      <ion-text>→
+        <ion-text>{{notification.idioma_chegada}}</ion-text>
+      </ion-text>
+    </ion-text>
+
+    <ion-chip *ngIf="notification.traducao === 'true'" class="traducao_chip">
+      <ion-icon src="../../assets/images/notifications/traducao_icon.svg" class="traducao_icon"></ion-icon>
+      Tradução
+    </ion-chip>
+    <ion-chip *ngIf="notification.interpretacao === 'true'" class="interpretacao_chip">
+      <ion-icon src="../../assets/images/notifications/interpretacao_icon.svg" class="interpretacao_icon"></ion-icon>
+      Interpretação
+    </ion-chip>
+
+    <ion-chip *ngIf="notification.modo === 'Presencial'" class="modo_chip">
+      <ion-icon src="../../assets/images/notifications/presencial_icon.svg" class="modo_icon"></ion-icon>
+      {{notification.modo}}
+    </ion-chip>
+
+    <ion-chip *ngIf="notification.modo === 'Remoto'" class="modo_chip">
+      <ion-icon src="../../assets/images/notifications/remoto_icon.svg" class="modo_icon"></ion-icon>
+      {{notification.modo}}
+    </ion-chip>
+
+    <ion-button class="detalhes_btn">Detalhes</ion-button>
+
+    <ion-chip *ngIf="notification.status === 'selecionado'" class="status selecionado">
+      <ion-icon src="../../assets/images/notifications/check_icon.svg" class="status_icon"></ion-icon>
+      <ion-label>Esta audiência está confirmada. Você foi selecionado(a).</ion-label>
+    </ion-chip>
+
+    <ion-chip *ngIf="notification.status === 'recusado'" class="status recusado">
+      <ion-icon src="../../assets/images/notifications/x_icon.svg" class="status_icon"></ion-icon>
+      <ion-label>Você não foi selecionado(a). Caso haja desistência, você será notificado(a).</ion-label>
+    </ion-chip>
+
+    <ion-chip *ngIf="notification.status === 'cancelado'" class="status recusado">
+      <ion-icon src="../../assets/images/notifications/x_icon.svg" class="status_icon"></ion-icon>
+      <ion-label>Esta audiência foi cancelada.</ion-label>
+    </ion-chip>
+  </ion-card>
+</ion-content>

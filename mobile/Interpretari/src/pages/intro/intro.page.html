@@ -1,0 +1,26 @@
+<ion-header>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+</ion-header>
+
+<ion-content [scrollY]="false">
+    <swiper #swiper effect="fade" [config]="config">
+        <ng-template swiperSlide>
+            <div class="background">
+                <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+                <img src="../assets/images/intro/splash1.png" class="slide1" />
+                <ion-button (click)="next()" class="next_button" color="primary">Próximo</ion-button>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+            <img src="../assets/images/intro/splash2.png" class="slide2" />
+            <ion-button (click)="next()" class="next_button" color="primary">Próximo</ion-button>
+        </ng-template>
+        <ng-template swiperSlide>
+            <ion-button class="skip" fill="clear" color="secondary" href="/login">Pular</ion-button>
+            <img src="../assets/images/intro/splash3.png" class="slide3" />
+            <ion-button class="start_button" color="primary" href="/login">Iniciar</ion-button>
+        </ng-template>
+    </swiper>
+</ion-content>
